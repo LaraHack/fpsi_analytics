@@ -9,7 +9,7 @@ prefix pso: <http://purl.org/spar/pso/>
 
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
-select distinct ?submitted_np ?newversion where {
+select distinct ?submitted_np ?newversion_x where {
 
   # SUPERPATTERN
 
@@ -28,12 +28,12 @@ select distinct ?submitted_np ?newversion where {
   }
 
   optional {
-    graph npa:graph { ?newversion npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion np:hasPublicationInfo ?si .  # TODO: move into npa:graph
-    graph ?si { ?newversion npx:supersedes ?submission_np . }
+    graph npa:graph { ?newversion_x npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_x np:hasPublicationInfo ?si .  # TODO: move into npa:graph
+    graph ?si { ?newversion_x npx:supersedes ?submitted_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_s npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_s np:hasAssertion ?sa .  # TODO: move into npa:graph
-    graph ?sa { ?somebody_s npx:retracts ?submission_np . }
+    graph npa:graph { ?retraction_x npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_x np:hasAssertion ?sa .  # TODO: move into npa:graph
+    graph ?sa { ?somebody_x npx:retracts ?submitted_np . }
   }
 
 }
