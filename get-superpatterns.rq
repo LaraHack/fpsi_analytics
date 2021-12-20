@@ -4,27 +4,28 @@ prefix np: <http://www.nanopub.org/nschema#>
 prefix npx: <http://purl.org/nanopub/x/>
 prefix npa: <http://purl.org/nanopub/admin/>
 prefix frbr: <http://purl.org/vocab/frbr/core#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix pso: <http://purl.org/spar/pso/>
-
 prefix lf: <https://w3id.org/linkflows/reviews/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+prefix Accepted: <http://purl.org/spar/pso/accepted-for-publication>
+prefix Rejected: <http://purl.org/spar/pso/rejected-for-publication>
+prefix pso: <http://purl.org/spar/pso/>
 
 select distinct ?submitted_np ?newversion_x where {
 
-  # SUPERPATTERN
-
-  graph ?submission_np_head {
-    ?submission_np np:hasAssertion ?submission_np_assertion ;
-      np:hasPublicationInfo ?submission_np_pubinfo ;
-      a np:Nanopublication .
-  }
-  graph ?submission_np_assertion {
+  graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
+  graph ?submission_np_a {
     ?submitted_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
       pso:withStatus pso:submitted .
   }
-  graph ?submission_np_pubinfo {
+  graph ?submission_np_i {
     ?submission_np dct:creator ?__author_iri .
     bind(?__author_iri as ?author)
+  }
+  filter not exists {
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
+    graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
 
   optional {
@@ -32,8 +33,8 @@ select distinct ?submitted_np ?newversion_x where {
     graph ?si { ?newversion_x npx:supersedes ?submitted_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_x npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_x np:hasAssertion ?sa .  # TODO: move into npa:graph
-    graph ?sa { ?somebody_x npx:retracts ?submitted_np . }
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
+    graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
 
 }
