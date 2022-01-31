@@ -3,7 +3,6 @@
 TODO:
 
 - get-submission-to-superpattern.rq
-- get-updated.rq
 - get-updated-to-superpattern.rq
 - get-sp-reviews.rq
 - get-cd-reviews.rq
@@ -12,5 +11,4 @@ TODO:
 - get-responses.rq
 - get-response-to-review.rq
 - get-response-to-updated.rq
-- get-decision.rq
 - get-decision-to-updated.rq
