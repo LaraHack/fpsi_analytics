@@ -21,11 +21,11 @@ select distinct ?submitted_np ?update_np where {
   graph ?submission_np_i {
     ?submission_np dct:creator ?__author_iri .
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
