@@ -1,4 +1,3 @@
-# INCOMPLETE
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix dct: <http://purl.org/dc/terms/>
 prefix np: <http://www.nanopub.org/nschema#>
@@ -7,6 +6,7 @@ prefix npa: <http://purl.org/nanopub/admin/>
 prefix frbr: <http://purl.org/vocab/frbr/core#>
 prefix lf: <https://w3id.org/linkflows/reviews/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix pso: <http://purl.org/spar/pso/>
 
 prefix Addressed: <https://w3id.org/linkflows/reviews/PointAddressedComment>
 prefix PartiallyAddressed: <https://w3id.org/linkflows/reviews/PointPartiallyAddressedComment>
@@ -16,7 +16,7 @@ prefix Agreed: <https://w3id.org/linkflows/reviews/AgreementComment>
 prefix PartialAgreed: <https://w3id.org/linkflows/reviews/PartialAgreementComment>
 prefix Disagreed: <https://w3id.org/linkflows/reviews/DisagreementComment>
 
-select distinct where ?resp_np ?resp_text ?agreement ?addressed {
+select distinct ?resp_np ?resp_text ?agreement ?addressed where {
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
