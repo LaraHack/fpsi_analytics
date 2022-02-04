@@ -22,11 +22,11 @@ select distinct ?decision_np ?decision where {
     ?submission_np dct:creator ?__author_iri .
     bind(?__author_iri as ?author)
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
