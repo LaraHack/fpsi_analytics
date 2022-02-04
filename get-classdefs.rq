@@ -11,9 +11,8 @@ prefix pso: <http://purl.org/spar/pso/>
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
 select distinct ?class_np ?newversion where {
-
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
-    ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
+  ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
     ?submitted_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
       pso:withStatus pso:submitted .
@@ -26,16 +25,14 @@ select distinct ?class_np ?newversion where {
     graph npa:graph { ?newversion npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion np:hasPublicationInfo ?si .  # TODO: move into npa:graph
     graph ?si { ?newversion npx:supersedes ?submission_np . }
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-
-    ?submitted_np np:hasAssertion ?submitted_np_a .  # TODO: move into npa:graph
+  ?submitted_np np:hasAssertion ?submitted_np_a .  # TODO: move into npa:graph
   graph ?submitted_np_a {
     ?spi ?spi_pred ?class .
   }
-
   graph npa:graph { ?class_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?class_np np:hasAssertion ?class_np_a ; np:hasPublicationInfo ?class_np_i .  # TODO: move into npa:graph
   graph ?class_np_i {
