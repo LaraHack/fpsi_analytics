@@ -16,7 +16,7 @@ prefix Agreed: <https://w3id.org/linkflows/reviews/AgreementComment>
 prefix PartialAgreed: <https://w3id.org/linkflows/reviews/PartialAgreementComment>
 prefix Disagreed: <https://w3id.org/linkflows/reviews/DisagreementComment>
 
-select distinct ?resp_np ?resp_text ?agreement ?addressed where {
+select distinct ?resp_np ?agreement ?addressed ?resp_text where {
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
@@ -70,19 +70,17 @@ select distinct ?resp_np ?resp_text ?agreement ?addressed where {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
     graph ?ra { ?somebody npx:retracts ?review_np . }
   }
-  optional {
-    graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?resp_np np:hasAssertion ?respa .
-    graph ?respa {
-      ?resp_comment lf:isResponseTo ?review_np ;
-        lf:hasCommentText ?resp_textpre .
-      ?resp_comment a ?agreement .
-      values ?agreement { lf:AgreementComment lf:DisagreementComment lf:PartialAgreementComment }
-      ?resp_comment a ?addressed .
-      values ?addressed { lf:PointAddressedComment lf:PointNotAddressedComment lf:PointPartiallyAddressedComment }
-    }
-    filter not exists {
-      graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
-      graph ?respra { ?somebody npx:retracts ?resp_np . }
-    }
+  graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?resp_np np:hasAssertion ?respa .
+  graph ?respa {
+    ?resp_comment lf:isResponseTo ?review_np ;
+      lf:hasCommentText ?resp_text .
+    ?resp_comment a ?agreement .
+    values ?agreement { lf:AgreementComment lf:DisagreementComment lf:PartialAgreementComment }
+    ?resp_comment a ?addressed .
+    values ?addressed { lf:PointAddressedComment lf:PointNotAddressedComment lf:PointPartiallyAddressedComment }
+  }
+  filter not exists {
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
+    graph ?respra { ?somebody npx:retracts ?resp_np . }
   }
 }
