@@ -9,4 +9,3 @@ TODO:
 - get-response-to-review.rq
 - get-response-to-updated.rq
 - get-decision-to-updated.rq
-- get-cd-responses.rq
