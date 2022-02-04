@@ -4,7 +4,6 @@ TODO:
 
 - get-submission-to-superpattern.rq
 - get-updated-to-superpattern.rq
-- get-sp-reviews.rq
 - get-cd-reviews.rq
 - get-review-to-superpattern.rq
 - get-review-to-classdef.rq

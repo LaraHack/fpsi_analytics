@@ -57,6 +57,7 @@ select distinct ?resp_np ?agreement ?addressed ?resp_text where {
     values ?action { lf:ActionNeededComment lf:NoActionNeededComment lf:SuggestionComment }
     ?r lf:hasImpact ?imp .
     ?r lf:hasCommentText ?textpre .
+    bind(strdt(replace(?textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?text_rc)
   }
   graph ?review_np_pubinfo {
     ?review_np dct:creator ?__reviewer_iri .
@@ -77,7 +78,8 @@ select distinct ?resp_np ?agreement ?addressed ?resp_text where {
   graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?resp_np np:hasAssertion ?respa .
   graph ?respa {
     ?resp_comment lf:isResponseTo ?review_np ;
-      lf:hasCommentText ?resp_text .
+      lf:hasCommentText ?resp_textpre .
+    bind(strdt(replace(?resp_textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?resp_text)
     ?resp_comment a ?agreement .
     values ?agreement { lf:AgreementComment lf:DisagreementComment lf:PartialAgreementComment }
     ?resp_comment a ?addressed .
