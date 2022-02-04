@@ -11,8 +11,7 @@ prefix Accepted: <http://purl.org/spar/pso/accepted-for-publication>
 prefix Rejected: <http://purl.org/spar/pso/rejected-for-publication>
 prefix pso: <http://purl.org/spar/pso/>
 
-select distinct ?submission_np ?newversion_x where {
-
+select distinct ?submission_np ?newversion_submission_np where {
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
@@ -24,15 +23,14 @@ select distinct ?submission_np ?newversion_x where {
     bind(?__author_iri as ?author)
   }
   optional {
-    graph npa:graph { ?newversion_x npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_x np:hasPublicationInfo ?si .  # TODO: move into npa:graph
-    graph ?si { ?newversion_x npx:supersedes ?submission_np . }
+    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submission_np np:hasPublicationInfo ?si .  # TODO: move into npa:graph
+    graph ?si { ?newversion_submission_np npx:supersedes ?submission_np . }
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
