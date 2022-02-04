@@ -22,11 +22,11 @@ select distinct ?update_np where {
     ?submission_np dct:creator ?__author_iri .
     bind(?__author_iri as ?author)
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
@@ -38,7 +38,7 @@ select distinct ?update_np where {
       graph ?ura { ?update_retr_p npx:retracts ?update_np . }
     }
     filter(!bound(?update_retr))
-    optional {  # 'filter not exists' doesn't seem to work here; not sure why...
+    optional {
       graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
       graph ?usi { ?superseding npx:supersedes ?update_np . }
     }
