@@ -2,4 +2,5 @@
 
 TODO:
 
-- get-review-to-classdef.rq
+- check queries on SPARQL endpoint!!!
+- check results
