@@ -32,14 +32,4 @@ select distinct ?submission_np ?submitted_np ?author where {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
-  optional {
-    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .  # TODO: move into npa:graph; TODO: check pubkey
-    graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
-    filter(!bound(?update_retr))
-    optional {
-      graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
-      graph ?usi { ?superseding npx:supersedes ?update_np . }
-    }
-    filter(!bound(?superseding))
-  }
 }
