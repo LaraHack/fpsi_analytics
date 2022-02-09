@@ -1,0 +1,53 @@
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix dct: <http://purl.org/dc/terms/>
+prefix np: <http://www.nanopub.org/nschema#>
+prefix npx: <http://purl.org/nanopub/x/>
+prefix npa: <http://purl.org/nanopub/admin/>
+prefix frbr: <http://purl.org/vocab/frbr/core#>
+prefix lf: <https://w3id.org/linkflows/reviews/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+prefix Accepted: <http://purl.org/spar/pso/accepted-for-publication>
+prefix Rejected: <http://purl.org/spar/pso/rejected-for-publication>
+prefix pso: <http://purl.org/spar/pso/>
+
+select distinct ?decision_np ?update_np where {
+  graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
+  graph ?submission_np_a {
+    ?submitted_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
+      pso:withStatus pso:submitted .
+  }
+  graph ?submission_np_i {
+    ?submission_np dct:creator ?__author_iri .
+    bind(?__author_iri as ?author)
+  }
+  optional {
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
+    graph ?sra { ?somebody npx:retracts ?submission_np . }
+  }
+  optional {
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
+    graph ?dra { ?somebody npx:retracts ?submitted_np . }
+  }
+  optional {
+    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .  # TODO: move into npa:graph; TODO: check pubkey
+    graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
+    optional {
+      graph npa:graph { ?update_retr npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_retr np:hasAssertion ?ura .  # TODO: move into npa:graph
+      graph ?ura { ?update_retr_p npx:retracts ?update_np . }
+    }
+    filter(!bound(?update_retr))
+    optional { 
+      graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
+      graph ?usi { ?superseding npx:supersedes ?update_np . }
+    }
+    filter(!bound(?superseding))
+    optional {
+      graph npa:graph { ?decision_np npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?decision_np np:hasAssertion ?da .  # TODO: move into npa:graph
+      graph ?da {
+        ?update_np pso:withStatus ?decision .
+      }
+    }
+  }
+}
