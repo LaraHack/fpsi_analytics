@@ -52,7 +52,7 @@ select distinct ?review_np ?subm_np ?author ?reviewer ?aspect ?pos ?action ?imp 
   }
   filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
-    graph ?sa { ?somebody npx:retracts ?submission_np . }
+    graph ?sa { ?somebody_submission_np npx:retracts ?submission_np . }
   }
   graph ?review_np_head {
     ?review_np np:hasAssertion ?review_np_assertion ;
@@ -88,14 +88,14 @@ select distinct ?review_np ?subm_np ?author ?reviewer ?aspect ?pos ?action ?imp 
   }
   filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
-    graph ?ra { ?somebody npx:retracts ?review_np . }
+    graph ?ra { ?somebody_review_np npx:retracts ?review_np . }
   }
   optional {
     graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?xi .  # TODO: move into npa:graph; TODO: check pubkey
     graph ?xi { ?update_np lf:isUpdateOf ?subm_np . }
     filter not exists {
       graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction np:hasAssertion ?ura .  # TODO: move into npa:graph
-      graph ?ura { ?somebody npx:retracts ?update_np . }
+      graph ?ura { ?somebody_update_np npx:retracts ?update_np . }
     }
     filter not exists {
       graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
