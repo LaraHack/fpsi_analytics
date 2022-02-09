@@ -6,6 +6,5 @@ TODO:
 - get-updated-to-superpattern.rq
 - get-review-to-superpattern.rq
 - get-review-to-classdef.rq
-- get-response-to-review.rq
 - get-response-to-updated.rq
 - get-decision-to-updated.rq

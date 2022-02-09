@@ -1,0 +1,123 @@
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix dct: <http://purl.org/dc/terms/>
+prefix np: <http://www.nanopub.org/nschema#>
+prefix npx: <http://purl.org/nanopub/x/>
+prefix npa: <http://purl.org/nanopub/admin/>
+prefix frbr: <http://purl.org/vocab/frbr/core#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix pso: <http://purl.org/spar/pso/>
+
+prefix Syntax: <https://w3id.org/linkflows/reviews/SyntaxComment>
+prefix Style: <https://w3id.org/linkflows/reviews/StyleComment>
+prefix Content: <https://w3id.org/linkflows/reviews/ContentComment>
+
+prefix Neg: <https://w3id.org/linkflows/reviews/NegativeComment>
+prefix Neutr: <https://w3id.org/linkflows/reviews/NeutralComment>
+prefix Pos: <https://w3id.org/linkflows/reviews/PositiveComment>
+
+prefix NoActionNeeded: <https://w3id.org/linkflows/reviews/NoActionNeededComment>
+prefix Suggestion: <https://w3id.org/linkflows/reviews/SuggestionComment>
+prefix ActionNeeded: <https://w3id.org/linkflows/reviews/ActionNeededComment>
+
+prefix Addressed: <https://w3id.org/linkflows/reviews/PointAddressedComment>
+prefix PartiallyAddressed: <https://w3id.org/linkflows/reviews/PointPartiallyAddressedComment>
+prefix NotAddressed: <https://w3id.org/linkflows/reviews/PointNotAddressedComment>
+
+prefix Agreed: <https://w3id.org/linkflows/reviews/AgreementComment>
+prefix PartialAgreed: <https://w3id.org/linkflows/reviews/PartialAgreementComment>
+prefix Disagreed: <https://w3id.org/linkflows/reviews/DisagreementComment>
+
+prefix lf: <https://w3id.org/linkflows/reviews/>
+
+select distinct ?resp_np ?review_np ?subm_np ?author ?reviewer ?aspect ?pos ?action ?imp ?mention ?text ?resp_text ?agreement ?addressed where {
+  graph ?submission_np_head {
+    ?submission_np np:hasAssertion ?submission_np_assertion ;
+      np:hasPublicationInfo ?submission_np_pubinfo ;
+      a np:Nanopublication .
+  }
+  graph ?submission_np_assertion {
+    ?subm_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
+      pso:withStatus pso:submitted .
+  }
+  graph ?submission_np_pubinfo {
+    ?submission_np dct:creator ?__author_iri .
+    bind(?__author_iri as ?author)
+  }
+  optional { ?__author_iri foaf:name ?authorLabel . }
+  graph npa:graph {
+    ?submission_np npa:hasValidSignatureForPublicKey ?pubkey .
+  }
+  filter not exists {
+    graph npa:graph { ?newversion npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion np:hasPublicationInfo ?si .  # TODO: move into npa:graph
+    graph ?si { ?newversion npx:supersedes ?submission_np . }
+  }
+  filter not exists {
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
+    graph ?sa { ?somebody npx:retracts ?submission_np . }
+  }
+  graph ?review_np_head {
+    ?review_np np:hasAssertion ?review_np_assertion ;
+      np:hasPublicationInfo ?review_np_pubinfo ;
+      a np:Nanopublication .
+  }
+  graph ?review_np_assertion {
+    ?r a lf:ReviewComment .
+    ?r lf:refersTo ?subm_np .
+    optional {
+      ?r lf:refersToMentioningOf ?mention .
+    }
+    ?r a ?aspect .
+    values ?aspect { lf:ContentComment lf:StyleComment lf:SyntaxComment }
+    ?r a ?pos .
+    values ?pos { lf:PositiveComment lf:NeutralComment lf:NegativeComment }
+    ?r a ?action .
+    values ?action { lf:ActionNeededComment lf:NoActionNeededComment lf:SuggestionComment }
+    ?r lf:hasImpact ?imp .
+    ?r lf:hasCommentText ?textpre .
+    bind(strdt(replace(?textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?text)
+  }
+  graph ?review_np_pubinfo {
+    ?review_np dct:creator ?__reviewer_iri .
+    bind(?__reviewer_iri as ?reviewer)
+  }
+  optional { ?__reviewer_iri foaf:name ?reviewerLabel . }
+  graph npa:graph {
+    ?review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey .
+  }
+  filter not exists {
+    graph npa:graph { ?newversion npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?newversion np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
+    graph ?ri { ?newversion npx:supersedes ?review_np . }
+  }
+  filter not exists {
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
+    graph ?ra { ?somebody npx:retracts ?review_np . }
+  }
+  optional {
+    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?xi .  # TODO: move into npa:graph; TODO: check pubkey
+    graph ?xi { ?update_np lf:isUpdateOf ?subm_np . }
+    filter not exists {
+      graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction np:hasAssertion ?ura .  # TODO: move into npa:graph
+      graph ?ura { ?somebody npx:retracts ?update_np . }
+    }
+    filter not exists {
+      graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
+      graph ?usi { ?superseding npx:supersedes ?update_np . }
+    }
+  }
+  optional {
+    graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?resp_np np:hasAssertion ?respa .
+    graph ?respa {
+      ?resp_comment lf:isResponseTo ?review_np ;
+        lf:hasCommentText ?resp_textpre .
+      bind(strdt(replace(?resp_textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?resp_text)
+      ?resp_comment a ?agreement .
+      values ?agreement { lf:AgreementComment lf:DisagreementComment lf:PartialAgreementComment }
+      ?resp_comment a ?addressed .
+      values ?addressed { lf:PointAddressedComment lf:PointNotAddressedComment lf:PointPartiallyAddressedComment }
+    }
+    filter not exists {
+      graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
+      graph ?respra { ?somebody npx:retracts ?resp_np . }
+    }
+  }
+}
