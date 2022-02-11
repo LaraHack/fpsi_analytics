@@ -11,7 +11,7 @@ prefix Accepted: <http://purl.org/spar/pso/accepted-for-publication>
 prefix Rejected: <http://purl.org/spar/pso/rejected-for-publication>
 prefix pso: <http://purl.org/spar/pso/>
 
-select distinct ?decision_np where {
+select distinct ?decision_np ?newversion_decision where {
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
@@ -22,32 +22,28 @@ select distinct ?decision_np where {
     ?submission_np dct:creator ?__author_iri .
     bind(?__author_iri as ?author)
   }
-  optional {
+  filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-  optional {
+  filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
+  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .  # TODO: move into npa:graph; TODO: check pubkey
+  graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
   optional {
-    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .  # TODO: move into npa:graph; TODO: check pubkey
-    graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
-    optional {
-      graph npa:graph { ?update_retr npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_retr np:hasAssertion ?ura .  # TODO: move into npa:graph
-      graph ?ura { ?update_retr_p npx:retracts ?update_np . }
-    }
-    filter(!bound(?update_retr))
-    optional {  # 'filter not exists' doesn't seem to work here; not sure why...
-      graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
-      graph ?usi { ?superseding npx:supersedes ?update_np . }
-    }
-    filter(!bound(?superseding))
-    optional {
-      graph npa:graph { ?decision_np npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?decision_np np:hasAssertion ?da .  # TODO: move into npa:graph
-      graph ?da {
-        ?update_np pso:withStatus ?decision .
-      }
-    }
+    graph npa:graph { ?update_retr npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_retr np:hasAssertion ?ura .  # TODO: move into npa:graph
+    graph ?ura { ?update_retr_p npx:retracts ?update_np . }
+  }
+  optional {
+    graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
+    graph ?usi { ?superseding npx:supersedes ?update_np . }
+  }
+  graph npa:graph { ?decision_np npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?decision_np np:hasAssertion ?da .  # TODO: move into npa:graph
+  graph ?da { ?update_np pso:withStatus ?decision . }
+  optional {
+    graph npa:graph { ?newversion_decision npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?newversion_decision np:hasPublicationInfo ?dsi .  # TODO: move into npa:graph
+    graph ?dsi { ?newversion_decision npx:supersedes ?decision . }
   }
 }
