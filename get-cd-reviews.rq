@@ -36,11 +36,10 @@ select distinct ?review_np ?newversion where {
     ?submission_np dct:creator ?__author_iri .
     bind(?__author_iri as ?author)
   }
-  optional { ?__author_iri foaf:name ?authorLabel . }
   graph npa:graph {
     ?submission_np vp: ?pubkey .
   }
-  optional {
+  filter not exists {
     graph npa:graph { ?retraction vp: ?pubkey . } ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
     graph ?sa { ?somebody npx:retracts ?submission_np . }
   }
@@ -80,25 +79,11 @@ select distinct ?review_np ?newversion where {
   graph ?review_np_assertion {
     ?r a lf:ReviewComment .
     ?r lf:refersTo ?class_np .
-    optional {
-      ?r lf:refersToMentioningOf ?mentioning .
-      bind(replace(replace(str(?mentioning), '^.*[/#]([^/#]+)[/#]?$', '$1'), '^(RA[a-zA-Z0-9-_]{8})[a-zA-Z0-9-_]{35}$', '$1') as ?mentioningLabel)
-    }
-    ?r a ?aspect .
-    values ?aspect { lf:ContentComment lf:StyleComment lf:SyntaxComment }
-    ?r a ?pos .
-    values ?pos { lf:PositiveComment lf:NeutralComment lf:NegativeComment }
-    ?r a ?action .
-    values ?action { lf:ActionNeededComment lf:NoActionNeededComment lf:SuggestionComment }
-    ?r lf:hasImpact ?imp .
-    ?r lf:hasCommentText ?textpre .
   }
-  bind(strdt(replace(?textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?text)
   graph ?review_np_pubinfo {
     ?review_np dct:creator ?__reviewer_iri .
     bind(?__reviewer_iri as ?reviewer)
   }
-  optional { ?__reviewer_iri foaf:name ?reviewerLabel . }
   graph npa:graph {
     ?review_np vp: ?reviewer_pubkey .
   }
