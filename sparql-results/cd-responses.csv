@@ -1,51 +1,49 @@
-"class_np","class_name","author","resp_np","resp_text","agreement","addressed"
-"http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0","expression of genes IRX3 AND IRX5","https://orcid.org/0000-0003-2432-4125",,,,
-"http://purl.org/np/RANAxL2OxGmP9VAN6cUi_0KEK0rJb9bPn4l1A5HquXKrI","regulatory element within the first intron of FTO","https://orcid.org/0000-0003-2432-4125",,,,
-"http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0","expression of genes IRX3 AND IRX5","https://orcid.org/0000-0003-2432-4125",,,,
-"http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0","expression of genes IRX3 AND IRX5","https://orcid.org/0000-0003-2432-4125",,,,
-"http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0","expression of genes IRX3 AND IRX5","https://orcid.org/0000-0003-2432-4125",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAdMQ7AZVDQoUg21ZlYbF-_2ny5Gob_NAzSeHkjNo6B8M","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAFQovt9yQD7nZ2tdZ9_Uhpb7CsfT3k64pK7dh63xd-50","Automated Discovery","https://orcid.org/0000-0003-4727-9435",,,,
-"http://purl.org/np/RAodU4AmRjfzyjwtJK3luO0iyRJJPUBjkijKWdlMHvack","adherence to the FAIR Guiding Principles","https://orcid.org/0000-0003-4727-9435",,,,
-"http://purl.org/np/RAFQovt9yQD7nZ2tdZ9_Uhpb7CsfT3k64pK7dh63xd-50","Automated Discovery","https://orcid.org/0000-0003-4727-9435","http://purl.org/np/RA062HUn_Zu1nVB61cxpeesJ4DyUCVIK9HEgS5BJVkE-Y","Thanks! m.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAodU4AmRjfzyjwtJK3luO0iyRJJPUBjkijKWdlMHvack","adherence to the FAIR Guiding Principles","https://orcid.org/0000-0003-4727-9435","http://purl.org/np/RAQImRBJTpV_MmzEvzJQjBnMH4gO78ss8mP8UEHXj72BU","Right - i see that adherence to the FAIR principles is a more specific form of adherence. the ontologist in me wants to make this a subclass :)","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAPVWYH0x-xyDa9PfBcGUFly3m1FNEO43KG9s0uH-y6yo","STX1B mutation","https://orcid.org/0000-0001-6501-0806","http://purl.org/np/RAcYNDJKPFqtoBIiEcdg8yShvLzqV-vSxU7-npALtkJZg","nothing to change","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0","expression of genes IRX3 AND IRX5","https://orcid.org/0000-0003-2432-4125","http://purl.org/np/RAfLGVuw7zXtYR2QndL2aZnfjZ1voMCCrowD0LdWWgOIA","AND was changed to and","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0","expression of genes IRX3 AND IRX5","https://orcid.org/0000-0003-2432-4125","http://purl.org/np/RAoqiduQlZfzvdyESwhFCRyZUNFA5b7kHkjV6tqSHbwrc","Added IRX3 and IRX5 as related classes","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RANAxL2OxGmP9VAN6cUi_0KEK0rJb9bPn4l1A5HquXKrI","regulatory element within the first intron of FTO","https://orcid.org/0000-0003-2432-4125","http://purl.org/np/RAkz3162Z4w0cRK6uQREUzdU3H6SKjtR7LKA0D-vRDKlw","Couldnt find the appropriate subclass for ""regulatory element""","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointPartiallyAddressedComment"
-"http://purl.org/np/RAjD4-Q2kO_cIUE52rde2uWbV3RtuCR90geXW90il2YX4","cost-effective treatment","https://orcid.org/0000-0002-0519-7776",,,,
-"http://purl.org/np/RAuLZtfsHn3NGe0Md8lLNvYmBseEtW9v1rVUVfJCpJYUE","patient undergoing PCI","https://orcid.org/0000-0002-0519-7776",,,,
-"http://purl.org/np/RAEpHUXRKtaLE3Z24sgIUdaxwTBsK2bjshyq9yF00145Y","semantic triple extracted from biodiversity literature","https://orcid.org/0000-0002-8083-6048","http://purl.org/np/RA913Qgx4UShjz9upA4IAsbYCkLhSxQ0vaV1figRNXkH8","Thanks for the positive review on the class definition.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RA6snbuih8c4A_1jDlDPtYXKBcO5KE5jdoQUtu3V2xPY4","biodiversity data reuse","https://orcid.org/0000-0002-8083-6048","http://purl.org/np/RALGIIKvWi-5iWhzWafeDsmUndSVJ8pdf6luPtwSiou8Q","Thanks for the positive review on the class definition.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAUxfk7XeLxn-2hiX3xWSlE5LXgkNW0MIFBGe2h3Bb3pM","Usage of the Linked Data Scopes ontology","https://orcid.org/0000-0001-9079-039X","http://purl.org/np/RAwsSVnefEYwpilUTTMTDgO-3QYYylNBBUdE249_SzYis","Thanks for the positive review on the class definition.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAtsHwzNs36rGrLnoSbGrPD351Qw033Acoe4zmdXhsYlM","early human adipogenesis","https://orcid.org/0000-0003-2432-4125","http://purl.org/np/RAtBvXr7_qxO0dwA5Nq2hwWVCG7fJz1oI-dB7ssjzZ570","no action needed","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAvOAyEg-J8ynmZNrkCgg5XqGuqRo-dXcGFvgDLxtY6ck","pharmacogenomics guided clopidogrel therapy","https://orcid.org/0000-0002-0519-7776",,,,
-"http://purl.org/np/RAftU4grJrKrRdqTA_Q9CqBJ0iA8j_g7ZaXkfJOLmS5pI","obesity together with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAe1_LbgR-F_6h9RufzR4upiYDQSiZz4CjPPkQcWmjHeo","obesity together with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAVYczMihUbgryLu1x8xhoqR6LQe4fSoWmF3SCQHfR5xE","obesity with metabolic abnormality","https://orcid.org/0000-0002-7114-6459",,,,
-"http://purl.org/np/RAodU4AmRjfzyjwtJK3luO0iyRJJPUBjkijKWdlMHvack","adherence to the FAIR Guiding Principles","https://orcid.org/0000-0003-4727-9435","http://purl.org/np/RAaPvL2hjBzAerIZPVV7afEBD2y2G0BZLiz9dbdl45ouo","Thanks! m.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAEpHUXRKtaLE3Z24sgIUdaxwTBsK2bjshyq9yF00145Y","semantic triple extracted from biodiversity literature","https://orcid.org/0000-0002-8083-6048","http://purl.org/np/RAFUOj4M9QAFD3Gf36uw_TDoIyG98ryT07P_pa-_MZ72w","Thanks for the positive review on the class definition.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAY2Gg01ffDVLprAakuMqpizAjksasRtTal_UsCf94LL8","OpenBiodiv knowledge graph","https://orcid.org/0000-0002-8083-6048","http://purl.org/np/RAD2d2pLO6hCu7pWsODSNHNxYGjKkyFJUlN1reDPn8G-0","Thanks for the positive review on the class definition.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAIwMZ0StXU9DCY1WGoJMwD2NAc30mijCb0FML8TXIB0Y","Relative size of the neocortex","https://orcid.org/0000-0002-0191-7211","http://purl.org/np/RANmHoSCPExJaux1NMHu8bVhZzAducyyR4dTtHJSbv2SE","The relation subClassOf was replaced with skos:related as it matches better the intended meaning. The new class is now related to both - the neocortex and size - classes.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAIwMZ0StXU9DCY1WGoJMwD2NAc30mijCb0FML8TXIB0Y","Relative size of the neocortex","https://orcid.org/0000-0002-0191-7211","http://purl.org/np/RAPTktNJpm0JblZpJsn0BUPbHeGV58k6sGQfuJUluyp04","The relation subClassOf was replaced with skos:related as it matches better the intended meaning. The new class is now related to both - the neocortex and size - classes.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0","expression of genes IRX3 AND IRX5","https://orcid.org/0000-0003-2432-4125","http://purl.org/np/RApJwqSdEJ2NCD9v2G9kOkdRxBzM-Aw1u6MZAoeGAtBAk","no review needed, but was completed anyway","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RANAxL2OxGmP9VAN6cUi_0KEK0rJb9bPn4l1A5HquXKrI","regulatory element within the first intron of FTO","https://orcid.org/0000-0003-2432-4125","http://purl.org/np/RATka2stDVfq6OTrm5zocL9eZUPETavRe6XhoVh3_Hx0I","related classes added","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RA9UaQM3wVa9xRAmL9CWEXyhDbcgvHlPoGTw4pnKaHYL8","integrin clustering","https://orcid.org/0000-0002-0830-7029","http://purl.org/np/RA2kBfTdI1zfinySdO_KecrMqS5x3kr5n87r5inNba_Bo","addressed in previous comment","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAXecDWH8gZVp7FZRP1m_Fg6EXH_uoZGhKN9blfN9lrfI","cancer cell engaged in extracellular matrix","https://orcid.org/0000-0002-0830-7029","http://purl.org/np/RAMpzb1Ec_HZZrVbr4RZAOemRxq80XUb8uZ00pDZ4R0uw","This issue has been resolved as indicated.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RA9UaQM3wVa9xRAmL9CWEXyhDbcgvHlPoGTw4pnKaHYL8","integrin clustering","https://orcid.org/0000-0002-0830-7029","http://purl.org/np/RAxrrwY-FEIMbEiJRhCuq0_PLGsleJBKvw5GIHQysg6xU","I have updated the class to refer to more appropriate wikidata class","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RACS5sSm45MGbuJrztnPrpdu1AuLiKxDni-6JcKzN5ZtM","glycocalyx bulk","https://orcid.org/0000-0002-0830-7029","http://purl.org/np/RAVfl0p-An2P-B-98rLtAmhVKafpT8S9W2GnF4IMrXPA8","I updated the class description to use skos:related to for glycocalyx","https://w3id.org/linkflows/reviews/PartialAgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RA9UaQM3wVa9xRAmL9CWEXyhDbcgvHlPoGTw4pnKaHYL8","integrin clustering","https://orcid.org/0000-0002-0830-7029",,,,
-"http://purl.org/np/RAXecDWH8gZVp7FZRP1m_Fg6EXH_uoZGhKN9blfN9lrfI","cancer cell engaged in extracellular matrix","https://orcid.org/0000-0002-0830-7029",,,,
-"http://purl.org/np/RAtsHwzNs36rGrLnoSbGrPD351Qw033Acoe4zmdXhsYlM","early human adipogenesis","https://orcid.org/0000-0003-2432-4125",,,,
-"http://purl.org/np/RAlKYv_sE8qwiSqsRdcr7KrkU1bsqlqiFmhDPtPBwpLrM","Social group size","https://orcid.org/0000-0002-0191-7211","http://purl.org/np/RAH8v3PKwnXbMjc1g0FMnRYKylKtiEEKgR-3zrnj2pDS8","Thank you for your comment.","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RACS5sSm45MGbuJrztnPrpdu1AuLiKxDni-6JcKzN5ZtM","glycocalyx bulk","https://orcid.org/0000-0002-0830-7029","http://purl.org/np/RACweRIgGmEvbyNLBHzPeko402hlFC36CHJQ7zoxVEPUA","Addressed in previous correction","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RACS5sSm45MGbuJrztnPrpdu1AuLiKxDni-6JcKzN5ZtM","glycocalyx bulk","https://orcid.org/0000-0002-0830-7029",,,,
-"http://purl.org/np/RAtsHwzNs36rGrLnoSbGrPD351Qw033Acoe4zmdXhsYlM","early human adipogenesis","https://orcid.org/0000-0003-2432-4125","http://purl.org/np/RAhOoiILMw1nbwX3H6m6Bz6IjnjKLn9JeP0L_-z9vZPw0","no action needed","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
-"http://purl.org/np/RAXecDWH8gZVp7FZRP1m_Fg6EXH_uoZGhKN9blfN9lrfI","cancer cell engaged in extracellular matrix","https://orcid.org/0000-0002-0830-7029","http://purl.org/np/RAyltU3D2Z571K86qce2j1neDLsp6HeDAhWyPmDuNDvEc","updated to reflect ecm binding as a property of the cancer cell","https://w3id.org/linkflows/reviews/AgreementComment","https://w3id.org/linkflows/reviews/PointAddressedComment"
+"resp_np"
+
+
+
+
+
+
+
+
+
+
+
+
+
+"http://purl.org/np/RA062HUn_Zu1nVB61cxpeesJ4DyUCVIK9HEgS5BJVkE-Y"
+"http://purl.org/np/RAQImRBJTpV_MmzEvzJQjBnMH4gO78ss8mP8UEHXj72BU"
+"http://purl.org/np/RAcYNDJKPFqtoBIiEcdg8yShvLzqV-vSxU7-npALtkJZg"
+"http://purl.org/np/RAfLGVuw7zXtYR2QndL2aZnfjZ1voMCCrowD0LdWWgOIA"
+"http://purl.org/np/RAoqiduQlZfzvdyESwhFCRyZUNFA5b7kHkjV6tqSHbwrc"
+"http://purl.org/np/RAkz3162Z4w0cRK6uQREUzdU3H6SKjtR7LKA0D-vRDKlw"
+
+
+"http://purl.org/np/RA913Qgx4UShjz9upA4IAsbYCkLhSxQ0vaV1figRNXkH8"
+"http://purl.org/np/RALGIIKvWi-5iWhzWafeDsmUndSVJ8pdf6luPtwSiou8Q"
+"http://purl.org/np/RAwsSVnefEYwpilUTTMTDgO-3QYYylNBBUdE249_SzYis"
+"http://purl.org/np/RAtBvXr7_qxO0dwA5Nq2hwWVCG7fJz1oI-dB7ssjzZ570"
+
+
+
+"http://purl.org/np/RAaPvL2hjBzAerIZPVV7afEBD2y2G0BZLiz9dbdl45ouo"
+"http://purl.org/np/RAFUOj4M9QAFD3Gf36uw_TDoIyG98ryT07P_pa-_MZ72w"
+"http://purl.org/np/RAD2d2pLO6hCu7pWsODSNHNxYGjKkyFJUlN1reDPn8G-0"
+
+"http://purl.org/np/RANmHoSCPExJaux1NMHu8bVhZzAducyyR4dTtHJSbv2SE"
+"http://purl.org/np/RAPTktNJpm0JblZpJsn0BUPbHeGV58k6sGQfuJUluyp04"
+"http://purl.org/np/RApJwqSdEJ2NCD9v2G9kOkdRxBzM-Aw1u6MZAoeGAtBAk"
+"http://purl.org/np/RATka2stDVfq6OTrm5zocL9eZUPETavRe6XhoVh3_Hx0I"
+"http://purl.org/np/RA2kBfTdI1zfinySdO_KecrMqS5x3kr5n87r5inNba_Bo"
+"http://purl.org/np/RAMpzb1Ec_HZZrVbr4RZAOemRxq80XUb8uZ00pDZ4R0uw"
+"http://purl.org/np/RAxrrwY-FEIMbEiJRhCuq0_PLGsleJBKvw5GIHQysg6xU"
+"http://purl.org/np/RAVfl0p-An2P-B-98rLtAmhVKafpT8S9W2GnF4IMrXPA8"
+
+
+"http://purl.org/np/RAH8v3PKwnXbMjc1g0FMnRYKylKtiEEKgR-3zrnj2pDS8"
+"http://purl.org/np/RACweRIgGmEvbyNLBHzPeko402hlFC36CHJQ7zoxVEPUA"
+
+"http://purl.org/np/RAhOoiILMw1nbwX3H6m6Bz6IjnjKLn9JeP0L_-z9vZPw0"
+
+"http://purl.org/np/RAyltU3D2Z571K86qce2j1neDLsp6HeDAhWyPmDuNDvEc"
