@@ -2,5 +2,5 @@
 
 TODO:
 
-- check queries on SPARQL endpoint!!!
 - check results
+- make sure the graph generated is correct and complete
