@@ -11,7 +11,7 @@ prefix Accepted: <http://purl.org/spar/pso/accepted-for-publication>
 prefix Rejected: <http://purl.org/spar/pso/rejected-for-publication>
 prefix pso: <http://purl.org/spar/pso/>
 
-select distinct ?submitted_np ?update_np where {
+select distinct ?submitted_np where {
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
