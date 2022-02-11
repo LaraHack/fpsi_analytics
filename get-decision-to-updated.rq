@@ -22,32 +22,20 @@ select distinct ?decision_np ?update_np where {
     ?submission_np dct:creator ?__author_iri .
     bind(?__author_iri as ?author)
   }
-  optional {
+  filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-  optional {
+  filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
-  optional {
-    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .  # TODO: move into npa:graph; TODO: check pubkey
-    graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
-    optional {
-      graph npa:graph { ?update_retr npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_retr np:hasAssertion ?ura .  # TODO: move into npa:graph
-      graph ?ura { ?update_retr_p npx:retracts ?update_np . }
-    }
-    filter(!bound(?update_retr))
-    optional { 
-      graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
-      graph ?usi { ?superseding npx:supersedes ?update_np . }
-    }
-    filter(!bound(?superseding))
-    optional {
-      graph npa:graph { ?decision_np npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?decision_np np:hasAssertion ?da .  # TODO: move into npa:graph
-      graph ?da {
-        ?update_np pso:withStatus ?decision .
-      }
-    }
+  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .
+  graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
+  filter not exists {
+    graph npa:graph { ?update_retr npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_retr np:hasAssertion ?ura .
+    graph ?ura { ?update_retr_p npx:retracts ?update_np . }
   }
+  graph npa:graph { ?decision_np npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?decision_np np:hasAssertion ?da .  # TODO: move into npa:graph
+  graph ?da { ?update_np pso:withStatus ?decision . }
 }
