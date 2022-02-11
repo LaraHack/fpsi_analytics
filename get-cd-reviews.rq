@@ -106,6 +106,7 @@ select distinct ?review_np ?newversion where {
     graph npa:graph { ?newversion vp: ?reviewer_pubkey . } ?newversion np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
     graph ?ri { ?newversion npx:supersedes ?review_np . }
   }
+  filter(!bound(?newversion))
   filter not exists {
     graph npa:graph { ?retraction vp: ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
     graph ?ra { ?somebody npx:retracts ?review_np . }
