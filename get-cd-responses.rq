@@ -97,11 +97,6 @@ select distinct ?resp_np ?newversion where {
     ?review_np vp: ?reviewer_pubkey .
   }
   optional {
-    graph npa:graph { ?newversion vp: ?reviewer_pubkey . } ?newversion np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
-    graph ?ri { ?newversion npx:supersedes ?review_np . }
-  }
-  filter(!bound(?newversion))
-  optional {
     graph npa:graph { ?retraction vp: ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
     graph ?ra { ?somebody npx:retracts ?review_np . }
   }
@@ -123,6 +118,10 @@ select distinct ?resp_np ?newversion where {
     optional {
       graph npa:graph { ?retraction vp: ?pubkey . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
       graph ?respra { ?somebody npx:retracts ?resp_np . }
+    }
+    optional {
+      graph npa:graph { ?newversion vp: ?pubkey . } ?newversion np:hasAssertion ?respra .  # TODO: move into npa:graph
+      graph ?respra { ?newversion npx:supersedes ?resp_np . }
     }
   }
 }
