@@ -19,7 +19,7 @@ prefix Disagreed: <https://w3id.org/linkflows/reviews/DisagreementComment>
 
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
-select distinct ?resp_np where {
+select distinct ?resp_np ?newversion where {
   graph ?submission_np_head {
     ?submission_np np:hasAssertion ?submission_np_assertion ;
       np:hasPublicationInfo ?submission_np_pubinfo .
