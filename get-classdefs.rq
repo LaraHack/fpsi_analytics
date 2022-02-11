@@ -22,11 +22,11 @@ select distinct ?class_np ?newversion_class where {
     bind(?__author_iri as ?author)
   }
   optional {
-    graph npa:graph { ?newversion npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion np:hasPublicationInfo ?si .  # TODO: move into npa:graph
-    graph ?si { ?newversion npx:supersedes ?submission_np . }
+    graph npa:graph { ?newversion_submission npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submission np:hasPublicationInfo ?si .  # TODO: move into npa:graph
+    graph ?si { ?newversion_submission npx:supersedes ?submission_np . }
   }
-  optional {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
+  filter not exists {
+    graph npa:graph { ?retraction_submission npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submission np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
   ?submitted_np np:hasAssertion ?submitted_np_a .  # TODO: move into npa:graph
@@ -37,7 +37,7 @@ select distinct ?class_np ?newversion_class where {
   ?class_np np:hasAssertion ?class_np_a ; np:hasPublicationInfo ?class_np_i .  # TODO: move into npa:graph
   graph ?class_np_i { ?class_np npx:introduces ?class . }
   optional {
-    graph npa:graph { ?newversion_class vp: ?pubkey . } ?newversion_class np:hasPublicationInfo ?ri . 
+    graph npa:graph { ?newversion_class vp: ?pubkey . } ?newversion_class np:hasPublicationInfo ?ri .
     graph ?ri { ?newversion_class npx:supersedes ?class_np . }
   }
   filter not exists {
