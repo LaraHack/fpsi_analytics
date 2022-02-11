@@ -1,0 +1,9 @@
+cd-responses orange
+cd-reviews yellow
+classdefs red
+decision green
+sp-responses orange
+sp-reviews yellow
+submissions brown
+superpatterns blue
+updated darkblue
