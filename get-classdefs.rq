@@ -10,7 +10,7 @@ prefix pso: <http://purl.org/spar/pso/>
 
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
-select distinct ?class_np ?newversion where {
+select distinct ?class_np ?newversion_class where {
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
   ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
@@ -34,9 +34,14 @@ select distinct ?class_np ?newversion where {
     ?spi ?spi_pred ?class .
   }
   graph npa:graph { ?class_np npa:hasValidSignatureForPublicKey ?pubkey . }
-    ?class_np np:hasAssertion ?class_np_a ; np:hasPublicationInfo ?class_np_i .  # TODO: move into npa:graph
-  graph ?class_np_i {
-    ?class_np npx:introduces ?class .
+  ?class_np np:hasAssertion ?class_np_a ; np:hasPublicationInfo ?class_np_i .  # TODO: move into npa:graph
+  graph ?class_np_i { ?class_np npx:introduces ?class . }
+  optional {
+    graph npa:graph { ?newversion_class vp: ?pubkey . } ?newversion_class np:hasPublicationInfo ?ri . 
+    graph ?ri { ?newversion_class npx:supersedes ?class_np . }
   }
-
+  filter not exists {
+    graph npa:graph { ?retraction vp: ?pubkey . } ?retraction np:hasAssertion ?ra .
+    graph ?ra { ?somebody npx:retracts ?class_np . }
+  }
 }
