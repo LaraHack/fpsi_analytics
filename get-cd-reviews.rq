@@ -23,7 +23,7 @@ prefix ActionNeeded: <https://w3id.org/linkflows/reviews/ActionNeededComment>
 
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
-select distinct ?review_np ?newversion where {
+select distinct ?review_np ?newversion_review where {
   graph ?submission_np_head {
     ?submission_np np:hasAssertion ?submission_np_assertion ;
       np:hasPublicationInfo ?submission_np_pubinfo .
@@ -88,8 +88,8 @@ select distinct ?review_np ?newversion where {
     ?review_np vp: ?reviewer_pubkey .
   }
   optional {
-    graph npa:graph { ?newversion vp: ?reviewer_pubkey . } ?newversion np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
-    graph ?ri { ?newversion npx:supersedes ?review_np . }
+    graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
+    graph ?ri { ?newversion_review npx:supersedes ?review_np . }
   }
   filter not exists {
     graph npa:graph { ?retraction vp: ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
