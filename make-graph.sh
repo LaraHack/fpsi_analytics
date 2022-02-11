@@ -10,7 +10,7 @@ while read line; do
   cat sparql-results/$query.csv \
     | sed 1d \
     | sed -r 's/^"([^"]*)".*$/\1/' \
-    | grep 'http://purl.org/np/' \
+    | grep '^http://purl.org/np/' \
     | sort \
     | uniq \
     | awk -v color=$color '{print "\""substr($1,20,10)"\" [fillcolor="color",URL=\""$1"\"]"}' \
