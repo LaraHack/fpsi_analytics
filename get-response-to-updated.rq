@@ -26,7 +26,7 @@ select distinct ?resp_np ?update_np where {
   graph ?submission_np_i {
     ?submission_np dct:creator ?__author_iri .
   }
-  optional {
+  filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
@@ -34,17 +34,19 @@ select distinct ?resp_np ?update_np where {
     graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion__submission_np np:hasPublicationInfo ?si .  # TODO: move into npa:graph
     graph ?si { ?newversion_submission_np npx:supersedes ?submission_np . }
   }
-  optional {
+  filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
   optional {
-    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .  # TODO: move into npa:graph;
-    graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
-    optional {
-      graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
-      graph ?usi { ?superseding npx:supersedes ?update_np . }
-    }
+    graph npa:graph { ?newversion_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submitted_np np:hasAssertion ?dsa .  # TODO: move into npa:graph
+    graph ?dsa { ?newversion_submitted_np npx:supersedes ?submission_np . }
+  }
+  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .  # TODO: move into npa:graph;
+  graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
+  optional {
+    graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_update_np np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
+    graph ?usi { ?newversion_update_np npx:supersedes ?update_np . }
   }
   graph ?review_np_head {
     ?review_np np:hasAssertion ?review_np_assertion ;
@@ -52,20 +54,8 @@ select distinct ?resp_np ?update_np where {
       a np:Nanopublication .
   }
   graph ?review_np_assertion {
-    ?r a lf:ReviewComment .
-    ?r lf:refersTo ?submitted_np .
-    optional {
-      ?r lf:refersToMentioningOf ?mention .
-    }
-    ?r a ?aspect .
-    values ?aspect { lf:ContentComment lf:StyleComment lf:SyntaxComment }
-    ?r a ?pos .
-    values ?pos { lf:PositiveComment lf:NeutralComment lf:NegativeComment }
-    ?r a ?action .
-    values ?action { lf:ActionNeededComment lf:NoActionNeededComment lf:SuggestionComment }
-    ?r lf:hasImpact ?imp .
-    ?r lf:hasCommentText ?textpre .
-    bind(strdt(replace(?textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?text_rc)
+    ?review_comment a lf:ReviewComment .
+    ?review_comment lf:refersTo ?submitted_np .
   }
   graph ?review_np_pubinfo {
     ?review_np dct:creator ?__reviewer_iri .
@@ -76,7 +66,7 @@ select distinct ?resp_np ?update_np where {
     ?review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey .
   }
   optional {
-    graph npa:graph { ?newversion_review npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
+    graph npa:graph { ?newversion_review npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .
     graph ?ri { ?newversion_review npx:supersedes ?review_np . }
   }
   optional {
@@ -84,17 +74,13 @@ select distinct ?resp_np ?update_np where {
     graph ?ra { ?somebody npx:retracts ?review_np . }
   }
   graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?resp_np np:hasAssertion ?respa .
-  graph ?respa {
-    ?resp_comment lf:isResponseTo ?review_np ;
-      lf:hasCommentText ?resp_textpre .
-    bind(strdt(replace(?resp_textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?resp_text)
-    ?resp_comment a ?agreement .
-    values ?agreement { lf:AgreementComment lf:DisagreementComment lf:PartialAgreementComment }
-    ?resp_comment a ?addressed .
-    values ?addressed { lf:PointAddressedComment lf:PointNotAddressedComment lf:PointPartiallyAddressedComment }
-  }
-  optional {
+  graph ?respa { ?resp_np lf:isResponseTo ?review_np .}
+  filter not exists {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
     graph ?respra { ?somebody npx:retracts ?resp_np . }
+  }
+  optional {
+    graph npa:graph { ?newversion_response_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_response_np np:hasAssertion ?respda .  # TODO: move into npa:graph
+    graph ?respda { ?newversion_response_np npx:supersedes ?resp_np . }
   }
 }
