@@ -22,18 +22,6 @@ select distinct ?resp_np ?update_np where {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .
     graph ?sra { ?somebody npx:retracts ?submission_np . }
   }
-  optional {
-    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion__submission_np np:hasPublicationInfo ?si .  # TODO: move into npa:graph
-    graph ?si { ?newversion_submission_np npx:supersedes ?submission_np . }
-  }
-  filter not exists {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?dra .
-    graph ?dra { ?somebody npx:retracts ?submitted_np . }
-  }
-  optional {
-    graph npa:graph { ?newversion_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submitted_np np:hasAssertion ?dsa .  # TODO: move into npa:graph
-    graph ?dsa { ?newversion_submitted_np npx:supersedes ?submission_np . }
-  }
   graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey . } ?update_np np:hasPublicationInfo ?ui .
   graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
   optional {
@@ -64,14 +52,14 @@ select distinct ?resp_np ?update_np where {
     graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .
     graph ?ra { ?somebody npx:retracts ?review_np . }
   }
-  graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?resp_np np:hasAssertion ?respa .
+  graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?resp_np np:hasAssertion ?respa .
   graph ?respa { ?resp_np lf:isResponseTo ?review_np .}
   filter not exists {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
+    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
     graph ?respra { ?somebody npx:retracts ?resp_np . }
   }
   optional {
-    graph npa:graph { ?newversion_response_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_response_np np:hasAssertion ?respda .
+    graph npa:graph { ?newversion_response_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_response_np np:hasAssertion ?respda .
     graph ?respda { ?newversion_response_np npx:supersedes ?resp_np . }
   }
 }

@@ -7,29 +7,9 @@ prefix frbr: <http://purl.org/vocab/frbr/core#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix pso: <http://purl.org/spar/pso/>
 
-prefix Syntax: <https://w3id.org/linkflows/reviews/SyntaxComment>
-prefix Style: <https://w3id.org/linkflows/reviews/StyleComment>
-prefix Content: <https://w3id.org/linkflows/reviews/ContentComment>
-
-prefix Neg: <https://w3id.org/linkflows/reviews/NegativeComment>
-prefix Neutr: <https://w3id.org/linkflows/reviews/NeutralComment>
-prefix Pos: <https://w3id.org/linkflows/reviews/PositiveComment>
-
-prefix NoActionNeeded: <https://w3id.org/linkflows/reviews/NoActionNeededComment>
-prefix Suggestion: <https://w3id.org/linkflows/reviews/SuggestionComment>
-prefix ActionNeeded: <https://w3id.org/linkflows/reviews/ActionNeededComment>
-
-prefix Addressed: <https://w3id.org/linkflows/reviews/PointAddressedComment>
-prefix PartiallyAddressed: <https://w3id.org/linkflows/reviews/PointPartiallyAddressedComment>
-prefix NotAddressed: <https://w3id.org/linkflows/reviews/PointNotAddressedComment>
-
-prefix Agreed: <https://w3id.org/linkflows/reviews/AgreementComment>
-prefix PartialAgreed: <https://w3id.org/linkflows/reviews/PartialAgreementComment>
-prefix Disagreed: <https://w3id.org/linkflows/reviews/DisagreementComment>
-
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
-select distinct ?review_np ?subm_np ?author ?reviewer ?aspect ?pos ?action ?imp ?mention ?text where {
+select distinct ?review_np ?subm_np where {
   graph ?submission_np_head {
     ?submission_np np:hasAssertion ?submission_np_assertion ;
       np:hasPublicationInfo ?submission_np_pubinfo ;
@@ -46,7 +26,7 @@ select distinct ?review_np ?subm_np ?author ?reviewer ?aspect ?pos ?action ?imp 
   graph npa:graph {
     ?submission_np npa:hasValidSignatureForPublicKey ?pubkey .
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?newversion npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion np:hasPublicationInfo ?si .  # TODO: move into npa:graph
     graph ?si { ?newversion npx:supersedes ?submission_np . }
   }
@@ -62,18 +42,6 @@ select distinct ?review_np ?subm_np ?author ?reviewer ?aspect ?pos ?action ?imp 
   graph ?review_np_assertion {
     ?r a lf:ReviewComment .
     ?r lf:refersTo ?subm_np .
-    optional {
-      ?r lf:refersToMentioningOf ?mention .
-    }
-    ?r a ?aspect .
-    values ?aspect { lf:ContentComment lf:StyleComment lf:SyntaxComment }
-    ?r a ?pos .
-    values ?pos { lf:PositiveComment lf:NeutralComment lf:NegativeComment }
-    ?r a ?action .
-    values ?action { lf:ActionNeededComment lf:NoActionNeededComment lf:SuggestionComment }
-    ?r lf:hasImpact ?imp .
-    ?r lf:hasCommentText ?textpre .
-    bind(strdt(replace(?textpre, "[^\n\t\r -􏿿]", "[NON-PRINTABLE-CHARACTER]"), xsd:string) as ?text)
   }
   graph ?review_np_pubinfo {
     ?review_np dct:creator ?__reviewer_iri .
@@ -82,24 +50,12 @@ select distinct ?review_np ?subm_np ?author ?reviewer ?aspect ?pos ?action ?imp 
   graph npa:graph {
     ?review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey .
   }
-  filter not exists {
+  optional {
     graph npa:graph { ?newversion npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?newversion np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
     graph ?ri { ?newversion npx:supersedes ?review_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
+    graph npa:graph { ?retraction_review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction_review_np np:hasAssertion ?ra .  # TODO: move into npa:graph
     graph ?ra { ?somebody_review_np npx:retracts ?review_np . }
-  }
-  optional {
-    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?xi .  # TODO: move into npa:graph; TODO: check pubkey
-    graph ?xi { ?update_np lf:isUpdateOf ?subm_np . }
-    filter not exists {
-      graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction np:hasAssertion ?ura .  # TODO: move into npa:graph
-      graph ?ura { ?somebody_update_np npx:retracts ?update_np . }
-    }
-    filter not exists {
-      graph npa:graph { ?superseding npa:hasValidSignatureForPublicKey ?pubkey2 . } ?superseding np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
-      graph ?usi { ?superseding npx:supersedes ?update_np . }
-    }
   }
 }
