@@ -37,6 +37,10 @@ select distinct ?resp_np ?newversion_response where {
     ?submission_np vp: ?pubkey .
   }
   optional {
+    graph npa:graph { ?newversion_submission vp: ?pubkey . } ?newversion_submission np:hasAssertion ?sa .  # TODO: move into npa:graph
+    graph ?sa { ?newversion_submission npx:supersedes ?submission_np . }
+  }
+  filter not exists {
     graph npa:graph { ?retraction vp: ?pubkey . } ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
     graph ?sa { ?somebody npx:retracts ?submission_np . }
   }
