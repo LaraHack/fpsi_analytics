@@ -33,8 +33,12 @@ select distinct ?decision_np ?update_np where {
   graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .
   graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
   filter not exists {
-    graph npa:graph { ?update_retr npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_retr np:hasAssertion ?ura .
-    graph ?ura { ?update_retr_p npx:retracts ?update_np . }
+    graph npa:graph { ?retraction_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction_update_np np:hasAssertion ?ura .
+    graph ?ura { ?retraction_update_np npx:retracts ?update_np . }
+  }
+  optional {
+    graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_update_np np:hasAssertion ?sra .
+    graph ?sra { ?newversion_update_np npx:supersedes ?update_np . }
   }
   graph npa:graph { ?decision_np npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?decision_np np:hasAssertion ?da .  # TODO: move into npa:graph
   graph ?da { ?update_np pso:withStatus ?decision . }
