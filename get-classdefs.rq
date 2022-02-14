@@ -52,4 +52,8 @@ select distinct ?class_np ?newversion_class_np where {
     graph npa:graph { ?retraction_class_np vp: ?pubkey . } ?retraction_class_np np:hasAssertion ?ra .
     graph ?ra { ?somebody_class_np npx:retracts ?class_np . }
   }
+  filter not exists {
+    graph npa:graph { ?example_class_np vp: ?pubkey . } ?example_class_np np:hasAssertion ?rai .
+    graph ?rai { ?example_class_np a npx:ExampleNanopub . }
+  }
 }
