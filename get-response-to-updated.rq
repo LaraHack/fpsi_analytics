@@ -10,17 +10,30 @@ prefix pso: <http://purl.org/spar/pso/>
 
 select distinct ?resp_np ?update_np where {
   graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
-    ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .
+    ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
     ?submitted_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
       pso:withStatus pso:submitted .
   }
   graph ?submission_np_i {
     ?submission_np dct:creator ?__author_iri .
+    bind(?__author_iri as ?author)
+  }
+  optional {
+    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submission_np np:hasPublicationInfo ?si .
+    graph ?si { ?newversion_submission_np npx:supersedes ?submission_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction np:hasAssertion ?sra .
-    graph ?sra { ?somebody npx:retracts ?submission_np . }
+    graph npa:graph { ?retraction_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submission_np np:hasAssertion ?sra .
+    graph ?sra { ?somebody_submission_np npx:retracts ?submission_np . }
+  }
+  optional {
+    graph npa:graph { ?newversion_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submitted_np np:hasPublicationInfo ?di .
+    graph ?di { ?newversion_submitted_np npx:supersedes ?submitted_np . }
+  }
+  filter not exists {
+    graph npa:graph { ?retraction_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submitted_np np:hasAssertion ?dra . 
+    graph ?dra { ?somebody_submitted_np npx:retracts ?submitted_np . }
   }
   graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey . } ?update_np np:hasPublicationInfo ?ui .
   graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
@@ -49,14 +62,14 @@ select distinct ?resp_np ?update_np where {
     graph ?ri { ?newversion_review_np npx:supersedes ?review_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .
-    graph ?ra { ?somebody npx:retracts ?review_np . }
+    graph npa:graph { ?retraction_review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction_review_np np:hasAssertion ?ra .
+    graph ?ra { ?somebody_review_np npx:retracts ?review_np . }
   }
   graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?resp_np np:hasAssertion ?respa .
   graph ?respa { ?resp_np lf:isResponseTo ?review_np .}
   filter not exists {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction np:hasAssertion ?respra .  # TODO: move into npa:graph
-    graph ?respra { ?somebody npx:retracts ?resp_np . }
+    graph npa:graph { ?retraction_resp_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction_resp_np np:hasAssertion ?respra .  # TODO: move into npa:graph
+    graph ?respra { ?somebody_resp_np npx:retracts ?resp_np . }
   }
   optional {
     graph npa:graph { ?newversion_response_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_response_np np:hasAssertion ?respda .
