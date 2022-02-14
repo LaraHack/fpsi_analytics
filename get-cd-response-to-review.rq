@@ -11,7 +11,7 @@ prefix pso: <http://purl.org/spar/pso/>
 
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
-select distinct ?resp_np ?newversion_response where {
+select distinct ?resp_np ?review_np where {
   graph ?submission_np_head {
     ?submission_np np:hasAssertion ?submission_np_assertion ;
       np:hasPublicationInfo ?submission_np_pubinfo .
@@ -82,25 +82,25 @@ select distinct ?resp_np ?newversion_response where {
     ?review_np vp: ?reviewer_pubkey .
   }
   optional {
-    graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
+    graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .
     graph ?ri { ?newversion_review npx:supersedes ?review_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_review vp: ?reviewer_pubkey . } ?retraction_review np:hasAssertion ?ra .  # TODO: move into npa:graph
+    graph npa:graph { ?retraction_review vp: ?reviewer_pubkey . } ?retraction_review np:hasAssertion ?ra .
     graph ?ra { ?somebody npx:retracts ?review_np . }
   }
   optional {
-    graph npa:graph { ?update_np vp: ?pubkey . } ?update_np np:hasPublicationInfo ?xi .  # TODO: move into npa:graph
+    graph npa:graph { ?update_np vp: ?pubkey . } ?update_np np:hasPublicationInfo ?xi .
     graph ?xi { ?update_np lf:isUpdateOf ?class_np . }
   }
   graph npa:graph { ?resp_np vp: ?pubkey . } ?resp_np np:hasAssertion ?respa .
   graph ?respa { ?resp_comment lf:isResponseTo ?review_np . }
   filter not exists {
-    graph npa:graph { ?retraction_resp vp: ?pubkey . } ?retraction_resp np:hasAssertion ?respra .  # TODO: move into npa:graph
-    graph ?respra { ?somebody npx:retracts ?resp_np . }
+    graph npa:graph { ?retraction_resp vp: ?pubkey . } ?retraction_resp np:hasAssertion ?respra .
+    graph ?respra { ?somebody_resp_np npx:retracts ?resp_np . }
   }
   optional {
-    graph npa:graph { ?newversion_response vp: ?pubkey . } ?newversion_response np:hasAssertion ?respra .  # TODO: move into npa:graph
+    graph npa:graph { ?newversion_response vp: ?pubkey . } ?newversion_response np:hasAssertion ?respra . npa:graph
     graph ?respra { ?newversion_response npx:supersedes ?resp_np . }
   }
 }
