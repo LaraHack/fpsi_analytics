@@ -82,9 +82,13 @@ select distinct ?resp_np ?review_np where {
     ?review_np dct:creator ?__reviewer_iri .
     bind(?__reviewer_iri as ?reviewer)
   }
-  optional { ?__reviewer_iri foaf:name ?reviewerLabel . }
   graph npa:graph {
     ?review_np vp: ?reviewer_pubkey .
+  }
+  filter not exists {
+    graph ?review_np_pubinfo {
+      ?review_np a npx:ExampleNanopub .
+    }
   }
   optional {
     graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .
