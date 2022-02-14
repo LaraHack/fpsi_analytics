@@ -36,5 +36,4 @@ select distinct ?submission_np ?newversion_submission_np where {
     graph npa:graph { ?retraction_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submitted_np np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody_submitted_np npx:retracts ?submitted_np . }
   }
-
 }
