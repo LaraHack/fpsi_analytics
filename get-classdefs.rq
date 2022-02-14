@@ -41,18 +41,18 @@ select distinct ?class_np ?newversion_class_np where {
   graph ?submitted_np_a {
     ?spi ?spi_pred ?class .
   }
-  graph npa:graph { ?class_np npa:hasValidSignatureForPublicKey ?pubkey . }
+  graph npa:graph { ?class_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
   ?class_np np:hasAssertion ?class_np_a ; np:hasPublicationInfo ?class_np_i .
   graph ?class_np_i { ?class_np npx:introduces ?class . }
   filter not exists {
     graph ?class_np_i { ?class_np a npx:ExampleNanopub . }
   }
-  optional {
-    graph npa:graph { ?newversion_class_np vp: ?pubkey . } ?newversion_class np:hasPublicationInfo ?ri .
-    graph ?ri { ?newversion_class_np npx:supersedes ?class_np . }
-  }
   filter not exists {
-    graph npa:graph { ?retraction_class_np vp: ?pubkey . } ?retraction_class_np np:hasAssertion ?ra .
+    graph npa:graph { ?retraction_class_np vp: ?pubkey2 . } ?retraction_class_np np:hasAssertion ?ra .
     graph ?ra { ?somebody_class_np npx:retracts ?class_np . }
+  }
+  optional {
+    graph npa:graph { ?newversion_class_np vp: ?pubkey2 . } ?newversion_class np:hasPublicationInfo ?ri .
+    graph ?ri { ?newversion_class_np npx:supersedes ?class_np . }
   }
 }
