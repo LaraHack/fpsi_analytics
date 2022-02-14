@@ -59,7 +59,7 @@ select distinct ?review_np ?newversion_review where {
   filter not exists {
     graph ?class_np_pubinfo {
       ?class_np a npx:ExampleNanopub .
-      }
+    }
   }
   graph npa:graph {
     ?class_np vp: ?pubkey .
@@ -76,6 +76,11 @@ select distinct ?review_np ?newversion_review where {
   graph ?review_np_pubinfo {
     ?review_np dct:creator ?__reviewer_iri .
     bind(?__reviewer_iri as ?reviewer)
+  }
+  filter not exists {
+    graph ?review_np_pubinfo {
+      ?review_np a npx:ExampleNanopub .
+    }
   }
   graph npa:graph {
     ?review_np vp: ?reviewer_pubkey .
