@@ -100,7 +100,7 @@ select distinct ?resp_np ?review_np where {
     graph ?respra { ?somebody_resp_np npx:retracts ?resp_np . }
   }
   optional {
-    graph npa:graph { ?newversion_response vp: ?pubkey . } ?newversion_response np:hasAssertion ?respra . npa:graph
+    graph npa:graph { ?newversion_response vp: ?pubkey . } ?newversion_response np:hasAssertion ?respra .
     graph ?respra { ?newversion_response npx:supersedes ?resp_np . }
   }
 }
