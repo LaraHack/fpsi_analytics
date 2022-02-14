@@ -38,6 +38,10 @@ select distinct ?update_np ?newversion_update_np where {
   }
   graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .
   graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
+  filter not exists {
+    graph npa:graph { ?retraction_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction_update_np np:hasAssertion ?dsi .
+    graph ?dsi { ?somebody_update_np npx:retracts ?update_np . }
+  }
   optional {
     graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_update_np np:hasPublicationInfo ?usi .
     graph ?usi { ?newversion_update_np npx:supersedes ?update_np . }
