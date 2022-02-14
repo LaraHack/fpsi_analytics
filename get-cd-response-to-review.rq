@@ -61,6 +61,11 @@ select distinct ?resp_np ?review_np where {
   graph ?class_np_pubinfo {
     ?class_np npx:introduces ?class .
   }
+  filter not exists {
+    graph ?class_np_pubinfo {
+      ?class_np a npx:ExampleNanopub .
+      }
+  }
   graph npa:graph {
     ?class_np vp: ?pubkey .
   }
