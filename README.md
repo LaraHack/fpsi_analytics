@@ -2,5 +2,5 @@
 
 TODO:
 
-- check results
-- make sure the graph generated is correct and complete
+- some superseeding nodes do not show up (need to be in first column of the row)
+- get rid of the example nanopubs realted to the "obesity" example 
