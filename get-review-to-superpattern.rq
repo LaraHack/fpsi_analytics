@@ -43,7 +43,7 @@ select distinct ?review_np ?submitted_np where {
   }
   graph ?review_np_assertion {
     ?r a lf:ReviewComment .
-    ?r lf:refersTo ?subm_np .
+    ?r lf:refersTo ?submitted_np .
   }
   graph ?review_np_pubinfo {
     ?review_np dct:creator ?__reviewer_iri .
