@@ -1,1 +1,2 @@
 classdefs red
+superpatterns blue
