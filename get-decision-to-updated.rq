@@ -33,8 +33,13 @@ select distinct ?decision_np ?update_np where {
     graph ?dra { ?somebody npx:retracts ?submitted_np . }
   }
 #  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
-  ?update_np np:hasPublicationInfo ?ui .
-  graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
+
+# non-strict checking of isUpdateOf chain:
+#  ?update_np np:hasPublicationInfo ?ui .
+#  graph ?ui {
+    ?update_np lf:isUpdateOf+ ?submitted_np .
+#  }
+
   filter not exists {
 #    graph npa:graph { ?retraction_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
     ?retraction_update_np np:hasAssertion ?ura .

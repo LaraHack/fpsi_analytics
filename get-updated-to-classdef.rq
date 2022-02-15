@@ -41,9 +41,15 @@ select distinct ?update_old_or_new_np ?class_np where {
     ?retraction_submitted_np np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody_submitted_np npx:retracts ?submitted_np . }
   }
+
 #  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
-  ?update_np np:hasPublicationInfo ?ui .
-  graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
+
+# non-strict checking of isUpdateOf chain:
+#  ?update_np np:hasPublicationInfo ?ui .
+#  graph ?ui {
+    ?update_np lf:isUpdateOf+ ?submitted_np .
+#  }
+
   optional {
 #    graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
     ?newversion_update_np np:hasPublicationInfo ?usi .
