@@ -1,0 +1,1347 @@
+@prefix this: <http://purl.org/np/RA0HU7k7XUj81ioBftZFk7ywHx5uBBlVgXduglUYgyW5w> .
+@prefix sub: <http://purl.org/np/RA0HU7k7XUj81ioBftZFk7ywHx5uBBlVgXduglUYgyW5w#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "In the context of Digital Humanities research, usage of the Linked Data Scopes ontology contributes to transparency of the research.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAkCjYmMU3obIrC4IpwUw84JW1ymd312yz0N0g-R9yes0#digital-humanities-research>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <https://www.wikidata.org/wiki/Q535347>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/canGenerallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/contributesTo>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAUxfk7XeLxn-2hiX3xWSlE5LXgkNW0MIFBGe2h3Bb3pM#usage-of-linked-data-scopes> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.1007%2F978-3-030-71903-6_32>;
+    prov:wasAssociatedWith orcid:0000-0001-9079-039X .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "With the rise of data driven methods in the humanities, it becomes necessary to develop reusable and consistent methodological patterns for dealing with the various data manipulation steps. This increases transparency, replicability of the research. Data scopes present a qualitative framework for such methodological steps. In this work we present a Linked Data model to represent and share Data Scopes";
+    prov:wasQuotedFrom <https://doi.org/10.1007%2F978-3-030-71903-6_32> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCUtUS5tVuMGtBUJ+dpxk0EKcI3xKBG4efTcKjAMHeQj6b+liabAld6kXxQKQIRVQomBKOcvoYJ9oTC4K4AMUPMfQsPSLt1noFxSahw86AXdAh7kWiVZu04Vs0NDuPPUOWwRQjXRf6gYFLQu3gA5o0PkWd7FZ6lrum6lNmi/LFQdwIDAQAB";
+    npx:hasSignature "N5Hv7EGA3/7bgw3qviB0+Z7KmLikshfWX8Lb5nZuvMs7RdJnH9BwttR9M2fFopg9JAHM3bcDkCY/Wkh84QN6CIJKTjxSO8gaLGleSWvA/Bru+l5y54DeeLjsnYC7tGy6TdLGbOnEiSt/81/4ti/1iR2qcRQfsV72UgOF5FPsqCQ=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-26T14:15:44.168+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9079-039X;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RATc9O9tCdQPlrsJeGNsTNO0PbENIzdKa6XAOex7dXfrY>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RA12lVwEtmddK9OwDkZQZlgJaOD2-0NXtAtO_jDaG-3VQ> .
+@prefix sub: <http://purl.org/np/RA12lVwEtmddK9OwDkZQZlgJaOD2-0NXtAtO_jDaG-3VQ#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "NGLY1 deficiency is a novel autosomal recessive disorder of the ERAD pathway.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q5>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAZVLqlkbwiX40n0GNxcxJany2Cw3oxMCrNuZtjBClryU#Dysfunction_of_ERAD_pathway>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/alwaysQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/isCausedBy>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.obolibrary.org/obo/MONDO_0014109> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://dx.doi.org/10.1038%2Fgim.2014.22>;
+    prov:wasAssociatedWith orcid:0000-0003-0169-8159 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "NGLY1 deficiency is a novel autosomal recessive disorder of the endoplasmic reticulum–associated degradation pathway";
+    prov:wasQuotedFrom <https://dx.doi.org/10.1038%2Fgim.2014.22> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOWrvo3T4o7/c9+al6pWVu3tb32/oqIpuNK/bZlFUgR6bnQRBl+7ub5H++34CVFU1pWEQb4RXsx39Q0fM1UPvJbZbXDYAsCEPzn0mzN+YAYdSZKAEyjM2cf4cqjQLwKBabOluVKfKetxTaKB/Jr/9U770dEc2LR3lOMFcbALPSXwIDAQAB";
+    npx:hasSignature "hyYI2msaoxuiMomUFjxJ0K37Cko2r6FQsFper7fJQGC9Y5HMIR//VzDqrzXwz1BGdno3PG8WLv3dvy2vDj+ULXqXxFfp4IuSVekvT902OJXbQuCv40jTVPSgc0LsT0HAll64tIu+nR8o2d8f9lr7mZSCitDc0FsEAcw2U9RUIF4=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T10:26:28.040+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-0169-8159;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RASPvPrnUq6SOsOkrgOsUvRbsfmC7dHd73FgUA6oRmlGg>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAGgV-nRMWhmgtxx5n3yE29NaopuuDVDKAuZC8IzCATag>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RA1FoHM9lwJ1XAV1eB871XcMAKfod73G_i4YtgoLpJVH0> .
+@prefix sub: <http://purl.org/np/RA1FoHM9lwJ1XAV1eB871XcMAKfod73G_i4YtgoLpJVH0#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Sonic hedgehog signalling pathway is an essential regulator of astrocytes development.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q5>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.obolibrary.org/obo/GO_0014002>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/mostlyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/affects>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.obolibrary.org/obo/GO_0007224> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://link.springer.com/article/10.1007%2Fs00018-020-03668-8>;
+    prov:wasAssociatedWith orcid:0000-0001-8004-0464 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Shh signaling and emerging data point to essential roles for this pleiotropic signaling pathway in regulating various functional properties of astrocytes.";
+    prov:wasQuotedFrom <https://link.springer.com/article/10.1007%2Fs00018-020-03668-8> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDs0t7O15Wx/NFoleAZFCOuayiJlHtJ7daow/5JX9WuaUi0hjKn+wPdhgxDuxQvTPQIe8D6JE1LZnY2LXBSOzDcHKn+QWB6Zkn/ZisiG24V5C0kGpNji6Ab0gaAFZYl32VdS0qLPr34LLsEDzJRUoZHWxg0KoHw85F0EzlrPH+JpwIDAQAB";
+    npx:hasSignature "k7zk9oeQr6IarkWA3guYqppm8oIdPR8cWvcJWsi+iyQUXLG3s7BOD5oqAPzfTQ0BYwl91ZIIO5kXyJ4sob/m4lSJUc6AQ3XqNbgg5hIsL/F5EUo9XpL511ywLMYVKJ054/HrTvDw0oip/0Z4KKKmRPse7PeyE9b6fOMj/wz8jAo=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-20T12:00:18.181+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-8004-0464;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAmfrSLt-WVQVNTrJi6IlNk3ZiQyYBds0NYGJpUEsPjfI>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RA22JAQihYeiJkNIjvwnxLPmjuG74yPcRXpPyVX8DV6fA> .
+@prefix sub: <http://purl.org/np/RA22JAQihYeiJkNIjvwnxLPmjuG74yPcRXpPyVX8DV6fA#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Adherence of a dataset to the FAIR Guiding Principles enables its automated discovery.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q1172284>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAFQovt9yQD7nZ2tdZ9_Uhpb7CsfT3k64pK7dh63xd-50#automatedDiscovery>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/canGenerallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/enables>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAodU4AmRjfzyjwtJK3luO0iyRJJPUBjkijKWdlMHvack#adherenceToTheFAIRGuidingPrinciples> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.1038/sdata.2016.18>;
+    prov:wasAssociatedWith orcid:0000-0003-4727-9435 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "the FAIR Principles put specific emphasis on enhancing the ability of machines to automatically find and use the data";
+    prov:wasQuotedFrom <https://doi.org/10.1038/sdata.2016.18> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCTQs+mANCSHWhIW/YPio468UdGNHsPvADpjfaW8um/v2L4AoDIANginfoU65VNbPT5D0ADt1y0uFNne3VEMr9Y+I2HFaz6IKj+LdYMJk6VUf5WJoImRHIX6BZQwcUc22CbTBFYxvqvp3UmmHrCrhLIZjDSyutExK3tOTRoMDjGowIDAQAB";
+    npx:hasSignature "hHeN9qAHbRXgslk6ztdFWPThPTPYrIjclGL+nH6YX7A88Qqj70dJFXZYBFGcv7OpOiEmEVsAlNs2Xn7oefCmpsfBTIivwVPLf8SWzXrpnDU2p9naIr6YMlyrNJ3wLg61pXWaOH82njsVr1GMtL7y0VGw8cCmhdvzASigRCfLAQs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-08T09:09:11.999+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-4727-9435;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAPLWOEA5t6_Kx6vVHtibWm92pg1XTN6FIZdWuaTyoy9g>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RA2hde9hXKfi0juhaF7yWd1aKsyZknPYj2Od-rLlAKmSM> .
+@prefix sub: <http://purl.org/np/RA2hde9hXKfi0juhaF7yWd1aKsyZknPYj2Od-rLlAKmSM#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Licenses with a non-commercial clause generally inhibit re-use of biodiversity data.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <https://w3id.org/linkflows/superpattern/terms/UniversalContext>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RA6snbuih8c4A_1jDlDPtYXKBcO5KE5jdoQUtu3V2xPY4#biodiversity-data-reuse>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/inhibits>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RA5Txa3acYP9_MUWEw7s7wenDTB1QXNMB7UehJW-2E-_8#license-with-non-commercial-clause> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.3897/zookeys.150.2189>;
+    prov:wasAssociatedWith orcid:0000-0001-9488-1870, orcid:0000-0002-2186-5033, orcid:0000-0002-8083-6048 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Unfortunately, in science and education, knowledge and data are often intermingled with copyrighted expressions of the same. Many publishers establish barriers to knowledge sharing by asserting copyright on non-copyrightable plain or formal expressions of that knowledge. In the area of biodiversity, often dealing with textually expressed data or data expressed in images, this is a major obstacle.";
+    prov:wasQuotedFrom <https://doi.org/10.3897/zookeys.150.2189> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "FIgRefqSunECIG9KljbO+Tnb8M2urUKrtGrs+5dB9GgXAXXwAXfE6r/S1Q/ZQn2RoZBkA8tBGqBHSsjnKx63ugHoc8v6Mbhfs5YHzZ5A0Rvn5cWdKVuRy7Xq3Dg0xeo12hViKX2CDyMAZmvhipHmxozSjSgwgMd3wq8WmWse28E=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-28T10:26:39.753+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAjk3YoNydLhbuD4BV9FD21ecELazvZibHHM7IXtJd-4A>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RA7MgxMCcVykE2RBJHm-Ou_CuuhPXqfcinswtIfjXReOc> .
+@prefix sub: <http://purl.org/np/RA7MgxMCcVykE2RBJHm-Ou_CuuhPXqfcinswtIfjXReOc#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "The cortex size of humans does not relate to their social group size";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q874405>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAlKYv_sE8qwiSqsRdcr7KrkU1bsqlqiFmhDPtPBwpLrM#social-group-size>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/neverQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/affects>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAIwMZ0StXU9DCY1WGoJMwD2NAc30mijCb0FML8TXIB0Y#relative-neocortex-size> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://royalsocietypublishing.org/doi/10.1098/rsbl.2021.0158>;
+    prov:wasAssociatedWith orcid:0000-0002-0191-7211 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "A cognitive limit on human group size cannot be derived in this manner.";
+    prov:wasQuotedFrom <https://royalsocietypublishing.org/doi/10.1098/rsbl.2021.0158> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3cICbOHZ1ecuLOsgovKwUlFRRvNWNgBJxoXCFAYWtU2OK97i/SjoIaxFphg9tkv9WxOjtPqYJ4cuM0E76wxeRZ7VBMHBrBIyCAGTvAfESWVQZCDgulG46VjffEzXuRmqOka/C5Ur6beLijFPMtiWEg6I2Mbj8z9vuHPxReIu4JwIDAQAB";
+    npx:hasSignature "EXpFs+fW9xBJRV+mVQffHfGmzxEtSOcO1NblQ7BNpjeCc8h0/9QvU9YTgD2lohAc41RgXELCL8n3VwOBtdB7ESfkIJfN9CsDOy07t3U/RiY9q7t8d7tPM88O4ODdS51BvWinT/Sn7qCSsGLNiEUgfQGlFgc+ROxd077uj4g8Ekg=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-19T14:25:52.269+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0191-7211;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAYJe1ruxzvy8idQGuxziYN4ri8OFeKZxzK-QdJPvDug0>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAbWbJCYlLhlYBDn9PVxdJP_WUbbi058aRcK-3sOJsRwY> .
+@prefix sub: <http://purl.org/np/RAbWbJCYlLhlYBDn9PVxdJP_WUbbi058aRcK-3sOJsRwY#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "The cortex size of humans does not relate to their social group size";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q874405>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAlKYv_sE8qwiSqsRdcr7KrkU1bsqlqiFmhDPtPBwpLrM#social-group-size>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/neverQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/affects>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAhnnsMWVM8M29NixCJfVDLWzRzwwCPnUD7LI2kxT-FME#relative-neocortex-size> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://royalsocietypublishing.org/doi/10.1098/rsbl.2021.0158>;
+    prov:wasAssociatedWith orcid:0000-0002-0191-7211 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "A cognitive limit on human group size cannot be derived in this manner.";
+    prov:wasQuotedFrom <https://royalsocietypublishing.org/doi/10.1098/rsbl.2021.0158> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3cICbOHZ1ecuLOsgovKwUlFRRvNWNgBJxoXCFAYWtU2OK97i/SjoIaxFphg9tkv9WxOjtPqYJ4cuM0E76wxeRZ7VBMHBrBIyCAGTvAfESWVQZCDgulG46VjffEzXuRmqOka/C5Ur6beLijFPMtiWEg6I2Mbj8z9vuHPxReIu4JwIDAQAB";
+    npx:hasSignature "ZFigeQHif/2IZT/QsVTqDThjV1P0Uy4IkGEmOC8W/Iygn8sGpJt4DOBDLDrT2egAwiesYqFxVqSDQnWCeY2C/yaVIob6j49CYlZor+VZQo1HdsGvEq3V7xiLobl/w4sMPxA690y9DF5zp8w3wggXaJxMjrAESSCpaPxtnKGhxt0=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T18:03:20.686+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0191-7211;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RA7MgxMCcVykE2RBJHm-Ou_CuuhPXqfcinswtIfjXReOc>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAYJe1ruxzvy8idQGuxziYN4ri8OFeKZxzK-QdJPvDug0>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAB_yY8X4BUuS9HMBso8SvvPfBX31cb8cCv41SgfyMBew> .
+@prefix sub: <http://purl.org/np/RAB_yY8X4BUuS9HMBso8SvvPfBX31cb8cCv41SgfyMBew#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Pharmacogenomics-guided clopidogrel strategy represents a cost-effective treatment for patients undergoing PCI";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAuLZtfsHn3NGe0Md8lLNvYmBseEtW9v1rVUVfJCpJYUE#patient_undergoing_PCI>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAjD4-Q2kO_cIUE52rde2uWbV3RtuCR90geXW90il2YX4#cost-effective_treatment>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/enables>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAvOAyEg-J8ynmZNrkCgg5XqGuqRo-dXcGFvgDLxtY6ck#pharmacogenomics_guided_clopidogrel_therapy> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://pubmed.ncbi.nlm.nih.gov/30647444/>;
+    prov:wasAssociatedWith orcid:0000-0002-0519-7776 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Our data show that pharmacogenomics-guided clopidogrel treatment strategy may represent a cost-effective choice compared with non-pharmacogenomics-guided strategy for patients undergoing PCI.";
+    prov:wasQuotedFrom <https://pubmed.ncbi.nlm.nih.gov/30647444/> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "QB48A6lfdmR/CEXbA4x4dn5mquRPNXjyvttOMRjoudp396TuV37KrUtG+bBpXP22QU1QOYe2ug47AREnfMIy8a29vCiVl8dG2yYZXCDzHIxiTiFf9FGleuFmNiqlQRx8b9EAsrXgvgjzVyMCMNnY6ep5BiVDdVhtoWVk1ubiE0E=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-04T10:33:15.100+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAWCmrfeUUoh1tOl_7qFYoWgrYeonmX4FzAFboCSEoL-s>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RABzhulhaPhOzo9MxWxl230N72-azdlpMNwu_HtDqsuUc> .
+@prefix sub: <http://purl.org/np/RABzhulhaPhOzo9MxWxl230N72-azdlpMNwu_HtDqsuUc#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "When talking about biodiversity data, licenses with a non-commercial clause generally inhibit data reuse.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q28946370>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://www.wikidata.org/entity/Q58023280>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/inhibits>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RA5Txa3acYP9_MUWEw7s7wenDTB1QXNMB7UehJW-2E-_8#license-with-non-commercial-clause> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.3897/zookeys.150.2189>;
+    prov:wasAssociatedWith orcid:0000-0001-9488-1870, orcid:0000-0002-2186-5033, orcid:0000-0002-8083-6048 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Unfortunately, in science and education, knowledge and data are often intermingled with copyrighted expressions of the same. Many publishers establish barriers to knowledge sharing by asserting copyright on non-copyrightable plain or formal expressions of that knowledge. In the area of biodiversity, often dealing with textually expressed data or data expressed in images, this is a major obstacle.";
+    prov:wasQuotedFrom <https://doi.org/10.3897/zookeys.150.2189> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "pqWZhyfzNdZhmUc6gaCbmq2GWJb4R/pWwk4rMvlOn35Nx9y44fsz9zGWDyEEVg0frXq6EOsd5Umyq5YY1BIHFJBjiOKUaVmtxU+MuyCuTCbLp3s1k+hYl7ocAl40F5SOMfcY+Dqxte1rNQM5rmVQJa9wJ+mmKejz7Cs+Bm9xsD8=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-30T21:54:51.835+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RA2hde9hXKfi0juhaF7yWd1aKsyZknPYj2Od-rLlAKmSM>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAjk3YoNydLhbuD4BV9FD21ecELazvZibHHM7IXtJd-4A>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAeRSya2qIYymsBxiqOZP_oaQpHXUVXiydKvPCFM-7DDQ> .
+@prefix sub: <http://purl.org/np/RAeRSya2qIYymsBxiqOZP_oaQpHXUVXiydKvPCFM-7DDQ#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Mutations in STX1B are associated with epilepsy";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q5>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://www.wikidata.org/entity/Q41571>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/frequentlyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/cooccursWith>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAPVWYH0x-xyDa9PfBcGUFly3m1FNEO43KG9s0uH-y6yo#STX1B-mutation> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used <http://doi.org/10.1038/ng.3130>, sub:quote;
+    prov:wasAssociatedWith orcid:0000-0001-6501-0806, orcid:0000-0002-6532-5880, orcid:0000-0002-7979-9921 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Our results thus implicate STX1B and the presynaptic release machinery in fever-associated epilepsy syndromes";
+    prov:wasQuotedFrom <http://doi.org/10.1038/ng.3130> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCY36SLWPLee0SZGM108+7dyjGzKFYg9t09XuL3js13jO3CDzqAZygcrwbJsbLQMRHYvWf0Mkly1ePLgdb43NqEbXiDHC4o49nHjhi2bSWeRDJ4jFicvhpL1Sjv5N0oFU3wTA8KGN+rYvQ10xhZXcjuuiCMb6yInj6wJ2S+wI14fwIDAQAB";
+    npx:hasSignature "QF+C9lXmczrn9cJWuimwLG45Mpntk2CcRIWbeWmKvfE9gmQ6MPKa/x6AfNgVQRnPWppJdDoWepK6m/+m8tWY1WQsXn0KZ8sER+graEHQYuE70Mz9JzuBTyYu0vpWj5jteoCve5fyvFkhkYVjoRK9tV40GDW6zh+bHqH5tBwrc/0=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-29T10:35:33.912+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-6501-0806;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAGo62Hb_Bx1klF4pn1q1Ty40860e3A7Sz4hr2vojZ2wA>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAgoIxfXPqNDY8vnK2EmBQDAFwuFIDJtfaMplTvPMq3pg> .
+@prefix sub: <http://purl.org/np/RAgoIxfXPqNDY8vnK2EmBQDAFwuFIDJtfaMplTvPMq3pg#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "In the context of Digital Humanities research, usage of the Linked Data Scopes ontology contributes to transparency of the research.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAkCjYmMU3obIrC4IpwUw84JW1ymd312yz0N0g-R9yes0#digital-humanities-research>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <https://www.wikidata.org/wiki/Q535347>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/canGenerallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/contributesTo>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAcPa1aO8kAt8QYwjQoJq-PIzYvo0jCzYrAiOX_XOyk1w#usage-of-linked-data-scopes> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.1007%2F978-3-030-71903-6_32>;
+    prov:wasAssociatedWith orcid:0000-0001-9079-039X .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "With the rise of data driven methods in the humanities, it becomes necessary to develop reusable and consistent methodological patterns for dealing with the various data manipulation steps. This increases transparency, replicability of the research. Data scopes present a qualitative framework for such methodological steps. In this work we present a Linked Data model to represent and share Data Scopes";
+    prov:wasQuotedFrom <https://doi.org/10.1007%2F978-3-030-71903-6_32> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCUtUS5tVuMGtBUJ+dpxk0EKcI3xKBG4efTcKjAMHeQj6b+liabAld6kXxQKQIRVQomBKOcvoYJ9oTC4K4AMUPMfQsPSLt1noFxSahw86AXdAh7kWiVZu04Vs0NDuPPUOWwRQjXRf6gYFLQu3gA5o0PkWd7FZ6lrum6lNmi/LFQdwIDAQAB";
+    npx:hasSignature "Zn7f/GSB5lE7q1x9oYoWH2jMAnMIGJhh5bdy6spvltV7O2OWok82jK7IcZoHdtFrzFcMKyrb18VhXJD6KY1NFP2zui5n0gyBNzv/aruPWUdTx8WaijNQv75R96ZmUHIrWknF8lpF53HjGK1TfIVUevYvOlNFv88DiQdMo9naSPM=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-19T09:25:07.665+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9079-039X;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RA0HU7k7XUj81ioBftZFk7ywHx5uBBlVgXduglUYgyW5w>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RATc9O9tCdQPlrsJeGNsTNO0PbENIzdKa6XAOex7dXfrY>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAh1GOK4_HhqeUeJhIyV_DDCFFTY9jeeiKWgbSzooWEi4> .
+@prefix sub: <http://purl.org/np/RAh1GOK4_HhqeUeJhIyV_DDCFFTY9jeeiKWgbSzooWEi4#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Glycocalyx bulk mechanically drives integrin clustering in cancer cells engaged with the extracellular matrix";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAaOAF90U6YxAvnchfj0dRtT5HRz320Pz202aGap-VfuI>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAFH8AVn-wnTcSGxvPZ1Uiy_AtOhINlynnAxxiCdcTVWU>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/increases>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RA-jkb7qPNTSOe_EXltW_rlQWQ9x3_Y1KOzW6J_bbPz4U> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://www.nature.com/articles/nature13535>;
+    prov:wasAssociatedWith orcid:0000-0002-0830-7029 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Expression of large tumour-associated glycoproteins in non-transformed mammary cells promoted focal adhesion assembly and facilitated integrin-dependent growth factor signalling to support cell growth and survival.";
+    prov:wasQuotedFrom <https://www.nature.com/articles/nature13535> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCluZ2msgo7OqPkyRoZMluzpaLX8KRHyDs3J/cZwm6+Vq/CKVIGsGaT7/XH435cE9J8dwCgQ/Jssjlj6oqX+nSI9xXBtMH9ZeyGHFBzK1cUBy/rRSez4EnwbS1sKMBSc4MBCXQ9R3jZ3GpsN0GmIrS1ukKkUBQrREBYpb4w5MbGywIDAQAB";
+    npx:hasSignature "mErMxpyxV2TBnjOSFJPZQjcwcmVwkTI5bVL3OV2ZKaMGEvrFSODflCL9x4myu4fbeppqds7sQ3u2IJuS+a90QbwVG2CLySbEKo/LSp6SKW+bkpCP5KcYt8vj77rkiHgyvbqOSjRQB9whklkhN1gZ0YAfFw2aZH/S9Nf5YJUpAx4=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-12T09:34:18.883-08:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0830-7029;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RASZZ5T1Ca5gpCMPubKoypR_0WcSUkHiMaADu9o1BS1Xs>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAmG2bXxwkIzARk4Mda-lqZU0RVnkpX7hUHBIPcdLHQUU> .
+@prefix sub: <http://purl.org/np/RAmG2bXxwkIzARk4Mda-lqZU0RVnkpX7hUHBIPcdLHQUU#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "the protein TDP-43 generally contributes to the transcription of STMN2 in human motor neurons";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q101404862>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAiUYY1dbEDbcsscapEmbMMHsgJmjEJ1yUoNsxZIH1r90#transcription-of-stmn2>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/canGenerallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/contributesTo>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://www.wikidata.org/entity/Q21133247> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.1038/s41593-018-0300-4>;
+    prov:wasAssociatedWith orcid:0000-0003-1099-3328 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "expression of STMN2, which encodes a microtubule regulator, declined after TDP-43 knockdown and TDP-43 mislocalization as well as in patient-specific motor neurons";
+    prov:wasQuotedFrom <https://doi.org/10.1038/s41593-018-0300-4> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCWyqaozls49LpqjUqCP7APpHaYeBQB0+Erh4usb4W7fWZRVVybfNg+HynNs2p//7PbfQraV2BEMxNMXF85hDpCjFMt9fQdvnS+zYqCh/p352aCoss3zHjzMp6BE9GhmGvevpGh7eJxSkO9WZ54ld38kq7VrcZQ4Rmy0IlLfk/BdQIDAQAB";
+    npx:hasSignature "L8uNtEZZ3sXEtasw18HmJZSvMaHvtlmGz5ZMHz/Qw4Q3TCv+1eqG/1XalFeFNwrTy715BS9P8ygD0uKRjIcDzONv91pM5I0RwyRT4keBIFHRhN6jzu2LujsdByfQd0VFOfndgH2jaBVg9nZhvDanuZGC0hw5OAXT/E6HygtDoVs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-20T17:26:34.506Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-1099-3328;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RA5rRFy9eDTZSTyVeuTrAO7aCg_JPcq1cVmWWjc-kjFOM>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAMgThXW6xx8QiPmW9VhVuxWCN2ZWe-pmxDcFfdx_A7z0> .
+@prefix sub: <http://purl.org/np/RAMgThXW6xx8QiPmW9VhVuxWCN2ZWe-pmxDcFfdx_A7z0#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Triples in the OpenBiodiv knowledge graph releases are generally semantic triples extracted from biodiversity literature.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAlm6vh2zpFLg189qrDYPtppkL790Pqaw-q2KUhyfJtRY#release-of-openbiodiv-knowledge-graph>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAEpHUXRKtaLE3Z24sgIUdaxwTBsK2bjshyq9yF00145Y#semantic-triples-extracted-from-biodiversity-literature>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/isSameAs>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAaEkIiJLmBJP5kK3JdYjseCRqwutYbdnI8Q3VbzrK9VA#triple-in-openbiodiv-knowledge-graph> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.3390/publications7020038>;
+    prov:wasAssociatedWith orcid:0000-0002-8083-6048 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "OpenBiodiv encompasses data extracted from more than 5000 scholarly articles published by Pensoft and many more taxonomic treatments extracted by Plazi from journals of other publishers. The data from both sources are converted to Resource Description Framework (RDF) and integrated in a graph database using the OpenBiodiv-O ontology and an RDF version of the Global Biodiversity Information Facility (GBIF) taxonomic backbone.";
+    prov:wasQuotedFrom <https://doi.org/10.3390/publications7020038> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "ZbscFpNaJ3Wi/kWcKUWM3P5FbINnIPh3Z/BHMuCI95sAZjbD6XQD4AVUf7XUfFcMZtK8QKRE6S88zdLayXPklZC2x2GWcrh0j7Rk5UisHVcyZrukL0jH0D7oxXw2xi+W1FhX+6X8cgilEcums1MTLZ9bx3BdA1Goii6pR32gOLQ=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-30T22:13:32.063+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RAN_chNfWR9hbEkfjwOfMpq1piwOgAj6q2sJ-qbDzaLOk>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAWcrMY8mnsI26BfokKid75MO1c2uVenyW9tmxj0VhbnY>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+@prefix sub: <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Pharmacogenomics-guided clopidogrel strategy represents a cost-effective treatment for patients undergoing PCI";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RA9pwySo43TIfbvPuhK4ZuisvMsDvZ6TeR5N6MNKft8Nw#patient_undergoing_PCI>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAlfRfPak2jsyyVy4knjOmxQSYtociP8Cc0O7gemMtqQY#cost-effective_treatment>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/enables>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAOxICL4ULhzr5mxC9cyzStCBtpoETQGin6Vr-Ns7JNtA#pharmacogenomics_guided_clopidogrel_therapy> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://pubmed.ncbi.nlm.nih.gov/30647444/>;
+    prov:wasAssociatedWith orcid:0000-0002-0519-7776 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Our data show that pharmacogenomics-guided clopidogrel treatment strategy may represent a cost-effective choice compared with non-pharmacogenomics-guided strategy for patients undergoing PCI.";
+    prov:wasQuotedFrom <https://pubmed.ncbi.nlm.nih.gov/30647444/> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "cEQZgFxgTd99RYcmWsqM1LCUciLc1lXuy6mfjgKhn0BfsMcesqIKR+51xx6lfHD31tnz/bovIDh1YEPORGBe2PEvFMPvRRFd67B9s1awepEPll5tA7wmhkTOjPrEUXISQaQu93NbpbYMYSGnRx+Shv7jNxE+hPrxQw7fD6EgJr8=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:22:59.625+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RAB_yY8X4BUuS9HMBso8SvvPfBX31cb8cCv41SgfyMBew>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAWCmrfeUUoh1tOl_7qFYoWgrYeonmX4FzAFboCSEoL-s>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAN_chNfWR9hbEkfjwOfMpq1piwOgAj6q2sJ-qbDzaLOk> .
+@prefix sub: <http://purl.org/np/RAN_chNfWR9hbEkfjwOfMpq1piwOgAj6q2sJ-qbDzaLOk#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "The OpenBiodiv knowledge graph contains semantic triples extracted from biodiversity literature";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <https://w3id.org/linkflows/superpattern/terms/UniversalContext>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAEpHUXRKtaLE3Z24sgIUdaxwTBsK2bjshyq9yF00145Y#semantic-triples-extracted-from-biodiversity-literature>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/alwaysQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/includes>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAY2Gg01ffDVLprAakuMqpizAjksasRtTal_UsCf94LL8#openbiodiv-knowledge-graph> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.3390/publications7020038>;
+    prov:wasAssociatedWith orcid:0000-0002-8083-6048 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "OpenBiodiv encompasses data extracted from more than 5000 scholarly articles published by Pensoft and many more taxonomic treatments extracted by Plazi from journals of other publishers. The data from both sources are converted to Resource Description Framework (RDF) and integrated in a graph database using the OpenBiodiv-O ontology and an RDF version of the Global Biodiversity Information Facility (GBIF) taxonomic backbone.";
+    prov:wasQuotedFrom <https://doi.org/10.3390/publications7020038> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "F2YtELjAJ90rk22vLtoc2m3W8seS5UZRkcQnDblGHdYK16Hxmc5AuIGqRPe6z6QKN4OKjxCpvtQnexW5m0IvOPb3TCK6BVz6hnErbd3V/WKkY8PBUMMUPW8k6pmUXUyqYVA/sgbt8yiN5sReUEvDehqoMmjTfIJSQI0k+LZWKEA=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-28T09:34:32.093+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAWcrMY8mnsI26BfokKid75MO1c2uVenyW9tmxj0VhbnY>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAokVMmiZSbRh01diNeJLum4p13kUd-NZjGFuVtxVz4Bs> .
+@prefix sub: <http://purl.org/np/RAokVMmiZSbRh01diNeJLum4p13kUd-NZjGFuVtxVz4Bs#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Sometimes Vitamin A targets are the same as genes associated with CAKUT";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <https://w3id.org/linkflows/superpattern/terms/UniversalContext>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <https://www.wikidata.org/wiki/Q109406949>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/sometimesQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/isSameAs>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <https://www.wikidata.org/wiki/Q109406970> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used <https://doi.org/10.12688/f1000research.51018.1>;
+    prov:wasAssociatedWith orcid:0000-0002-5301-3142, orcid:0000-0002-7770-620X .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCYtnHL3Zu9ExrWA28zHnRA9JKmj8V9awChjn+7oBn9p6wdLx61J5mD/lWK9H8NdxSk/fdoaEJAin2WLiWs6qBJdSZOLbfq7HSF/GVYoTkuvvjnf2rozS08mI+xwEXMsa7XVa+4bz8jauPyp/eEFbcIHEWtstiuQvjvoXKizK5HQIDAQAB";
+    npx:hasSignature "eRq1l9rsmh0+Dh3vybRf4smxuxGz9c9RrM+tl9Yt9siK+1bWyCqECJtJk7IjWREnELKy2VEKAy7L7Syh1dzjiM1h5ehLMwVesC3N1rOnzHl4WWVFhdjB8PrsWNOnXFw7KPXR+PNRApWxib2bv6T6CHDkDp0KekRM7woVYh4KI1g=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-05T10:15:53.951+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-7770-620X;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RAp7Xi0Qtv5aHY1hXJ1FayaIQrGNNv9NW3xBC7gipklVk>;
+    a npx:ExampleNanopub;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAsdV8EQ1qn_lXOrgoG7mPaF1JXdFLzt2iYy4eMhMMuM4>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAoo8EvTgfkxJw5SgZXbJvRl5nQG7ygeGaHp8Zud1U4Zw> .
+@prefix sub: <http://purl.org/np/RAoo8EvTgfkxJw5SgZXbJvRl5nQG7ygeGaHp8Zud1U4Zw#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Glycocalyx bulk mechanically drives integrin clustering in cancer cells engaged with the extracellular matrix";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAaOAF90U6YxAvnchfj0dRtT5HRz320Pz202aGap-VfuI#ecm-bound-cancer-cell>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAFH8AVn-wnTcSGxvPZ1Uiy_AtOhINlynnAxxiCdcTVWU#integrin-clustering>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/increases>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RA-jkb7qPNTSOe_EXltW_rlQWQ9x3_Y1KOzW6J_bbPz4U#glycocalyx-bulk> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://www.nature.com/articles/nature13535>;
+    prov:wasAssociatedWith orcid:0000-0002-0830-7029 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Expression of large tumour-associated glycoproteins in non-transformed mammary cells promoted focal adhesion assembly and facilitated integrin-dependent growth factor signalling to support cell growth and survival.";
+    prov:wasQuotedFrom <https://www.nature.com/articles/nature13535> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCluZ2msgo7OqPkyRoZMluzpaLX8KRHyDs3J/cZwm6+Vq/CKVIGsGaT7/XH435cE9J8dwCgQ/Jssjlj6oqX+nSI9xXBtMH9ZeyGHFBzK1cUBy/rRSez4EnwbS1sKMBSc4MBCXQ9R3jZ3GpsN0GmIrS1ukKkUBQrREBYpb4w5MbGywIDAQAB";
+    npx:hasSignature "Mc6yNlLGIu3AnhZEmrajdDXbYISe2imFa8OBDfBIWbQvJlOdxKaohx+dR9jwbzecksZ+bMNvtojD/ftMxBeLu3126L1DmW0kxIWoTvfi+RRhgeaXTkRT/RV7EBmcuEfzEU6Lk3YkK/v4dOiCP24mei1YLdsNRLK4n44AvOr54lE=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-26T17:14:38.341-07:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0830-7029;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RAh1GOK4_HhqeUeJhIyV_DDCFFTY9jeeiKWgbSzooWEi4>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RASZZ5T1Ca5gpCMPubKoypR_0WcSUkHiMaADu9o1BS1Xs>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAp7Xi0Qtv5aHY1hXJ1FayaIQrGNNv9NW3xBC7gipklVk> .
+@prefix sub: <http://purl.org/np/RAp7Xi0Qtv5aHY1hXJ1FayaIQrGNNv9NW3xBC7gipklVk#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Sometimes Vitamin A targets are the same as genes associated with CAKUT";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <https://w3id.org/biolink/vocab/ChemicalToGeneAssociation>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.obolibrary.org/obo/CHEBI_12777>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/sometimesQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/isSameAs>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <https://www.omim.org/entry/610805> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used <https://doi.org/10.12688/f1000research.51018.1>;
+    prov:wasAssociatedWith orcid:0000-0002-7770-620X .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCYtnHL3Zu9ExrWA28zHnRA9JKmj8V9awChjn+7oBn9p6wdLx61J5mD/lWK9H8NdxSk/fdoaEJAin2WLiWs6qBJdSZOLbfq7HSF/GVYoTkuvvjnf2rozS08mI+xwEXMsa7XVa+4bz8jauPyp/eEFbcIHEWtstiuQvjvoXKizK5HQIDAQAB";
+    npx:hasSignature "FitfZsiLDK2uEqUKk7xDI1bMUxXgFwVVEYo+zmWU2cNcuF8FEbcvkYCXprYlSsGSTThbfvn+PF9F9WTfo7PDUjXdqJU7bm8DqccsP4PEZceD0RqzPwJKh8IElK59LOhHs2mFr7E0iPThEawZp4PggD6MZ3rsP6QiR/cT9bcwfSI=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-21T16:30:40.803+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-7770-620X;
+    npx:introduces sub:spi;
+    a npx:ExampleNanopub;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAsdV8EQ1qn_lXOrgoG7mPaF1JXdFLzt2iYy4eMhMMuM4>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RASPvPrnUq6SOsOkrgOsUvRbsfmC7dHd73FgUA6oRmlGg> .
+@prefix sub: <http://purl.org/np/RASPvPrnUq6SOsOkrgOsUvRbsfmC7dHd73FgUA6oRmlGg#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "NGLY1 deficiency is a novel autosomal recessive disorder of the ERAD pathway.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q200779>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAYXLV7qwfx03AGH7k5ZP6zeMj_vx2kj88z5UQ5OX3C90#Dysfunction_of_ERAD_pathway>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/alwaysQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/isCausedBy>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.obolibrary.org/obo/MONDO_0014109> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://dx.doi.org/10.1038%2Fgim.2014.22>;
+    prov:wasAssociatedWith orcid:0000-0003-0169-8159 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "NGLY1 deficiency is a novel autosomal recessive disorder of the endoplasmic reticulum–associated degradation pathway";
+    prov:wasQuotedFrom <https://dx.doi.org/10.1038%2Fgim.2014.22> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOWrvo3T4o7/c9+al6pWVu3tb32/oqIpuNK/bZlFUgR6bnQRBl+7ub5H++34CVFU1pWEQb4RXsx39Q0fM1UPvJbZbXDYAsCEPzn0mzN+YAYdSZKAEyjM2cf4cqjQLwKBabOluVKfKetxTaKB/Jr/9U770dEc2LR3lOMFcbALPSXwIDAQAB";
+    npx:hasSignature "Ip4ij65LduJE6HexDIJWZaEHdkkwtsgBwzwbUOp8OLrMTzHvNsBwPB/tNYdAgJFSveRvd533iIiuwiENl1J9flvos+2AAPuIyLqqD/Ufnc8rr4Lxt5F7dj+EWALIqaXgjdSbVmhBsh7IYwmNzsxnOf5R0Ik9jjInnPrJHi/CN6Q=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-08T16:48:24.973+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-0169-8159;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAGgV-nRMWhmgtxx5n3yE29NaopuuDVDKAuZC8IzCATag>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAxBBJ2WkonyQNlXfdCAOaCi64J_xqgVGeaLjVQow9M88> .
+@prefix sub: <http://purl.org/np/RAxBBJ2WkonyQNlXfdCAOaCi64J_xqgVGeaLjVQow9M88#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "A regulatory element within the first intron of FTO affects IRX3 and IRX5 expression during early adipogenesis";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAtsHwzNs36rGrLnoSbGrPD351Qw033Acoe4zmdXhsYlM#early-human-adipogenesis>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAwkXiTv7qCtqOYzlR6ozZRGLRtG6mlogrYdRQ1E4dRDg#expression-of-genes-IRX3-and-IRX5>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/affects>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAxLYvJ1JrRf2JAowYGbGJleQPmqtpXnXsIvse7GmLeT8#regulatory-element-within-the-first-intron-of-FTO> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.1056/NEJMoa1502214>;
+    prov:wasAssociatedWith orcid:0000-0003-2432-4125 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "The rs1421085 T-to-C single-nucleotide variant disrupts a conserved motif for the ARID5B repressor, which leads to derepression of a potent preadipocyte enhancer and a doubling of IRX3 and IRX5 expression during early adipocyte differentiation.";
+    prov:wasQuotedFrom <https://doi.org/10.1056/NEJMoa1502214> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCS1s1OiABv1mrDnFWp9ecwHdQ+UlJn6JCDYXspRsbZgsm2QAiofbnVvf6gfkcjjScd5fq3sW/W8r/o7bdafVSd6xuTG/vHrO9Ax/guPiJ6O/Z57Hk0nQy6c+l71HpaJ2BPPWKOgYiFZ/8eulmuM6BJ8TDKxoBtcqP5QbvN9KYjlQIDAQAB";
+    npx:hasSignature "MUs9dML4QrzQVnfT2hqnfkif+lpusIVT0o4c74M69kgNQmA0CXVRzUZIHcvavS/pMlobVFBhfkTQ7kHs5a0CZGVrvtOhQJYD17eXzg6dwD/LqdYNYErvWxduyvwInXMasXpDZdYkFtddAFt/5Vny6BSBoiIzclnGfGwahZhFmpg=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-27T10:22:03.671-07:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-2432-4125;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAxxJWyH8OdTJLs-ZY1q5jVq1OWFNOoLFvwEcUFyR8EEo>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAXkuXJ4IK10Ai9F39_tOFDy6ewi7znau6OQhUEXP4nPc> .
+@prefix sub: <http://purl.org/np/RAXkuXJ4IK10Ai9F39_tOFDy6ewi7znau6OQhUEXP4nPc#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "The protein TDP-43 represses cryptic exon inclusion in the gene UNC13A.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q18036664>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.obolibrary.org/obo/VariO_0504>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/inhibits>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://www.wikidata.org/entity/Q21133247> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://www.biorxiv.org/content/10.1101/2021.04.02.438213v1>;
+    prov:wasAssociatedWith orcid:0000-0003-2310-3013 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "Here we show that TDP-43 represses a cryptic exon splicing event in UNC13A.";
+    prov:wasQuotedFrom <https://www.biorxiv.org/content/10.1101/2021.04.02.438213v1> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCKr8mDKqduV4sU41GiCvB3R8Hrv3cdc+FxyCD0iONSayErC8oLDfaMBKZSLMkPBapyXeAjWbYmhuey7COxiakpTqSGKzy8AnMKNZ7tgd3KATKBPLQiawisIxx0BFpxw50yA2spZhv2bEpdni9wUOGa1MG+0sKC6bo2DnjxxxeA/wIDAQAB";
+    npx:hasSignature "PBzoLld6dCDC9ZgL1KNN0L2bEiH1Z7MpIHnpGlhKKV7YqsrlFL9pS6z6mtMTrdfZwSqupg1o2pwWluWqIzindCa8rTEVzcQAOrEvFP/Xg0yef/f7lDeVrvyVZDxhhgWULwH8hesWGqhWgY0cLlmGsXtS4ft5GVU7o60AO5HMCAM=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-26T13:03:28.286Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-2310-3013;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAIWvdnjqmOl2VP_eR2oFBxk97A_dw__FeusMzuRE9SIY>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+@prefix sub: <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Strong static magnetic fields change the cell cortex in dejellied fertilizable stage VI Xenopus lavis oocytes.";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q107644116>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://www.wikidata.org/entity/Q5058180>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/affects>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://www.wikidata.org/entity/Q107644241> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.1186/1477-044X-3-2>;
+    prov:wasAssociatedWith orcid:0000-0001-9488-1870 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "A complex reorganization of cortical pigmentation was found in dejellied eggs as a function of the magnetic field and the field exposure time.";
+    prov:wasQuotedFrom <https://doi.org/10.1186/1477-044X-3-2> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "akW42kGSMe1sO8SU8VqcxrOSssOW3LLBQONsJBvsigKDV8AiBQ/MaR30ve20LhTgtrFQrwB1jA9ZhCy9zrYxyKVCRKvJzovPppGaTyHd8KCeAhsN0ZmSuu2XKUHqbiepzahoPyxX0GdqCox9PS9D6ssFe8WoRHPVRk3Jzwd5k1I=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:18:24.918+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RA2JlYTWhC4PuhqFITergBXYM0CdZ_H-uTJ751rOIntlU>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAyg4UgIVovBGia-hk4qEuRzOq14fcOlYAclC6YGQaVYU> .
+@prefix sub: <http://purl.org/np/RAyg4UgIVovBGia-hk4qEuRzOq14fcOlYAclC6YGQaVYU#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "Sometimes Vitamin A targets are the same as genes associated with CAKUT";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <https://w3id.org/linkflows/superpattern/terms/UniversalContext>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <https://www.wikidata.org/wiki/Q109406949>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/sometimesQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/isSameAs>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <https://www.wikidata.org/wiki/Q109406970> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used <https://doi.org/10.12688/f1000research.51018.1>;
+    prov:wasAssociatedWith orcid:0000-0002-5301-3142, orcid:0000-0002-7770-620X .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCYtnHL3Zu9ExrWA28zHnRA9JKmj8V9awChjn+7oBn9p6wdLx61J5mD/lWK9H8NdxSk/fdoaEJAin2WLiWs6qBJdSZOLbfq7HSF/GVYoTkuvvjnf2rozS08mI+xwEXMsa7XVa+4bz8jauPyp/eEFbcIHEWtstiuQvjvoXKizK5HQIDAQAB";
+    npx:hasSignature "I3KzDEFUZEyP4oMCYA1MchEGcmMpEmFjZLwDF/TtxkXD1yoRj40BopL4n78X+5ldUVsO4ufY1J8JXe+TFgPXX/Z9mBLE+EbzhuX7pGRG9woM16C5fLTwrJoJL7rcUK6ii7moFZ/LsChOKdtC0DrZuie+BecFjvt6xKi693gPih4=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-15T09:46:19.034+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-7770-620X;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RAokVMmiZSbRh01diNeJLum4p13kUd-NZjGFuVtxVz4Bs>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAsdV8EQ1qn_lXOrgoG7mPaF1JXdFLzt2iYy4eMhMMuM4>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+

@@ -1,0 +1,616 @@
+@prefix this: <http://purl.org/np/RA0frq_DIL62KAINYDqz_jPa92eTO1py-n8x9Q0xKRSkU> .
+@prefix sub: <http://purl.org/np/RA0frq_DIL62KAINYDqz_jPa92eTO1py-n8x9Q0xKRSkU#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAsdV8EQ1qn_lXOrgoG7mPaF1JXdFLzt2iYy4eMhMMuM4> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-7770-620X .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCYtnHL3Zu9ExrWA28zHnRA9JKmj8V9awChjn+7oBn9p6wdLx61J5mD/lWK9H8NdxSk/fdoaEJAin2WLiWs6qBJdSZOLbfq7HSF/GVYoTkuvvjnf2rozS08mI+xwEXMsa7XVa+4bz8jauPyp/eEFbcIHEWtstiuQvjvoXKizK5HQIDAQAB";
+    npx:hasSignature "dAcF/jZlPKS4GjUrmKxnb6Kg1xJIoupiZehVySMn6a+73wsUQo0iCnOUPxH4JTupcDwbuq/JGbhrQwpauoKy2icIlK5zBauR71bHqeazbyr6hmuFvviHUqUEZ7rZiEdUair+UH8EDLGw2731yGGESpfcyOXmvUfKKdQm09lutRE=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-09-28T15:13:11.185+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-7770-620X;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RA1eLUsfsZjvCGBP_nWVWaQQKMxET71h_GGxSpotNaCyg> .
+@prefix sub: <http://purl.org/np/RA1eLUsfsZjvCGBP_nWVWaQQKMxET71h_GGxSpotNaCyg#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAPLWOEA5t6_Kx6vVHtibWm92pg1XTN6FIZdWuaTyoy9g> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-4727-9435 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCTQs+mANCSHWhIW/YPio468UdGNHsPvADpjfaW8um/v2L4AoDIANginfoU65VNbPT5D0ADt1y0uFNne3VEMr9Y+I2HFaz6IKj+LdYMJk6VUf5WJoImRHIX6BZQwcUc22CbTBFYxvqvp3UmmHrCrhLIZjDSyutExK3tOTRoMDjGowIDAQAB";
+    npx:hasSignature "D1dtKENlTEr0njp5C2PIsACxirnD1QvxFLUDBILSBEfgnjjJxaBk68rofVTKKoSEuUXNzf8VkjL4O6cFevHP9kk2IwH4WLMAwuommswnfvcrlA9yCGtL/j6I3OczjA+E8JmUHkyDwjbIWAh2CkY7RROkQNq8pfdbd8YHuU80Htc=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-25T16:50:34.002+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-4727-9435;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RA2AsGFOtNd5iOxPvjA4ANQ2EVNqCeaYVynPs19tiIuEk> .
+@prefix sub: <http://purl.org/np/RA2AsGFOtNd5iOxPvjA4ANQ2EVNqCeaYVynPs19tiIuEk#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAmfrSLt-WVQVNTrJi6IlNk3ZiQyYBds0NYGJpUEsPjfI> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8004-0464 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDs0t7O15Wx/NFoleAZFCOuayiJlHtJ7daow/5JX9WuaUi0hjKn+wPdhgxDuxQvTPQIe8D6JE1LZnY2LXBSOzDcHKn+QWB6Zkn/ZisiG24V5C0kGpNji6Ab0gaAFZYl32VdS0qLPr34LLsEDzJRUoZHWxg0KoHw85F0EzlrPH+JpwIDAQAB";
+    npx:hasSignature "MAW9qP5mkVgxOnpccIj3cvi7fFbMiFvd3Z++qLcO9tYbr5gFAPbRUCOZeVhPRSHgfmolz0Cd+SAhKCXooDyrZBAL3i+ENPJEijDdgCZSbA+blyTHmjo9On4tsmrGsZJhgnGc6G0a0DfN9bpFhs17rpFKFc69hBcH1RsG1l8Aoho=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-25T16:02:12.948+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-8004-0464;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RA9OIEkDfzAXvpUfUi64J5OUGqspF59RBIkAVIDxkjRjE> .
+@prefix sub: <http://purl.org/np/RA9OIEkDfzAXvpUfUi64J5OUGqspF59RBIkAVIDxkjRjE#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RA2JlYTWhC4PuhqFITergBXYM0CdZ_H-uTJ751rOIntlU> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCTdrjHE05mWzJPiHs4goY9HN9AYf2BWYdsPbcKwtRZQP3t+ZrdRv/YX7kMvWDsdrRtAYMm/1xpfor45o2iASPOoQut/QT/kspp5X1UFjwCkAW0s4N2Jr7WInnc6S1YONO3KFhmrnf2U12Tz6vRoPoCxR/clP7FJPQqnYW3ywFqFwIDAQAB";
+    npx:hasSignature "kqiNi2QVorOB1GPgThWdCbULGJQQFjCSTCGIJA2lXDe3wVqPFnx0P7apn77qZrrTC4tc6+gl8663RJkTrJ+ags15SDdaUTW3ZKOlRCpGRGXj90/0WK6U6PKcYYS/oZTwIFzEHOPqlZRCrGN29hDL4qPnmqWMdW+DeAwlkUlpr/Q=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-07-25T20:31:26.159-04:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAAzPmVWXvodpYKPeeaxfRck9b62gGWE5C1-xSnQEb-Es> .
+@prefix sub: <http://purl.org/np/RAAzPmVWXvodpYKPeeaxfRck9b62gGWE5C1-xSnQEb-Es#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAWcrMY8mnsI26BfokKid75MO1c2uVenyW9tmxj0VhbnY> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-8083-6048 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "ajIPW7z9EAnQ+zaPcueBNrZYBIYZsxe4dIxwsM3suSRNVosS1O+XHpMC7h+Lshhso7koqz9OLI0f6950BJpb/9AZ29mYTe7r1Yo+5oDctnkPwz34aVsr6V86q6210WSOyf8MvXGh8/+i26CPHzYKkS1alwBN9rWkafFhJZQCggQ=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-07-07T13:27:50.304+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RABm7U1wy2kfOol84sbgyx2MYWx8H98Kgs48f6E-gg1DU> .
+@prefix sub: <http://purl.org/np/RABm7U1wy2kfOol84sbgyx2MYWx8H98Kgs48f6E-gg1DU#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RATc9O9tCdQPlrsJeGNsTNO0PbENIzdKa6XAOex7dXfrY> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9079-039X .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCUtUS5tVuMGtBUJ+dpxk0EKcI3xKBG4efTcKjAMHeQj6b+liabAld6kXxQKQIRVQomBKOcvoYJ9oTC4K4AMUPMfQsPSLt1noFxSahw86AXdAh7kWiVZu04Vs0NDuPPUOWwRQjXRf6gYFLQu3gA5o0PkWd7FZ6lrum6lNmi/LFQdwIDAQAB";
+    npx:hasSignature "QG/2kqmctlJFdDRZmekMgwNawrhEbxw60GA9lgM/yHgX98/lKeR9YG174TEC80WyQzRk2BJ1xblu73ihBrygqjYl0kiT2F96MyxEBwNiZVze+AZwdS4vI5SSHo4NM2kXMA6UgHEkFVzyHH0V8vOxdrPxYg5Q3o0+i7MN4chQLTY=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-25T14:47:20.270+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9079-039X;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RABz7zzArEi6Fd3oXlRMCC3rpqtGjvB56TW2oIb6jCe5U> .
+@prefix sub: <http://purl.org/np/RABz7zzArEi6Fd3oXlRMCC3rpqtGjvB56TW2oIb6jCe5U#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAWCmrfeUUoh1tOl_7qFYoWgrYeonmX4FzAFboCSEoL-s> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0XO//lG7w8A+eB1KT87c5XqhAGx6AHQB1sw58GsNCfmUM9DCZaylHZyPnsp/DcgP2Rm9AVwU0TFiUcHqFZUp7t9L1CfoscpgTSVHaWoclKpPTwsjooCmB1W0KbTDOufErW/jIHD7cvM8TH5TFMogMtBHLomSgM3JIv/4G9M0E8QIDAQAB";
+    npx:hasSignature "Db1wO0cmqBrxfVNTHDoWX36He8wIE8aQCvAFqZD0SgQ/T4FX6UBqOSwvf1EorFpRg4nHmbynvSN7ZHbgSNqu44uWdPvbNP0mgj0aFPtW/xUmvzI0lsAyOAgye7ZVNT2Pp4fW0/6Eaij0LkkV/B0kR7vNBlGHZ/t4REMI8HGJQWs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-07-05T13:50:31.926+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAcXejWBl2yH4PgxGJjxurb3zZ5uAdZqqjxBdqrlEiahA> .
+@prefix sub: <http://purl.org/np/RAcXejWBl2yH4PgxGJjxurb3zZ5uAdZqqjxBdqrlEiahA#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RA5rRFy9eDTZSTyVeuTrAO7aCg_JPcq1cVmWWjc-kjFOM> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-1099-3328 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCWyqaozls49LpqjUqCP7APpHaYeBQB0+Erh4usb4W7fWZRVVybfNg+HynNs2p//7PbfQraV2BEMxNMXF85hDpCjFMt9fQdvnS+zYqCh/p352aCoss3zHjzMp6BE9GhmGvevpGh7eJxSkO9WZ54ld38kq7VrcZQ4Rmy0IlLfk/BdQIDAQAB";
+    npx:hasSignature "Ri+zzABrf17Dl2LEWZJdSehWX0bpGpTwjfk1/cZInuR4u8LSiy5UeXDofXpOqvcW8d/0BdrH1uezcHpg1bSe27jOdqbwAqsQ89HC7FmxoaXMDUDbfOh5fb0+MSphrjJnwFPKRVjAfuGdrbP33VJWr6KtJrVgnF/LVPebCdCHpno=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-15T22:42:36.537Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-1099-3328;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAeoac32KBT_xDg8W5F8O8aDrLeBG_QZTeEwcIiMwCKnc> .
+@prefix sub: <http://purl.org/np/RAeoac32KBT_xDg8W5F8O8aDrLeBG_QZTeEwcIiMwCKnc#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAYJe1ruxzvy8idQGuxziYN4ri8OFeKZxzK-QdJPvDug0> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0191-7211 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3cICbOHZ1ecuLOsgovKwUlFRRvNWNgBJxoXCFAYWtU2OK97i/SjoIaxFphg9tkv9WxOjtPqYJ4cuM0E76wxeRZ7VBMHBrBIyCAGTvAfESWVQZCDgulG46VjffEzXuRmqOka/C5Ur6beLijFPMtiWEg6I2Mbj8z9vuHPxReIu4JwIDAQAB";
+    npx:hasSignature "LIqbrzqjOiUfH1iLXmpfU/2iOmRk2AMxnXNboDEPc8+2yoUnKTAE1jxuyVennNRhcAx6JAhV0qVpeOPd6EPtgZXwoa/SuS3T4f12gKUUQ/DKJrxq7Pnss9cHFZDgChWUX1uQ0pDs0VVwPi7lp0UFFog+EXPEpx7p8lM2q5BOVsU=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-25T11:26:22.468Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0191-7211;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAiL9z2iIO4MJFG3B5OzJjc222c_Nbi8Mq3IV1Reys76g> .
+@prefix sub: <http://purl.org/np/RAiL9z2iIO4MJFG3B5OzJjc222c_Nbi8Mq3IV1Reys76g#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAxxJWyH8OdTJLs-ZY1q5jVq1OWFNOoLFvwEcUFyR8EEo> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-2432-4125 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCS1s1OiABv1mrDnFWp9ecwHdQ+UlJn6JCDYXspRsbZgsm2QAiofbnVvf6gfkcjjScd5fq3sW/W8r/o7bdafVSd6xuTG/vHrO9Ax/guPiJ6O/Z57Hk0nQy6c+l71HpaJ2BPPWKOgYiFZ/8eulmuM6BJ8TDKxoBtcqP5QbvN9KYjlQIDAQAB";
+    npx:hasSignature "kAR71BSxJmj25ereP1dS0DZegjGsM6tlyKSKk8J4dEdUDQnQjLIdkKdbXa7y60rKXRJzxXGmEz7R+2NBDQ985YBJWTL1O/aMATYV1XDY41M8M6nhP6E+I7GLFw/KFo+AFkKz4V2EfIxoz9X+39UnQDQYVXL4K+KuZg+Q5d1r2YI=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-27T20:49:04.296-07:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-2432-4125;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RA_Oxu-sQ9OHwId1ff5dBPILr0A8bHSqtvBZsXx9ozk8w> .
+@prefix sub: <http://purl.org/np/RA_Oxu-sQ9OHwId1ff5dBPILr0A8bHSqtvBZsXx9ozk8w#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAGgV-nRMWhmgtxx5n3yE29NaopuuDVDKAuZC8IzCATag> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-0169-8159 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOWrvo3T4o7/c9+al6pWVu3tb32/oqIpuNK/bZlFUgR6bnQRBl+7ub5H++34CVFU1pWEQb4RXsx39Q0fM1UPvJbZbXDYAsCEPzn0mzN+YAYdSZKAEyjM2cf4cqjQLwKBabOluVKfKetxTaKB/Jr/9U770dEc2LR3lOMFcbALPSXwIDAQAB";
+    npx:hasSignature "HmqJtUL8glM+efdGvzIJEK6R6Z0LlfF1zHVK4dho9gBiUUtRo352wyI4B1Fea4tlmFyL5khoNbJCk5q2jdxkcv2Q6RprEWMZSZJoob8oVBSj5XjlJtWAH9qxmRttXZc8EMZS5XoEat1HbsNU+Rd1kwn7jYyWqwvg6u/qola08bk=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-06T16:22:31.363+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-0169-8159;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAs22kXX7N5azIwj-a4h5hbRD9Q4n_V228PGLs4gU21Cw> .
+@prefix sub: <http://purl.org/np/RAs22kXX7N5azIwj-a4h5hbRD9Q4n_V228PGLs4gU21Cw#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAjk3YoNydLhbuD4BV9FD21ecELazvZibHHM7IXtJd-4A> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870, orcid:0000-0002-2186-5033,
+      orcid:0000-0002-8083-6048 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "os7IjZWlwkGX+s84mmWFUTL4ZJxycSWYH58k0/tYlm4lHuI/D4hv3sLNUGGOacSa8+vgyVZbM1dPCn/nX8/BdzYBHjWOKk7ebuX0TuEq2VavkkzfkFBQhvAxUohVnF6dJ3l2Pq7Tk7t84h5Ob2EK0XrcVPYaa/qT/dp/ULJcNVs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-07-07T13:30:15.758+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAvyymGXyJJgGj8_FQqGZe5i2DkAdL5BgyVwWf-YOVy4E> .
+@prefix sub: <http://purl.org/np/RAvyymGXyJJgGj8_FQqGZe5i2DkAdL5BgyVwWf-YOVy4E#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RASZZ5T1Ca5gpCMPubKoypR_0WcSUkHiMaADu9o1BS1Xs> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0830-7029 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCluZ2msgo7OqPkyRoZMluzpaLX8KRHyDs3J/cZwm6+Vq/CKVIGsGaT7/XH435cE9J8dwCgQ/Jssjlj6oqX+nSI9xXBtMH9ZeyGHFBzK1cUBy/rRSez4EnwbS1sKMBSc4MBCXQ9R3jZ3GpsN0GmIrS1ukKkUBQrREBYpb4w5MbGywIDAQAB";
+    npx:hasSignature "C3317CLOhzzAIquV8kxd0qLe1FE+W5UbQGwv/22YAXfxKEt0G9iRwJqfnRSeJ+Im2a2Xr5LBCeko7zuFH8MeHU3nsG0Ve/+yCwpgVIe7PC+dKsWv/Q0eYRbPIdMfWvxCy9z+OUwuaSg14tG2AvRy1DrC8yJi0EUBX3/FT1v2POc=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-27T12:34:33.588-05:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0830-7029;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAWI_6Wpnnvn5scKXazYTqMftavW-HW9S-Alqlh1lf6Eo> .
+@prefix sub: <http://purl.org/np/RAWI_6Wpnnvn5scKXazYTqMftavW-HW9S-Alqlh1lf6Eo#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAGo62Hb_Bx1klF4pn1q1Ty40860e3A7Sz4hr2vojZ2wA> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-6501-0806 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCY36SLWPLee0SZGM108+7dyjGzKFYg9t09XuL3js13jO3CDzqAZygcrwbJsbLQMRHYvWf0Mkly1ePLgdb43NqEbXiDHC4o49nHjhi2bSWeRDJ4jFicvhpL1Sjv5N0oFU3wTA8KGN+rYvQ10xhZXcjuuiCMb6yInj6wJ2S+wI14fwIDAQAB";
+    npx:hasSignature "VVvyrm0ePbAzzYtztRh+MUbuaGi89jstyp6nUt033mWmdLa+MnZjCH08bIj22w7jsXd6vw0NuFb82JSRyMqJUN49Po130XP7hc/szYwlC4SqhbGaGvRmUgLrHxdtZHPWLMz8DYjldgKksLa7J9h3h+0ddDGGhH2EIrao8M1vu20=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-28T08:23:50.540+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-6501-0806;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
+@prefix this: <http://purl.org/np/RAy7c1VP3jTV9ZVzDIgTeNIvYIwGn0fiJhxIvzdZ9Itj0> .
+@prefix sub: <http://purl.org/np/RAy7c1VP3jTV9ZVzDIgTeNIvYIwGn0fiJhxIvzdZ9Itj0#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://purl.org/np/RAIWvdnjqmOl2VP_eR2oFBxk97A_dw__FeusMzuRE9SIY> <http://purl.org/spar/pso/withStatus>
+      <http://purl.org/spar/pso/submitted>;
+    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-2310-3013 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCKr8mDKqduV4sU41GiCvB3R8Hrv3cdc+FxyCD0iONSayErC8oLDfaMBKZSLMkPBapyXeAjWbYmhuey7COxiakpTqSGKzy8AnMKNZ7tgd3KATKBPLQiawisIxx0BFpxw50yA2spZhv2bEpdni9wUOGa1MG+0sKC6bo2DnjxxxeA/wIDAQAB";
+    npx:hasSignature "DRcZEJky416gLXbCTrAUYT9MrGxNgBFhgY0kT5PRlT3R7EPmHru8CD6YAwpWGry/K12bh+wd4WYdJp+My+2+YMukmI19de6guAb/yF3UOhbEbHhxvYOc6Ja12jXRZYbdmochA+xfN9Z5sAM80mHtVcmVpI0f9UpIMveK6Bd5i1M=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-12T14:32:09.925Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-2310-3013;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAK8ZEEuVneG9bh_OxG_ep6pAzjURATo2c0zTGlYDVwwk> .
+}
+
+
