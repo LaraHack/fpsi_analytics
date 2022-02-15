@@ -50,6 +50,7 @@ ls sparql-results \
   | awk '{print "\""substr($1,20,10)"\" ->\""substr($2,20,10)"\""}' \
   >> np-graph.dot
 
+cat np-graph.manual.dot >> np-graph.dot
 cat np-graph.tail.dot >> np-graph.dot
 
 dot -Tsvg np-graph.dot > np-graph.svg
