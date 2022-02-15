@@ -38,7 +38,7 @@ select distinct ?class_np ?newversion_class_np where {
     graph ?dra { ?somebody_submitted_np npx:retracts ?submitted_np . }
   }
   # check also the new version of submitted_np:
-  { ?submitted_np np:hasAssertion ?submitted_np_a . } union { ?newversion_submitted_np np:hasAssertion ?submitted_np_a . }
+  { ?submitted_np np:hasAssertion ?submitted_np_a . } union { filter(bound(?newversion_submitted_np)) ?newversion_submitted_np np:hasAssertion ?submitted_np_a . }
   graph ?submitted_np_a {
     ?spi ?spi_pred ?class .
   }
