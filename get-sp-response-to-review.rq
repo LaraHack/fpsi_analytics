@@ -23,15 +23,17 @@ select distinct ?resp_np ?review_np where {
     ?submission_np dct:creator ?__author_iri .
     bind(?__author_iri as ?author)
   }
-  graph npa:graph {
-    ?submission_np npa:hasValidSignatureForPublicKey ?pubkey .
-  }
+#  graph npa:graph {
+#    ?submission_np npa:hasValidSignatureForPublicKey ?pubkey .
+#  }
   optional {
-    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submission_np np:hasPublicationInfo ?si .  # TODO: move into npa:graph
+#    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?newversion_submission_np np:hasPublicationInfo ?si .  # TODO: move into npa:graph
     graph ?si { ?newversion_submission_np npx:supersedes ?submission_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_1 npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_1 np:hasAssertion ?sa .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction_1 npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?retraction_1 np:hasAssertion ?sa .  # TODO: move into npa:graph
     graph ?sa { ?somebody_submission_np npx:retracts ?submission_np . }
   }
   graph ?review_np_head {
@@ -47,33 +49,40 @@ select distinct ?resp_np ?review_np where {
     ?review_np dct:creator ?__reviewer_iri .
     bind(?__reviewer_iri as ?reviewer)
   }
-  graph npa:graph {
-    ?review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey .
-  }
+#  graph npa:graph {
+#    ?review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey .
+#  }
   optional {
-    graph npa:graph { ?newversion_review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?newversion_review_np np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
+#    graph npa:graph { ?newversion_review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey . }
+    ?newversion_review_np np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
     graph ?ri { ?newversion_review_np npx:supersedes ?review_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction npa:hasValidSignatureForPublicKey ?reviewer_pubkey . }
+    ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
     graph ?ra { ?somebody_review_np npx:retracts ?review_np . }
   }
   optional {
-    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?xi .  # TODO: move into npa:graph; TODO: check pubkey
+#    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+    ?update_np np:hasPublicationInfo ?xi .  # TODO: move into npa:graph; TODO: check pubkey
     graph ?xi { ?update_np lf:isUpdateOf ?subm_np . }
     filter not exists {
-      graph npa:graph { ?retraction_2 npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction_2 np:hasAssertion ?ura .  # TODO: move into npa:graph
+#      graph npa:graph { ?retraction_2 npa:hasValidSignatureForPublicKey ?pubkey2 . }
+      ?retraction_2 np:hasAssertion ?ura .  # TODO: move into npa:graph
       graph ?ura { ?somebody_update_np npx:retracts ?update_np . }
     }
     optional {
-      graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_update_np np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
+#      graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+      ?newversion_update_np np:hasPublicationInfo ?usi .  # TODO: move into npa:graph
       graph ?usi { ?newversion_update_np npx:supersedes ?update_np . }
     }
   }
-  graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?resp_np np:hasAssertion ?respa .
+#  graph npa:graph { ?resp_np npa:hasValidSignatureForPublicKey ?pubkey . }
+  ?resp_np np:hasAssertion ?respa .
   graph ?respa { ?resp_comment lf:isResponseTo ?review_np . }
   filter not exists {
-    graph npa:graph { ?retraction_resp_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_resp_np np:hasAssertion ?respra .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction_resp_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?retraction_resp_np np:hasAssertion ?respra .  # TODO: move into npa:graph
     graph ?respra { ?somebody_resp_np npx:retracts ?resp_np . }
   }
 }

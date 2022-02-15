@@ -29,11 +29,13 @@ select distinct ?resp_np ?review_np where {
     ?submission_np vp: ?pubkey .
   }
   optional {
-    graph npa:graph { ?newversion_submission vp: ?pubkey . } ?newversion_submission np:hasAssertion ?sa .  # TODO: move into npa:graph
+#    graph npa:graph { ?newversion_submission vp: ?pubkey . }
+    ?newversion_submission np:hasAssertion ?sa .  # TODO: move into npa:graph
     graph ?sa { ?newversion_submission npx:supersedes ?submission_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction vp: ?pubkey . } ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction vp: ?pubkey . }
+    ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
     graph ?sa { ?somebody npx:retracts ?submission_np . }
   }
   graph ?submitted_np_head {
@@ -48,9 +50,9 @@ select distinct ?resp_np ?review_np where {
   graph ?sp_np_assertion {
     ?spi ?p ?class .
   }
-  graph npa:graph {
-    ?sp_np vp: ?pubkey .
-  }
+#  graph npa:graph {
+#    ?sp_np vp: ?pubkey .
+#  }
   graph ?class_np_head {
     ?class_np np:hasAssertion ?class_np_assertion ;
       np:hasPublicationInfo ?class_np_pubinfo .
@@ -66,9 +68,9 @@ select distinct ?resp_np ?review_np where {
       ?class_np a npx:ExampleNanopub .
       }
   }
-  graph npa:graph {
-    ?class_np vp: ?pubkey .
-  }
+#  graph npa:graph {
+#    ?class_np vp: ?pubkey .
+#  }
   graph ?review_np_head {
     ?review_np np:hasAssertion ?review_np_assertion ;
       np:hasPublicationInfo ?review_np_pubinfo ;
@@ -82,34 +84,40 @@ select distinct ?resp_np ?review_np where {
     ?review_np dct:creator ?__reviewer_iri .
     bind(?__reviewer_iri as ?reviewer)
   }
-  graph npa:graph {
-    ?review_np vp: ?reviewer_pubkey .
-  }
+#  graph npa:graph {
+#    ?review_np vp: ?reviewer_pubkey .
+#  }
   filter not exists {
     graph ?review_np_pubinfo {
       ?review_np a npx:ExampleNanopub .
     }
   }
   optional {
-    graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .
+#    graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . }
+    ?newversion_review np:hasPublicationInfo ?ri .
     graph ?ri { ?newversion_review npx:supersedes ?review_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_review vp: ?reviewer_pubkey . } ?retraction_review np:hasAssertion ?ra .
+#    graph npa:graph { ?retraction_review vp: ?reviewer_pubkey . }
+    ?retraction_review np:hasAssertion ?ra .
     graph ?ra { ?somebody npx:retracts ?review_np . }
   }
   optional {
-    graph npa:graph { ?update_np vp: ?pubkey . } ?update_np np:hasPublicationInfo ?xi .
+#    graph npa:graph { ?update_np vp: ?pubkey . }
+    ?update_np np:hasPublicationInfo ?xi .
     graph ?xi { ?update_np lf:isUpdateOf ?class_np . }
   }
-  graph npa:graph { ?resp_np vp: ?pubkey . } ?resp_np np:hasAssertion ?respa .
+#  graph npa:graph { ?resp_np vp: ?pubkey . }
+  ?resp_np np:hasAssertion ?respa .
   graph ?respa { ?resp_comment lf:isResponseTo ?review_np . }
   filter not exists {
-    graph npa:graph { ?retraction_resp vp: ?pubkey . } ?retraction_resp np:hasAssertion ?respra .
+#    graph npa:graph { ?retraction_resp vp: ?pubkey . }
+    ?retraction_resp np:hasAssertion ?respra .
     graph ?respra { ?somebody_resp_np npx:retracts ?resp_np . }
   }
   optional {
-    graph npa:graph { ?newversion_response vp: ?pubkey . } ?newversion_response np:hasAssertion ?respra .
+#    graph npa:graph { ?newversion_response vp: ?pubkey . }
+    ?newversion_response np:hasAssertion ?respra .
     graph ?respra { ?newversion_response npx:supersedes ?resp_np . }
   }
 }

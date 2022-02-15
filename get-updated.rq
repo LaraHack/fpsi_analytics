@@ -10,7 +10,7 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix pso: <http://purl.org/spar/pso/>
 
 select distinct ?update_np ?newversion_update_np where {
-  graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+#  graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .
   graph ?submission_np_a {
     ?submitted_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
@@ -21,29 +21,36 @@ select distinct ?update_np ?newversion_update_np where {
     bind(?__author_iri as ?author)
   }
   optional {
-    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submission_np np:hasPublicationInfo ?si .
+#    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?newversion_submission_np np:hasPublicationInfo ?si .
     graph ?si { ?newversion_submission_np npx:supersedes ?submission_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submission_np np:hasAssertion ?sra .
+#    graph npa:graph { ?retraction_submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?retraction_submission_np np:hasAssertion ?sra .
     graph ?sra { ?somebody_submission_np npx:retracts ?submission_np . }
   }
   optional {
-    graph npa:graph { ?newversion_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submitted_np np:hasPublicationInfo ?di .
+#    graph npa:graph { ?newversion_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?newversion_submitted_np np:hasPublicationInfo ?di .
     graph ?di { ?newversion_submitted_np npx:supersedes ?submitted_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submitted_np np:hasAssertion ?dra .
+#    graph npa:graph { ?retraction_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?retraction_submitted_np np:hasAssertion ?dra .
     graph ?dra { ?somebody_submitted_np npx:retracts ?submitted_np . }
   }
-  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .
+#  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+  ?update_np np:hasPublicationInfo ?ui .
   graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
   filter not exists {
-    graph npa:graph { ?retraction_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?retraction_update_np np:hasAssertion ?dsi .
+#    graph npa:graph { ?retraction_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+    ?retraction_update_np np:hasAssertion ?dsi .
     graph ?dsi { ?somebody_update_np npx:retracts ?update_np . }
   }
   optional {
-    graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_update_np np:hasPublicationInfo ?usi .
+#    graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+    ?newversion_update_np np:hasPublicationInfo ?usi .
     graph ?usi { ?newversion_update_np npx:supersedes ?update_np . }
   }
 }

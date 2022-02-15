@@ -25,11 +25,12 @@ select distinct ?review_np ?class_np where {
     bind(?__author_iri as ?author)
   }
   optional { ?__author_iri foaf:name ?authorLabel . }
-  graph npa:graph {
-    ?submission_np vp: ?pubkey .
-  }
+#  graph npa:graph {
+#    ?submission_np vp: ?pubkey .
+#  }
   filter not exists {
-    graph npa:graph { ?retraction vp: ?pubkey . } ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction vp: ?pubkey . }
+    ?retraction np:hasAssertion ?sa .  # TODO: move into npa:graph
     graph ?sa { ?somebody npx:retracts ?submission_np . }
   }
   graph ?submitted_np_head {
@@ -44,9 +45,9 @@ select distinct ?review_np ?class_np where {
   graph ?sp_np_assertion {
     ?spi ?p ?class .
   }
-  graph npa:graph {
-    ?sp_np vp: ?pubkey .
-  }
+#  graph npa:graph {
+#    ?sp_np vp: ?pubkey .
+#  }
   graph ?class_np_head {
     ?class_np np:hasAssertion ?class_np_assertion ;
       np:hasPublicationInfo ?class_np_pubinfo .
@@ -57,9 +58,9 @@ select distinct ?review_np ?class_np where {
   graph ?class_np_pubinfo {
     ?class_np npx:introduces ?class .
   }
-  graph npa:graph {
-    ?class_np vp: ?pubkey .
-  }
+#  graph npa:graph {
+#    ?class_np vp: ?pubkey .
+#  }
   graph ?review_np_head {
     ?review_np np:hasAssertion ?review_np_assertion ;
       np:hasPublicationInfo ?review_np_pubinfo ;
@@ -73,15 +74,17 @@ select distinct ?review_np ?class_np where {
     ?review_np dct:creator ?__reviewer_iri .
     bind(?__reviewer_iri as ?reviewer)
   }
-  graph npa:graph {
-    ?review_np vp: ?reviewer_pubkey .
-  }
+#  graph npa:graph {
+#    ?review_np vp: ?reviewer_pubkey .
+#  }
   optional {
-    graph npa:graph { ?newversion vp: ?reviewer_pubkey . } ?newversion np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
+#    graph npa:graph { ?newversion vp: ?reviewer_pubkey . }
+    ?newversion np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
     graph ?ri { ?newversion npx:supersedes ?review_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction vp: ?reviewer_pubkey . } ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction vp: ?reviewer_pubkey . }
+    ?retraction np:hasAssertion ?ra .  # TODO: move into npa:graph
     graph ?ra { ?somebody npx:retracts ?review_np . }
   }
 }

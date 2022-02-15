@@ -11,7 +11,7 @@ prefix pso: <http://purl.org/spar/pso/>
 prefix lf: <https://w3id.org/linkflows/reviews/>
 
 select distinct ?update_old_or_new_np ?class_np where {
-  graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+#  graph npa:graph { ?submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .  # TODO: move into npa:graph
   graph ?submission_np_a {
     ?submitted_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
@@ -22,25 +22,31 @@ select distinct ?update_old_or_new_np ?class_np where {
     bind(?__author_iri as ?author)
   }
   optional {
-    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submission_np np:hasPublicationInfo ?si .  # TODO: move into npa:graph
+#    graph npa:graph { ?newversion_submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?newversion_submission_np np:hasPublicationInfo ?si .  # TODO: move into npa:graph
     graph ?si { ?newversion_submission_np npx:supersedes ?submission_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_submission_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submission_np np:hasAssertion ?sra .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction_submission_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?retraction_submission_np np:hasAssertion ?sra .  # TODO: move into npa:graph
     graph ?sra { ?somebody_submission_np npx:retracts ?submission_np . }
   }
   optional {
-    graph npa:graph { ?newversion_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?newversion_submitted_np np:hasPublicationInfo ?di .  # TODO: move into npa:graph
+#    graph npa:graph { ?newversion_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?newversion_submitted_np np:hasPublicationInfo ?di .  # TODO: move into npa:graph
     graph ?di { ?newversion_submitted_np npx:supersedes ?submitted_np . }
   }
   filter not exists {
-    graph npa:graph { ?retraction_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . } ?retraction_submitted_np np:hasAssertion ?dra .  # TODO: move into npa:graph
+#    graph npa:graph { ?retraction_submitted_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?retraction_submitted_np np:hasAssertion ?dra .  # TODO: move into npa:graph
     graph ?dra { ?somebody_submitted_np npx:retracts ?submitted_np . }
   }
-  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?update_np np:hasPublicationInfo ?ui .
+#  graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+  ?update_np np:hasPublicationInfo ?ui .
   graph ?ui { ?update_np lf:isUpdateOf ?submitted_np . }
   optional {
-    graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . } ?newversion_update_np np:hasPublicationInfo ?usi .
+#    graph npa:graph { ?newversion_update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+    ?newversion_update_np np:hasPublicationInfo ?usi .
     graph ?usi { ?newversion_update_np npx:supersedes ?update_np . }
   }
 
@@ -49,7 +55,7 @@ select distinct ?update_old_or_new_np ?class_np where {
   ?update_old_or_new_np np:hasAssertion ?update_np_a .
 
   graph ?update_np_a { ?spi ?spi_pred ?class . }
-  graph npa:graph { ?class_np npa:hasValidSignatureForPublicKey ?pubkey . }
+#  graph npa:graph { ?class_np npa:hasValidSignatureForPublicKey ?pubkey . }
   ?class_np np:hasAssertion ?class_np_a ; np:hasPublicationInfo ?class_np_i .  # TODO: move into npa:graph
   graph ?class_np_a {
     ?class rdfs:label ?class_name .
