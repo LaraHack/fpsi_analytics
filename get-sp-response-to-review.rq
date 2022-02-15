@@ -64,14 +64,8 @@ select distinct ?resp_np ?review_np where {
   }
   optional {
 #    graph npa:graph { ?update_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
-
-
-# non-strict checking of isUpdateOf chain:
-#    ?update_np np:hasPublicationInfo ?ui .
-#    graph ?ui {
-      ?update_np lf:isUpdateOf+ ?submitted_np .
-#    }
-
+    ?update_np np:hasPublicationInfo ?xi .  # TODO: move into npa:graph; TODO: check pubkey
+    graph ?xi { ?update_np lf:isUpdateOf ?subm_np . }
     filter not exists {
 #      graph npa:graph { ?retraction_2 npa:hasValidSignatureForPublicKey ?pubkey2 . }
       ?retraction_2 np:hasAssertion ?ura .  # TODO: move into npa:graph
