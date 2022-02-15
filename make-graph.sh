@@ -4,10 +4,12 @@ set -e
 
 cat np-graph.head.dot > np-graph.dot
 
+echo > np-graph-temp.dot
+
 while read line; do
   query=${line% *}
   color=${line#* }
-  cat sparql-results/$query.csv \
+  cat sparql-results/$query.csv sparql-results/${query}_x.csv \
     | sed 1d \
     | sed -r 's/^"([^"]*)".*$/\1/' \
     | grep '^http://purl.org/np/' \
@@ -15,7 +17,7 @@ while read line; do
     | uniq \
     | awk -v color=$color '{print "\""substr($1,20,10)"\" [fillcolor="color",URL=\""$1"\"]"}' \
     >> np-graph.dot
-  cat sparql-results/$query.csv \
+  cat sparql-results/$query.csv sparql-results/${query}_x.csv \
     | sed 1d \
     | grep ',' \
     | sed -r 's/^"([^"]*)","([^"]*)".*$/\1 \2/' \
@@ -29,28 +31,31 @@ done < color-map.txt
 while read line; do
   query=${line% *}
   color=${line#* }
-  cat sparql-results/$query.csv \
+  cat sparql-results/$query.csv sparql-results/${query}_x.csv \
     | sed 1d \
     | sed -r 's/^"([^"]*)"."([^"]*)"$/\2/' \
     | grep '^http://purl.org/np/' \
     | sort \
     | uniq \
     | awk -v color=$color '{print "\""substr($1,20,10)"\" [fillcolor="color",URL=\""$1"\"]"}' \
-    >> np-graph.dot
+    >> np-graph-temp.dot
 done < color-map-x.txt
 
-ls sparql-results \
-  | grep -- -to- \
-  | awk '{print "cat sparql-results/"$1" | sed 1d"}' \
-  | bash \
-  | sed -r 's/^"([^"]*)","([^"]*)".*$/\1 \2/' \
-  | grep '^http://purl.org/np/.* http://purl.org/np/' \
-  | sort \
-  | uniq \
-  | awk '{print "\""substr($1,20,10)"\" ->\""substr($2,20,10)"\""}' \
-  >> np-graph.dot
+while read line; do
+  cat sparql-results/$line.csv sparql-results/${line}_x.csv \
+    | sed -r 's/^"([^"]*)","([^"]*)".*$/\1 \2/' \
+    | grep '^http://purl.org/np/.* http://purl.org/np/' \
+    | sort \
+    | uniq \
+    | awk '{print "\""substr($1,20,10)"\" ->\""substr($2,20,10)"\""}' \
+    >> np-graph-temp.dot
+done < edge-map.txt
 
-cat np-graph.manual.dot >> np-graph.dot
+cat np-graph-temp.dot | sort | uniq > np-graph-temp-sorted.dot
+
+cat np-graph-temp-sorted.dot >> np-graph.dot
 cat np-graph.tail.dot >> np-graph.dot
+
+rm np-graph-temp*
 
 dot -Tsvg np-graph.dot > np-graph.svg

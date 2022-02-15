@@ -7,7 +7,7 @@ mkdir -p nanopubs
 while read line; do
   query=${line% *}
   echo "Reading file $query.csv..."
-  cat sparql-results/$query.csv \
+  cat sparql-results/$query.csv sparql-results/${query}_x.csv \
     | sed 1d \
     | sed -r 's/^"([^"]*)".*$/\1/' \
     | grep '^http://purl.org/np/' \

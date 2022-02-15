@@ -1,0 +1,11 @@
+cd-response-to-review
+decision-to-updated
+response-to-review
+response-to-updated
+review-to-classdef
+review-to-superpattern
+sp-response-to-review
+submission-to-superpattern
+superpattern-to-classdef
+updated-to-classdef
+updated-to-superpattern
