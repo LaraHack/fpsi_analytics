@@ -29,7 +29,7 @@ select distinct ?review_np ?newversion_review where {
   }
   filter not exists {
     graph npa:graph { ?retraction_submission vp: ?pubkey . } ?retraction_submission np:hasAssertion ?sa .  # TODO: move into npa:graph
-    graph ?sa { ?somebody npx:retracts ?submission_np . }
+    graph ?sa { ?somebody1 npx:retracts ?submission_np . }
   }
   graph ?submitted_np_head {
     ?submitted_np np:hasAssertion ?submitted_np_assertion .
@@ -86,11 +86,15 @@ select distinct ?review_np ?newversion_review where {
     ?review_np vp: ?reviewer_pubkey .
   }
   optional {
-    graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ri .  # TODO: move into npa:graph
-    graph ?ri { ?newversion_review npx:supersedes ?review_np . }
+    graph npa:graph { ?newversion_review vp: ?reviewer_pubkey . } ?newversion_review np:hasPublicationInfo ?ni .  # TODO: move into npa:graph
+    graph ?ni { ?newversion_review npx:supersedes ?review_np . }
+    filter not exists {
+      graph npa:graph { ?retraction_newversion_review vp: ?reviewer_pubkey . } ?retraction_newversion_review np:hasAssertion ?rna .  # TODO: move into npa:graph
+      graph ?rna { ?somebody2 npx:retracts ?newversion_review . }
+    }
   }
   filter not exists {
     graph npa:graph { ?retraction_review vp: ?reviewer_pubkey . } ?retraction_review np:hasAssertion ?ra .  # TODO: move into npa:graph
-    graph ?ra { ?somebody npx:retracts ?review_np . }
+    graph ?ra { ?somebody3 npx:retracts ?review_np . }
   }
 }
