@@ -53,8 +53,12 @@ select distinct ?review_np ?newversion_review_np where {
     ?review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey .
   }
   optional {
-    graph npa:graph { ?newversion_review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?newversion_review_np np:hasPublicationInfo ?ri .
-    graph ?ri { ?newversion_review_np npx:supersedes ?review_np . }
+    graph npa:graph { ?newversion_review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?newversion_review_np np:hasPublicationInfo ?ni .
+    graph ?ni { ?newversion_review_np npx:supersedes ?review_np . }
+    filter not exists {
+      graph npa:graph { ?retraction_newversion_review npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction_newversion_review np:hasAssertion ?rna .  # TODO: move into npa:graph
+      graph ?rna { ?somebody2 npx:retracts ?newversion_review_np . }
+    }
   }
   filter not exists {
     graph npa:graph { ?retraction_review_np npa:hasValidSignatureForPublicKey ?reviewer_pubkey . } ?retraction_review_np np:hasAssertion ?ra .
