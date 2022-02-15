@@ -15,7 +15,7 @@ select distinct ?class_np ?newversion_class_np where {
     ?submission_np np:hasAssertion ?submission_np_a ; np:hasPublicationInfo ?submission_np_i .
   graph ?submission_np_a {
     ?submitted_np frbr:partOf <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> ;
-      pso:withStatus pso:submitted .
+      pso:withStatus ?status .  # this could be submitted (for superpattern nanopub) or accepted (for updated nanopub)
   }
   graph ?submission_np_i {
     ?submission_np dct:creator ?__author_iri .
