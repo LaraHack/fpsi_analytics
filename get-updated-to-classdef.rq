@@ -49,6 +49,11 @@ select distinct ?update_old_or_new_np ?class_np where {
     ?newversion_update_np np:hasPublicationInfo ?usi .
     graph ?usi { ?newversion_update_np npx:supersedes ?update_np . }
   }
+  filter not exists {
+#    graph npa:graph { ?retraction_update_np npa:hasValidSignatureForPublicKey ?pubkey . }
+    ?retraction_update_np np:hasAssertion ?rua .  # TODO: move into npa:graph
+    graph ?rua { ?somebody_retraction_update_np npx:retracts ?update_np . }
+  }
 
   # check also the new version of update_np:
   { ?update_np np:hasAssertion ?update_np_a . } union { filter(bound(?newversion_update_np)) ?newversion_update_np np:hasAssertion ?update_np_a . }
