@@ -41,6 +41,138 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RA1lac797RgY6PwQMN55X5aLUTV9KB04vhRMmZ3JDsU9w> .
+@prefix sub: <http://purl.org/np/RA1lac797RgY6PwQMN55X5aLUTV9KB04vhRMmZ3JDsU9w#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointNotAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "In another review comment (http://purl.org/np/RALWxVELKuqrkcO9ud2eXr0E2-ot5bl-0NpOIQi1ktrgI) it is specified that this naming is ok.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAwcS7tG-K9nhhDd2eAtKtHt5GwIhYUcA1no9v5scoU8E>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "iH/gaP8Kp91heJpmz51TAne3CNgk4piUNWI1Xc1u81X8br4oMZUSajWiSvcbWbfm1QnU6+XClqpOmPDuqfTA+JIgxHH2K4epW4PgsNJC4/dcvcaJ3N3HT0FOuYFX18Hxae5Nf1P5Mfkr6MyP/HOmTfWPlx7jFCqMWIhx5DwKn8I=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:41:33.173+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RA3q8bDtZ3mHZRPPftGte0Y_r7ZEOy0NvM1tcJArDm20Y> .
+@prefix sub: <http://purl.org/np/RA3q8bDtZ3mHZRPPftGte0Y_r7ZEOy0NvM1tcJArDm20Y#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you for your suggestion, which was addressed.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RA_piT7JTF1kFBGqZnYKVswtQamhCy8Edj4eiA0Zatvv0>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "MpSVIqx6rBIC2hubo/JzFJ1ndgCqKOcUBhR9bDzSVHx7YLKeqztQgLaz9rfbgZ0Y9+LAsXSEwxFrNGU3S1GFlEDUuAHiRVL3uVwMvgcjJtKv6pMrFx6VS8DT0PVERgu6kKxLWHBQMbX6OZBCTWzpfeqQtsIDDZSkKN+cDhq6GhE=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:50:51.725+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RA4DdeBZluxqSTr_YT_LVYw4u3c-d5f3f2aMnscLvpB5k> .
+@prefix sub: <http://purl.org/np/RA4DdeBZluxqSTr_YT_LVYw4u3c-d5f3f2aMnscLvpB5k#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointNotAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Yes, it would be useful to specify how the sources should be referred to.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RA3d1wNhyQRILFaCc4WVBXd12ne3pJ-a9NHSGDWiScLJk>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "Z2iM9sxRY/rQqYcJdxDBhBMB3ruufZxSzx+78YnJX8eeotpqm1Ve1MmSwp5i7s6qiOMT/CxznDL0EKYrIZ2mBQY6EN5sOLYfzT/y8qRCfK6eTSPqkGVJtUQ+gwGdvyZjvrvV/1oGhAtT0mjd0Bd40qmW5ehSII11yotLlFDnhCs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:24:40.300+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RA4H1CPJ7YVgwiy9mu9_BTmBKu15gOyQJus8089NdORm0> .
 @prefix sub: <http://purl.org/np/RA4H1CPJ7YVgwiy9mu9_BTmBKu15gOyQJus8089NdORm0#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -471,6 +603,50 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RAANP7AWgyZRaS2WgNcGDfp8-4bXv0blhKapMcUrrWvos> .
+@prefix sub: <http://purl.org/np/RAANP7AWgyZRaS2WgNcGDfp8-4bXv0blhKapMcUrrWvos#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Yes, and it would be nice to have a way to assess how well the formalization corresponds to the original claim.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAIBpY3_Ob-fGnTo23yCCu86P1KZzPNdqrime6sEHsUPU>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "Pk7N+3fcOqCHbJZQxxWnW8IORxdmY9LFDlWYEMD7eaiaoy6a6JRCVSd/fb8ds21xeKObuUgIfwSgWH2Wb1W2rr1mTat8Am+OirM+JFx38qEu1jibNkk5grPMLVUi1CmkcRWRumwjx6JLArScnPEWpwnHrBQHlQ24vudjkKrs2lE=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:33:10.257+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RAAnt1YKH6K7xFZeI_VIkeDQokxZM5mz0Or4y9Mz1o97k> .
 @prefix sub: <http://purl.org/np/RAAnt1YKH6K7xFZeI_VIkeDQokxZM5mz0Or4y9Mz1o97k#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -729,6 +905,50 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RABtyhat8eNcz29hr3caN886bzaFbxtYB7xy74b5-m7v8> .
+@prefix sub: <http://purl.org/np/RABtyhat8eNcz29hr3caN886bzaFbxtYB7xy74b5-m7v8#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RApSKKPqmRuMaLZBWtWN9X-xqWxieDg2VmWq1HySMnD-k>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "PEEGWKrqYYaCbmipPJDy5/bKmvKScoFDmtl2Ko1UKZBF+c7JWKTC3KFsnIUpBaXM3LOWdvpMGQuYeicSnBR9YjkxEoebrmB++cQfFfr3kjYi9TO+hIk8b0SBajfxCKiivg3JJgb+qN76qK2aLNqznAXeIXurqiAH7cVMnisCvOg=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:45:21.231+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RAbYGDE27fjI5qTckXklj4g0ym4PnZGulmF2jN0MNt4m8> .
 @prefix sub: <http://purl.org/np/RAbYGDE27fjI5qTckXklj4g0ym4PnZGulmF2jN0MNt4m8#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -854,6 +1074,94 @@ sub:pubinfo {
     dct:creator orcid:0000-0002-8083-6048;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RAD4XQS1DXALtJcPHNkn7y9M3DFjZuc4UWAnfdjgtUxSc> .
+@prefix sub: <http://purl.org/np/RAD4XQS1DXALtJcPHNkn7y9M3DFjZuc4UWAnfdjgtUxSc#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointNotAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Yes, and maybe we should clarify the procedure for doing this systematically.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAGIam9RdG-5otB3CCwDNg1h8pMjUS1Qy4cOLXRlnffjo>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "REAK0C9C3bq15wIyM2v+70UIyL/sio4EPuMgqMsEqq4sW9ZhTv6hHK/G9J2si/4zldHTgW3EDwsmJSZDz0NRSrUGLY3oY8XrKS5KlLvrCKiETaxX3LLO0h746LH1gl3voLJ7OLKPtMW/7W8ECTxLy79Z4fHhheKjCJxkdPtcdSo=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:29:59.594+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RADrUsLdKijDGJNvINN2mXqWAYysGkWScFnfyMrHCyvE8> .
+@prefix sub: <http://purl.org/np/RADrUsLdKijDGJNvINN2mXqWAYysGkWScFnfyMrHCyvE8#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you for your suggestion, which was addressed.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RA_piT7JTF1kFBGqZnYKVswtQamhCy8Edj4eiA0Zatvv0>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "CRM6p3MoSXMLdS3I19Az4NeE8bQHnk4jDwfGkoDvPXskPhHhphEkuoW9k5nsm7gZuTPYZG2hKkIdemjne1aIEcmvFVCkwECOldRL20EIg4QrgrbAtj55YrGqcPT2VIV3BM5JzYQJhJ0lpiiDH/KJuMAuRiLPKLMfZqWi7rjCric=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:29:32.702+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
 }
 
@@ -1633,6 +1941,50 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RAIZdSg0rtI4P2hn7_U-Brzgtnjlh4f5TE_BhpTNsku78> .
+@prefix sub: <http://purl.org/np/RAIZdSg0rtI4P2hn7_U-Brzgtnjlh4f5TE_BhpTNsku78#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you for your suggestion, which was addressed.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RALWxVELKuqrkcO9ud2eXr0E2-ot5bl-0NpOIQi1ktrgI>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "aQv5zqECcgxd8TvCuZuRCD+Y19wtQomzyNzSaOwXWxQMa+bHROM1WEcSJEtK7Iw1UcTtGfqmlSUvHLHf9rQXNhPnM4kkrPvBKasj89ORPh+O7lX/+4R7FcWUWqVkjaZyKtMPNGC3w7PV9Tj9fSwcYlda/6KkymVVz2wGdRvDDFY=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:37:00.187+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RAjz0nKHGxFbENgB2BN7AylkOKnwdVgxYIu2KX_8NMZN4> .
 @prefix sub: <http://purl.org/np/RAjz0nKHGxFbENgB2BN7AylkOKnwdVgxYIu2KX_8NMZN4#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -1672,6 +2024,94 @@ sub:pubinfo {
     dct:creator orcid:0000-0002-0830-7029;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RAKhQUaLzA2G6zpdDGqBkbxwegjl6Ak28DO_0ZlT6G4Bc> .
+@prefix sub: <http://purl.org/np/RAKhQUaLzA2G6zpdDGqBkbxwegjl6Ak28DO_0ZlT6G4Bc#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointNotAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Yes, and as expressed in http://purl.org/np/RAANP7AWgyZRaS2WgNcGDfp8-4bXv0blhKapMcUrrWvos , it would be nice to have a way to quantify the solidity.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAopcyinEZK-YeTDygVClnLSOcEa-ui-PLtoZToQetNa8>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "S6ZzZFs0tK6JAvH5DUd/TFmaZk5cvNLnEYZqaUW6mfYoajWdjLbblbFo7Xt+eL1eDkm9ufVGlbL1UnTyXzSc5ifPZDbNZUOE73pDqHa51kboEBsqKKnPWRQtygAD8gIWeuJV3ZOdW34dVpmnexAuvmGdl5FJxpB98RfxYqlmSOk=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:42:04.007+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RAkq_B2KChGQpP1dn-aVf0dNmBcoSZi291HE8caQPbcAU> .
+@prefix sub: <http://purl.org/np/RAkq_B2KChGQpP1dn-aVf0dNmBcoSZi291HE8caQPbcAU#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Yes, and we have also added the full stop at the end.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RARduGmw6u6XKRLA5nJyNp-B1GsIcgJAqW0GW5TkwLiMs>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "Nnlsweew6eYbrv4n2IMeOGjXSryllR/MJsza/epGAhAWzqExh+mxjmYxRtzcuDYwbxazkdCSNVG16zfQMZTUgQ1bU6ceTXQklFm/pJW+fryds5m78EAiA4GHwqTktLI2c1x2qbYxOUPlN9USiYTzvryE8nK9BLBR+mm+YEu+xRA=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:38:52.546+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
 }
 
@@ -2236,6 +2676,50 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RAP8dkcFlSSR8bN0PosCy5ecB6FSaxUuPDGP_xV_celdM> .
+@prefix sub: <http://purl.org/np/RAP8dkcFlSSR8bN0PosCy5ecB6FSaxUuPDGP_xV_celdM#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "We have adapted the formalization accordingly.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RA9B6Vj6uE6O9Uwjv5SLtxoA6CBCZONJgJ2LJUFhVHbDs>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "NnJqtCvlkVIHTeLL71j3Dk3gQz/9PNS2TlrdyrXyvpPZ9Q1W98YB/f/1imjFwiX5CdI8DXaTSPYUMsOjrfJbnLHrxXGJoQ1uymWeUyheNeJ2TNcrDAb5NQ++pOD69Q9R0LfuZIVSWaEN2mHkc9qTdDboDI31WipxZC+2hzmaBT8=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:25:51.830+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RAPjdJK_mKmROq-jNyi2zby1brrxZ8AomWT8XjTKO6F5I> .
 @prefix sub: <http://purl.org/np/RAPjdJK_mKmROq-jNyi2zby1brrxZ8AomWT8XjTKO6F5I#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -2752,6 +3236,50 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RASmvEd9Pl6MZbWR0U4_zEvApfg_qjH9JEHoLP4EBrF0o> .
+@prefix sub: <http://purl.org/np/RASmvEd9Pl6MZbWR0U4_zEvApfg_qjH9JEHoLP4EBrF0o#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointNotAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "In another review comment (http://purl.org/np/RALWxVELKuqrkcO9ud2eXr0E2-ot5bl-0NpOIQi1ktrgI) it is specified that this naming is ok.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAwcS7tG-K9nhhDd2eAtKtHt5GwIhYUcA1no9v5scoU8E>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "hP0CZ4HocjSprvtzkm0/+8dbvAtYVHvx5CpywrAYs1B61vH7kaScEkydH6VVptDW6mzcc7sb/+ONqNtccZ5qR3FVwaizjhpSPchxHDp/4OnATidjG8agUqZwdUWQyjerFL1DJey9JO0JcEwLzfaPgQT78Z92JpyN/siTDek5bNc=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:43:28.590+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RAsxLZMQsm2YlKk8ju48BCvxGbPLmVH8NMXNUAtuYZG0w> .
 @prefix sub: <http://purl.org/np/RAsxLZMQsm2YlKk8ju48BCvxGbPLmVH8NMXNUAtuYZG0w#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -2877,6 +3405,50 @@ sub:pubinfo {
     dct:creator orcid:0000-0003-0169-8159;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RAtIBRI3SDy_TT7ySUdebUFyTJl1HsvL1T4WIfl9Y1o0c> .
+@prefix sub: <http://purl.org/np/RAtIBRI3SDy_TT7ySUdebUFyTJl1HsvL1T4WIfl9Y1o0c#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAqj2d3QxMBAvsKYuXlcHCLYq7DZ34GiSbUd5biYUItmk>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "dNtPN5c47GJxybKldDxNiy2VVS5JK6rQhBcZD1fddzGFRURgVGURYLt9Pqeqqe1i2anvjCGl5OB5HO01iYyqQ9b+RFJ+rlw+Dvi4FCBHqUR5sf3suo75JEK/Ce05jfWFJMcyOoT3+go8pww3IFNEY/bqOC2cpJZ//elskOSNoHA=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:44:46.412+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
 }
 
@@ -3139,6 +3711,50 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RAwEg9QegJ8Yg9MWhsPX-jFv0LCOAXj9B4Cn9l0ZvuPEk> .
+@prefix sub: <http://purl.org/np/RAwEg9QegJ8Yg9MWhsPX-jFv0LCOAXj9B4Cn9l0ZvuPEk#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAm04lBKr6LoOoqyfBw89BEyIZBGrdeLYSU-l1mDdh6wM>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "BtpfCep23tcP0wUCOLJeaG0YHTEyWPATDaabQVow5pDuW72PhqOX/QaQkSgeHnDevQ9MfhLWfY1NqXTKrhqo2Xa0kk3y83J+VlBx5BOYf/gkczVvlRjdY2Qr+qnovP+qwrS7/5iygI/riHBRI2AQlby4eiwJeHKFhLlhvlAO/2Y=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:45:57.799+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RAwo__Cy7l_6W-VKRhRM1MKk7-Jr_XWlu7z8sXROqeR68> .
 @prefix sub: <http://purl.org/np/RAwo__Cy7l_6W-VKRhRM1MKk7-Jr_XWlu7z8sXROqeR68#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -3182,6 +3798,50 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RAWqxXbzHZHj9cs_IiNzC9OYVw1LHPOPIdiNYgLeHPHcI> .
+@prefix sub: <http://purl.org/np/RAWqxXbzHZHj9cs_IiNzC9OYVw1LHPOPIdiNYgLeHPHcI#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointNotAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "In another review comment (http://purl.org/np/RALWxVELKuqrkcO9ud2eXr0E2-ot5bl-0NpOIQi1ktrgI) it is specified that this naming is ok.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAwcS7tG-K9nhhDd2eAtKtHt5GwIhYUcA1no9v5scoU8E>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "Hwo0Nl9hQK+/cwMukAj1i7dUZ9o3y6T6MvDx0tmnqK+Xl8F5ygZtIM7167ZEUWIg+5PYtQ7Rhx/dm6DyD7PsbeZiyONRO+GJYfI7PCZBTaTDkgv+YZ+6NVtS9/lvQN/I+SB08KVPHqEUd7EpN58p7IpE6B4gncerabO5iuF2sgw=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:44:11.450+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
 @prefix this: <http://purl.org/np/RAwurL5JmcIZBiENsexp_zDDH8NGhI7k7fQj2yN80V5So> .
 @prefix sub: <http://purl.org/np/RAwurL5JmcIZBiENsexp_zDDH8NGhI7k7fQj2yN80V5So#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -3221,6 +3881,50 @@ sub:pubinfo {
     dct:creator orcid:0000-0003-2432-4125;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RAXe7dhCnHCyL93kLF6gvSu1qUeeIGqggCxp8hvjv9zXw> .
+@prefix sub: <http://purl.org/np/RAXe7dhCnHCyL93kLF6gvSu1qUeeIGqggCxp8hvjv9zXw#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you for your suggestion, which was addressed.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAnF0KQ5CGBjL-pWk37fg2DXMkgZuzgDNvXnD7wPaTZjY>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "VbkGmmmH6GEPTq2IT8lD7pRiwQmtlIchp1y0GXC2pvF4oNF/LbMF2PpbAQcWfq3mH3C82tUgAdhuXzoTkMUQds3CPLkr2V9RKkgvEKgcjMMqsYdFL2UxViShpNDrE4fwkbsbWWyUXZUxkjRCClfBok2bKCpfAiRep4I134TrvIs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:35:59.839+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
 }
 
@@ -3307,6 +4011,50 @@ sub:pubinfo {
     dct:creator orcid:0000-0003-0169-8159;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RAxPQEgz3BnRajONd3dauM3dRrm7WteJrA9kGbQ2kbXiY> .
+@prefix sub: <http://purl.org/np/RAxPQEgz3BnRajONd3dauM3dRrm7WteJrA9kGbQ2kbXiY#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "Thank you.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RAqj2d3QxMBAvsKYuXlcHCLYq7DZ34GiSbUd5biYUItmk>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "WNwvuuEQ/v2spKoiH1s5aFIxOWaMoOEL/M+KQu38OHwnp4JG4RHLVoUDdu+Az6HkhQd8ZAp8CqGQyyc2BuAOP4KcxORzB7iWBd/7pLzgc2v19Ua1vM1hyqqJ4rIQ2KlQjCPBjwHAD8m0OZ11PwDj2SPjF9WWliGBNZ+cNQViojY=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-17T21:44:43.500+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
 }
 
@@ -3436,6 +4184,50 @@ sub:pubinfo {
     dct:creator orcid:0000-0002-0830-7029;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
+}
+
+
+@prefix this: <http://purl.org/np/RAzMChyn_cvJfsDbvlZFtNk2vALGT31jyQ5fg-XX3vJ-s> .
+@prefix sub: <http://purl.org/np/RAzMChyn_cvJfsDbvlZFtNk2vALGT31jyQ5fg-XX3vJ-s#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:comment a <https://w3id.org/linkflows/reviews/AgreementComment>, <https://w3id.org/linkflows/reviews/PointAddressedComment>,
+      <https://w3id.org/linkflows/reviews/ResponseComment>;
+    <https://w3id.org/linkflows/reviews/hasCommentText> "We thank the reviewer for this comment and have changed the formalization accordingly.";
+    <https://w3id.org/linkflows/reviews/isResponseTo> <http://purl.org/np/RA38HSbTw9IinK2q_4lp3aDhh-Jw7fASYLE-Vq3NrD--0>;
+    <https://w3id.org/linkflows/reviews/refersTo> <http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "GaklO2OvnchOaM0et+nGmuFfj0aHKzwU4zj/rbSjXTpuNTaiZ517Sc2PsNy50h/cYWGBbL0pM0CbzuXlk1/7Ev6caYidXhFkb/WkItBFcu0Ux1fBiAEjlJdsQNeOQx9Ip8tqkBA2MXrXQhjCd6tZLLn3a/GC5R62ks6GTJ0d46U=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T11:22:42.515+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9488-1870, orcid:0000-0002-7114-6459;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAe785M0p3cxpVXp2dhVdspVyj3YMdDdb0JEQdKPjO96E> .
 }
 
