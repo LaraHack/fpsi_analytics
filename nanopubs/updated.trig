@@ -1122,6 +1122,111 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RAWcrMY8mnsI26BfokKid75MO1c2uVenyW9tmxj0VhbnY> .
+@prefix sub: <http://purl.org/np/RAWcrMY8mnsI26BfokKid75MO1c2uVenyW9tmxj0VhbnY#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "The OpenBiodiv knowledge graph contains semantic triples extracted from biodiversity literature";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <https://w3id.org/linkflows/superpattern/terms/UniversalContext>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAEpHUXRKtaLE3Z24sgIUdaxwTBsK2bjshyq9yF00145Y#semantic-triples-extracted-from-biodiversity-literature>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/alwaysQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/includes>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAY2Gg01ffDVLprAakuMqpizAjksasRtTal_UsCf94LL8#openbiodiv-knowledge-graph> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://doi.org/10.3390/publications7020038>;
+    prov:wasAssociatedWith orcid:0000-0002-8083-6048 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "OpenBiodiv encompasses data extracted from more than 5000 scholarly articles published by Pensoft and many more taxonomic treatments extracted by Plazi from journals of other publishers. The data from both sources are converted to Resource Description Framework (RDF) and integrated in a graph database using the OpenBiodiv-O ontology and an RDF version of the Global Biodiversity Information Facility (GBIF) taxonomic backbone.";
+    prov:wasQuotedFrom <https://doi.org/10.3390/publications7020038> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "LxRTD2lCYLuaYp4R+8M+4FadVcLULlt7z5NeP4g2ZHmnIX7fPpu9TgKFzMLvZUzWCFrY/aMMA2WdaiA6IJNodmvbnXN/I0XlKppEJKMicl1iqb1Is//tiP7ldOcZBXM+Gr/Ux137oOn6hpv0vqp8VF/OPyGP1q9MYh27IaZP4yM=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-07-07T12:14:59.610+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:spi;
+    npx:supersedes <http://purl.org/np/RAyLeQS98UUrE-cH2_go9630no1x7QcVaPX4CvPTtotVU>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAE1wniOy0yO39PlK9QkQ-wqbC3q-R2nXraP5huu8W39k>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAx3fM5SIMEqjkFZ8mCTjaJu7omZ6IBynsezbyOU65D7o> .
+@prefix sub: <http://purl.org/np/RAx3fM5SIMEqjkFZ8mCTjaJu7omZ6IBynsezbyOU65D7o#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "The latest release of the OpenBiodiv knowledge graph contains semantic triples extracted from biodiversity literature";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <https://w3id.org/linkflows/superpattern/terms/UniversalContext>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAEpHUXRKtaLE3Z24sgIUdaxwTBsK2bjshyq9yF00145Y#semantic-triples-extracted-from-biodiversity-literature>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/alwaysQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/includes>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RAySzPQKOPqboKwpMIeTtYhCwmLZTdlmKhiMM9W_fmZKw#the-latest-release-of-openbiodiv> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-8083-6048 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "Hq5tgD+nneEZrQOfmCYbRST7NhUUHTQPaSi1uFVH0QM/gPPFeEnS4dhqbqrhUEky2t1+cc+iTo4rnb3tfPKwDPU/ozKIustkjbLofR9W9YduAsXLA7q+TTXcDdud33UCVAVgHbWID8StEkz7xSj3lFDpYvDkVPrBUEcjC9uTe/I=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-28T10:03:56.946+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:spi;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAN_chNfWR9hbEkfjwOfMpq1piwOgAj6q2sJ-qbDzaLOk>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
 @prefix this: <http://purl.org/np/RAxBBJ2WkonyQNlXfdCAOaCi64J_xqgVGeaLjVQow9M88> .
 @prefix sub: <http://purl.org/np/RAxBBJ2WkonyQNlXfdCAOaCi64J_xqgVGeaLjVQow9M88#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -1287,6 +1392,60 @@ sub:pubinfo {
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
       <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>,
       <http://purl.org/np/RAWv_eqe4tghg-OOg6NqRQODjC865Q0ZWkXTxqjSe59Y4>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
+}
+
+
+@prefix this: <http://purl.org/np/RAxxJWyH8OdTJLs-ZY1q5jVq1OWFNOoLFvwEcUFyR8EEo> .
+@prefix sub: <http://purl.org/np/RAxxJWyH8OdTJLs-ZY1q5jVq1OWFNOoLFvwEcUFyR8EEo#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "A regulatory element within the first intron of FTO affects IRX3 and IRX5 expression during early adipogenesis";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://purl.org/np/RAtsHwzNs36rGrLnoSbGrPD351Qw033Acoe4zmdXhsYlM#early-human-adipogenesis>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0#expression-of-genes-IRX3-AND-IRX5>;
+    <https://w3id.org/linkflows/superpattern/terms/hasQualifier> <https://w3id.org/linkflows/superpattern/terms/generallyQualifier>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/affects>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <http://purl.org/np/RANAxL2OxGmP9VAN6cUi_0KEK0rJb9bPn4l1A5HquXKrI#regulatory-element-within-the-first-intron-of-FTO> .
+}
+
+sub:provenance {
+  sub:activity a <https://w3id.org/linkflows/superpattern/terms/FormalizationActivity>;
+    prov:used sub:quote, <https://www.nejm.org/doi/full/10.1056/nejmoa1502214>;
+    prov:wasAssociatedWith orcid:0000-0003-2432-4125 .
+  
+  sub:assertion prov:wasGeneratedBy sub:activity .
+  
+  sub:quote prov:value "A regulatory element within the first intron of FTO affects IRX3 and IRX5 expression during early adipogenesis";
+    prov:wasQuotedFrom <https://www.nejm.org/doi/full/10.1056/nejmoa1502214> .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCS1s1OiABv1mrDnFWp9ecwHdQ+UlJn6JCDYXspRsbZgsm2QAiofbnVvf6gfkcjjScd5fq3sW/W8r/o7bdafVSd6xuTG/vHrO9Ax/guPiJ6O/Z57Hk0nQy6c+l71HpaJ2BPPWKOgYiFZ/8eulmuM6BJ8TDKxoBtcqP5QbvN9KYjlQIDAQAB";
+    npx:hasSignature "V91VRgxtMPyQrfnAbs25vm5AqeYv1FlaaS5q7jTUS106D/OQZYFCoVdzc2Crh52CYE4rIdY/xLsEMb6D6Pv9uBE6GG8v6UHf9q9u8LyhbkW+XXRx6AoRX5NrOh4oQCFI+J1LtfajjzEt0EwZ5u1DS75enmL6M0CR+bdXRl40H9o=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-06-21T16:49:24.513-07:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-2432-4125;
+    npx:introduces sub:spi;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAB_oy10D3XUP-zYlqGz7Uj58AsUXhEKeGqmRFg5LSgDM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAv68imZrEjfcp2rnEg1hzoBqEVc0cQMtp9_1Za0BxNM4> .
 }
 

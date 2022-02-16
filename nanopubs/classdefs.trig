@@ -1,3 +1,50 @@
+@prefix this: <http://purl.org/np/RA5Txa3acYP9_MUWEw7s7wenDTB1QXNMB7UehJW-2E-_8> .
+@prefix sub: <http://purl.org/np/RA5Txa3acYP9_MUWEw7s7wenDTB1QXNMB7UehJW-2E-_8#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:license-with-non-commercial-clause a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "license with a non-commercial clause";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q79719>;
+    <http://www.w3.org/2004/02/skos/core#definition> "a type of license which contain a clause which prohibits use for commercial purposes";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q65071627> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-8083-6048 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "lv9gGKSM989WhbvU+7dDcM+xIFW6jJnN0Lc91RN3tagMFc4utpd3/DBLQg8eDWPL+H9zfUa7SQ0grqCKggz86CyRJYctYHP/baTyhgemrPO3gyDTob5CqKpNm6hJ3xhC8ud3KH1LyzM+9UZW29OKeIe+zBx0rSs4PgS4z+cURsg=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-28T10:20:26.973+03:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:license-with-non-commercial-clause;
+    npx:supersedes <http://purl.org/np/RAlLxbLmjwDt_cTFqr44HHD0xfGJJbhuYLJn0GeGGa3lI>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
 @prefix this: <http://purl.org/np/RA6snbuih8c4A_1jDlDPtYXKBcO5KE5jdoQUtu3V2xPY4> .
 @prefix sub: <http://purl.org/np/RA6snbuih8c4A_1jDlDPtYXKBcO5KE5jdoQUtu3V2xPY4#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -39,6 +86,55 @@ sub:pubinfo {
     npx:introduces sub:biodiversity-data-reuse;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RA9pwySo43TIfbvPuhK4ZuisvMsDvZ6TeR5N6MNKft8Nw> .
+@prefix sub: <http://purl.org/np/RA9pwySo43TIfbvPuhK4ZuisvMsDvZ6TeR5N6MNKft8Nw#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:patient_undergoing_PCI a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "patient undergoing PCI";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q181600>;
+    <http://www.w3.org/2004/02/skos/core#definition> "patient undergoing percutaneous coronary intervention";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q2008344> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "Iv6wAp5BYaY+1tBEBIcPls8rQjacsBZifWaNxBQkJaoYJs5/ejUrEiMXVwul4D+4baebbEm8rkT6vp336uDcencmlDiZzHZGL1ioFQTG1Bc//XZYWBkO/jcGRB3HNolScLz1Fo/dWaB94+qrW9MSTi6eVmIY9YqjH+3mGY6HJRk=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-04T10:24:46.053+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    npx:introduces sub:patient_undergoing_PCI;
+    npx:supersedes <http://purl.org/np/RAuLZtfsHn3NGe0Md8lLNvYmBseEtW9v1rVUVfJCpJYUE>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAuLZtfsHn3NGe0Md8lLNvYmBseEtW9v1rVUVfJCpJYUE>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>,
+      <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
 }
 
@@ -85,6 +181,145 @@ sub:pubinfo {
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAaEkIiJLmBJP5kK3JdYjseCRqwutYbdnI8Q3VbzrK9VA> .
+@prefix sub: <http://purl.org/np/RAaEkIiJLmBJP5kK3JdYjseCRqwutYbdnI8Q3VbzrK9VA#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:triple-in-openbiodiv-knowledge-graph a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "Triple in OpenBiodiv knowledge graph";
+    <http://www.w3.org/2004/02/skos/core#definition> "A semantic triple in the OpenBiodiv knowledge graph";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.org/np/RAY2Gg01ffDVLprAakuMqpizAjksasRtTal_UsCf94LL8#openbiodiv-knowledge-graph> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-8083-6048 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "dPpPA1yEeyfIBRllzfX4pmiOoCUzGAxPLEf8+1/1CWBAecvBCtqsS+rUAWUnHEqHytgrvWlxZhEmw7oC3ilPPIl3Pkb8NwiJ1BcRgLOPbe2R5+1ws75TDzmaZKjUoHoMbB4oBIfT78o4YcULeUOiZww19rVWvddCv/JlXc2nSk8=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-30T22:09:26.986+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:triple-in-openbiodiv-knowledge-graph;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAaOAF90U6YxAvnchfj0dRtT5HRz320Pz202aGap-VfuI> .
+@prefix sub: <http://purl.org/np/RAaOAF90U6YxAvnchfj0dRtT5HRz320Pz202aGap-VfuI#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:ecm-bound-cancer-cell a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "cancer cell engaged in extracellular matrix";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q4118072>;
+    <http://www.w3.org/2004/02/skos/core#definition> "cancer cell engaged in extracellular matrix";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q193825> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0830-7029 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCluZ2msgo7OqPkyRoZMluzpaLX8KRHyDs3J/cZwm6+Vq/CKVIGsGaT7/XH435cE9J8dwCgQ/Jssjlj6oqX+nSI9xXBtMH9ZeyGHFBzK1cUBy/rRSez4EnwbS1sKMBSc4MBCXQ9R3jZ3GpsN0GmIrS1ukKkUBQrREBYpb4w5MbGywIDAQAB";
+    npx:hasSignature "J5J3Blgx/OmReiNFC8+4TzqHm34UUmKcQKRhq7SVPq5H0rLE0fqyX4RfZfA0oQg5dfD7vnbVttaGsUQZs1Iw1dU4r/CYko2IXUQiptdcY28cR76t/4coiBcFCZpqy3GPTKwIj7uR/aJIUj4UDzA6LCmsWju0hT1bp5NDmNhT+8E=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-12T09:21:35.816-08:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0830-7029;
+    npx:introduces sub:ecm-bound-cancer-cell;
+    npx:supersedes <http://purl.org/np/RAXecDWH8gZVp7FZRP1m_Fg6EXH_uoZGhKN9blfN9lrfI>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAXecDWH8gZVp7FZRP1m_Fg6EXH_uoZGhKN9blfN9lrfI>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAcPa1aO8kAt8QYwjQoJq-PIzYvo0jCzYrAiOX_XOyk1w> .
+@prefix sub: <http://purl.org/np/RAcPa1aO8kAt8QYwjQoJq-PIzYvo0jCzYrAiOX_XOyk1w#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:usage-of-linked-data-scopes dct:description "Usage of the Linked Data Scopes ontology in a research project";
+    a <http://www.w3.org/2002/07/owl#Class>, <http://www.w3.org/2002/07/owl#Restriction>;
+    rdfs:label "Usage of the Linked Data Scopes ontology";
+    <http://www.w3.org/2002/07/owl#onProperty> <http://wikidata.org/prop/direct/P2283>;
+    <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/datascope/> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9079-039X .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCUtUS5tVuMGtBUJ+dpxk0EKcI3xKBG4efTcKjAMHeQj6b+liabAld6kXxQKQIRVQomBKOcvoYJ9oTC4K4AMUPMfQsPSLt1noFxSahw86AXdAh7kWiVZu04Vs0NDuPPUOWwRQjXRf6gYFLQu3gA5o0PkWd7FZ6lrum6lNmi/LFQdwIDAQAB";
+    npx:hasSignature "CrXMFJLR+Q5CY5wK6uM5TWBFMfb+S3RR77LhqkIUcjwml9ARVAixA6iAyRqUAo/Of3vpJdzPzjoGbieJGYLhbPfn3bVC70Zwzwv1S/+g8jtrNmshNR1ZBsQ/D5zkLHjEdXx52VP+Sqmg4YTQsm7oOTtKu9jZfJo33MS9sogr8B4=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-19T09:23:19.603+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9079-039X;
+    npx:introduces sub:usage-of-linked-data-scopes;
+    npx:supersedes <http://purl.org/np/RAUxfk7XeLxn-2hiX3xWSlE5LXgkNW0MIFBGe2h3Bb3pM>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAX7opQ5Tv_uIMSyQNujbJFJO4JLa-xuTUitQlw2aQ1eU> .
 }
 
 
@@ -178,6 +413,54 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RAFH8AVn-wnTcSGxvPZ1Uiy_AtOhINlynnAxxiCdcTVWU> .
+@prefix sub: <http://purl.org/np/RAFH8AVn-wnTcSGxvPZ1Uiy_AtOhINlynnAxxiCdcTVWU#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:integrin-clustering a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "integrin clustering";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q14633861>;
+    <http://www.w3.org/2004/02/skos/core#definition> "clustering of integrin proteins at a focal adhesion";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q904514> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0830-7029 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCluZ2msgo7OqPkyRoZMluzpaLX8KRHyDs3J/cZwm6+Vq/CKVIGsGaT7/XH435cE9J8dwCgQ/Jssjlj6oqX+nSI9xXBtMH9ZeyGHFBzK1cUBy/rRSez4EnwbS1sKMBSc4MBCXQ9R3jZ3GpsN0GmIrS1ukKkUBQrREBYpb4w5MbGywIDAQAB";
+    npx:hasSignature "Bw052zD4Sd8+EkXb26m8oz03UEYZVfzKsvkEbf3j/zJeQJ/2PsYF94kN6QBs0mKoSeHJJQxOMOer6WCcTbYmltvLgG2zQYEFC3wkhRMTx5eEVjEMAXx4S57/Ur2a5yh+HzyqELJ1jG+2JIUQdHKO8F0F0VUqB2tyEf/ZhjMFz10=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-12T09:17:34.478-08:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0830-7029;
+    npx:introduces sub:integrin-clustering;
+    npx:supersedes <http://purl.org/np/RA9UaQM3wVa9xRAmL9CWEXyhDbcgvHlPoGTw4pnKaHYL8>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RA9UaQM3wVa9xRAmL9CWEXyhDbcgvHlPoGTw4pnKaHYL8>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
 @prefix this: <http://purl.org/np/RAFQovt9yQD7nZ2tdZ9_Uhpb7CsfT3k64pK7dh63xd-50> .
 @prefix sub: <http://purl.org/np/RAFQovt9yQD7nZ2tdZ9_Uhpb7CsfT3k64pK7dh63xd-50#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -219,6 +502,54 @@ sub:pubinfo {
     npx:introduces sub:automatedDiscovery;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAhnnsMWVM8M29NixCJfVDLWzRzwwCPnUD7LI2kxT-FME> .
+@prefix sub: <http://purl.org/np/RAhnnsMWVM8M29NixCJfVDLWzRzwwCPnUD7LI2kxT-FME#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:relative-neocortex-size a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "Relative size of the neocortex";
+    <http://www.w3.org/2004/02/skos/core#definition> "This class signifies the weight or volume of a part of the brain called neocortex.";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q322481>,
+      <http://www.wikidata.org/entity/Q726562> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0191-7211 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3cICbOHZ1ecuLOsgovKwUlFRRvNWNgBJxoXCFAYWtU2OK97i/SjoIaxFphg9tkv9WxOjtPqYJ4cuM0E76wxeRZ7VBMHBrBIyCAGTvAfESWVQZCDgulG46VjffEzXuRmqOka/C5Ur6beLijFPMtiWEg6I2Mbj8z9vuHPxReIu4JwIDAQAB";
+    npx:hasSignature "NMWYJ3I459BEnN7NgKELsfNucMayG4MXMMjOrZm0h+g/5Mbu8vbLVhkSi5C9N+SGc67qW6YtdndVxrMS7qpWfzUTv+FzVOgydGqs30VKUC5F0TNBzvTnTNvT9Bq61oQ5cNIxUHef6/Mqte2auchZPLgY8yap3ImLEaNTWwdQpTM=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-19T14:07:44.194+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0191-7211;
+    npx:introduces sub:relative-neocortex-size;
+    npx:supersedes <http://purl.org/np/RAIwMZ0StXU9DCY1WGoJMwD2NAc30mijCb0FML8TXIB0Y>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAIwMZ0StXU9DCY1WGoJMwD2NAc30mijCb0FML8TXIB0Y>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
 }
 
@@ -311,6 +642,147 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RA-jkb7qPNTSOe_EXltW_rlQWQ9x3_Y1KOzW6J_bbPz4U> .
+@prefix sub: <http://purl.org/np/RA-jkb7qPNTSOe_EXltW_rlQWQ9x3_Y1KOzW6J_bbPz4U#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:glycocalyx-bulk a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "glycocalyx bulk";
+    <http://www.w3.org/2004/02/skos/core#definition> "Relating to size, density, or bulk of the glycocalyx";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q898356> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0830-7029 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCluZ2msgo7OqPkyRoZMluzpaLX8KRHyDs3J/cZwm6+Vq/CKVIGsGaT7/XH435cE9J8dwCgQ/Jssjlj6oqX+nSI9xXBtMH9ZeyGHFBzK1cUBy/rRSez4EnwbS1sKMBSc4MBCXQ9R3jZ3GpsN0GmIrS1ukKkUBQrREBYpb4w5MbGywIDAQAB";
+    npx:hasSignature "WlbAvo5qWbVaY31i3E/uayLdSkt0IFbe2m+P7z0CEaoghb+sTAehmDjw9pmd2bzPQFblGdIwBr5yhGHXGorM4v3bkV2nIiRecOwhvtu9hM2pIUtS8QwD6kggHsO1WxzT4Wqs3GmS63PgN3cxZjEs0BuTWUhiXbd2V6gkLUPvaK8=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-12T09:27:02.246-08:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0830-7029;
+    npx:introduces sub:glycocalyx-bulk;
+    npx:supersedes <http://purl.org/np/RACS5sSm45MGbuJrztnPrpdu1AuLiKxDni-6JcKzN5ZtM>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RACS5sSm45MGbuJrztnPrpdu1AuLiKxDni-6JcKzN5ZtM>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAkCjYmMU3obIrC4IpwUw84JW1ymd312yz0N0g-R9yes0> .
+@prefix sub: <http://purl.org/np/RAkCjYmMU3obIrC4IpwUw84JW1ymd312yz0N0g-R9yes0#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:digital-humanities-research a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "Digital Humanities Research";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q42240>;
+    <http://www.w3.org/2004/02/skos/core#definition> "systematic study undertaken to increase knowledge in the field of Digital Humanities";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q1026962> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9079-039X .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCUtUS5tVuMGtBUJ+dpxk0EKcI3xKBG4efTcKjAMHeQj6b+liabAld6kXxQKQIRVQomBKOcvoYJ9oTC4K4AMUPMfQsPSLt1noFxSahw86AXdAh7kWiVZu04Vs0NDuPPUOWwRQjXRf6gYFLQu3gA5o0PkWd7FZ6lrum6lNmi/LFQdwIDAQAB";
+    npx:hasSignature "iXaNMYj4CT3YA+x8F4yuNplPhG8xjxeAAep0/7CYZS2LQlD2ovNJMvJCSxqLp6qhraPpSo9hnWeS/zLL1TwMfT4W0KtjQnET8mqI2kpqC9XYllcch2jr2sVPgiL7YgR9mir9CzEXHRchU8m6QH52twnsfQWtN3uLo+rOl2hMmJs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-26T14:11:45.332+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-9079-039X;
+    npx:introduces sub:digital-humanities-research;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAlfRfPak2jsyyVy4knjOmxQSYtociP8Cc0O7gemMtqQY> .
+@prefix sub: <http://purl.org/np/RAlfRfPak2jsyyVy4knjOmxQSYtociP8Cc0O7gemMtqQY#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:cost-effective_treatment a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "cost-effective treatment";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q179661>;
+    <http://www.w3.org/2004/02/skos/core#definition> "cost-effective treatment";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q1754768> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "f+XJLoVxSGhXnuQYxbgd+cAl1jMEdNppqO11jalPaJlnUREFKwRB5A9mhsvEuV1TWGzHfzi1wEL8FiguHgg7YUTJlbA1pb8qA98/MFkWtXeYzIjwOgmuFUrSIBQF0cEVX5OV8D3nzwwa+Y2glBes11pIkSRgAH4b3KMy8+PbNBg=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-04T10:28:39.058+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    npx:introduces sub:cost-effective_treatment;
+    npx:supersedes <http://purl.org/np/RAjD4-Q2kO_cIUE52rde2uWbV3RtuCR90geXW90il2YX4>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAjD4-Q2kO_cIUE52rde2uWbV3RtuCR90geXW90il2YX4>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>,
+      <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
 @prefix this: <http://purl.org/np/RAlKYv_sE8qwiSqsRdcr7KrkU1bsqlqiFmhDPtPBwpLrM> .
 @prefix sub: <http://purl.org/np/RAlKYv_sE8qwiSqsRdcr7KrkU1bsqlqiFmhDPtPBwpLrM#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -351,6 +823,53 @@ sub:pubinfo {
     npx:introduces sub:social-group-size;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAlm6vh2zpFLg189qrDYPtppkL790Pqaw-q2KUhyfJtRY> .
+@prefix sub: <http://purl.org/np/RAlm6vh2zpFLg189qrDYPtppkL790Pqaw-q2KUhyfJtRY#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:release-of-openbiodiv-knowledge-graph a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "A release of the OpenBiodiv knowledge graph";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q20631656>;
+    <http://www.w3.org/2004/02/skos/core#definition> "A release of the OpenBiodiv knowledge graph stored in a GraphDB repository at http://graph.openbiodiv.net/";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.org/np/RAY2Gg01ffDVLprAakuMqpizAjksasRtTal_UsCf94LL8#openbiodiv-knowledge-graph> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-8083-6048 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "FXDBQ2xJ6NWoC7ai62Yd02KL1I45X1XQxAN1skRMXtENVvO0ZdzjKOjU8TBOyw23h1prP/Ei/k+BT2JgOVHS+LyJXoW0ncHMg9a9AFrhB/BX+S6SMLVCEh0h8uzD7GbnBv6Vet2ajQ7nWCSb4ZkTJa0iByrFU/bpQMBZ4JKvkRs=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-30T22:05:24.772+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-8083-6048;
+    npx:introduces sub:release-of-openbiodiv-knowledge-graph;
+    npx:supersedes <http://purl.org/np/RAySzPQKOPqboKwpMIeTtYhCwmLZTdlmKhiMM9W_fmZKw>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
 }
 
@@ -398,6 +917,55 @@ sub:pubinfo {
 }
 
 
+@prefix this: <http://purl.org/np/RANjcIDg1VkGWDSqxkFyVn__2UEbR-V7y8lqtV4rxcLJk> .
+@prefix sub: <http://purl.org/np/RANjcIDg1VkGWDSqxkFyVn__2UEbR-V7y8lqtV4rxcLJk#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:expression-of-genes-IRX3-and-IRX5 a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "expression of genes IRX3 AND IRX5";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q26972>;
+    <http://www.w3.org/2004/02/skos/core#definition> "Expression of the human genes IRX3 and IRX5";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q18035174>,
+      <http://www.wikidata.org/entity/Q18046058> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-2432-4125 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCS1s1OiABv1mrDnFWp9ecwHdQ+UlJn6JCDYXspRsbZgsm2QAiofbnVvf6gfkcjjScd5fq3sW/W8r/o7bdafVSd6xuTG/vHrO9Ax/guPiJ6O/Z57Hk0nQy6c+l71HpaJ2BPPWKOgYiFZ/8eulmuM6BJ8TDKxoBtcqP5QbvN9KYjlQIDAQAB";
+    npx:hasSignature "UCOrI2QZKBgqHXulVFPSE3LUe0zG8GNGrezBDn3wf/2q5y61yBkNJXwB+2ITQ6mUaqDh9M7lzLv1UJHxsFyxyF1SwsJtqj5q5JVNk+Rdp5XujWD0Q3K8llHXCazb6VuLvuQZ3+kexYzv4ZGBrKC1Qsn7qnjZNZ6ITIys+efAzks=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-27T09:44:08.870-07:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-2432-4125;
+    npx:introduces sub:expression-of-genes-IRX3-and-IRX5;
+    npx:supersedes <http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAY3LaUoVtBLj9CN36wyyvTIjSMsACErVtEApnA12zjy0>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
 @prefix this: <http://purl.org/np/RAodU4AmRjfzyjwtJK3luO0iyRJJPUBjkijKWdlMHvack> .
 @prefix sub: <http://purl.org/np/RAodU4AmRjfzyjwtJK3luO0iyRJJPUBjkijKWdlMHvack#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
@@ -439,6 +1007,55 @@ sub:pubinfo {
     npx:introduces sub:adherenceToTheFAIRGuidingPrinciples;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAOxICL4ULhzr5mxC9cyzStCBtpoETQGin6Vr-Ns7JNtA> .
+@prefix sub: <http://purl.org/np/RAOxICL4ULhzr5mxC9cyzStCBtpoETQGin6Vr-Ns7JNtA#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:pharmacogenomics_guided_clopidogrel_therapy a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "pharmacogenomics guided clopidogrel therapy";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q179661>;
+    <http://www.w3.org/2004/02/skos/core#definition> "A clopidogrel therapy assisted by pharmacogenomics.";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q1152227>,
+      <http://www.wikidata.org/entity/Q410237> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-0519-7776 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "QNIcAE5wfsq1p8Z7J+KLQOwA1pbm5/VZFeRJe6JKkIB6TvXTdlO2OKOTDYMPZys15bU9yibaKOA/7YRQnaf6oTbgOmaT1mV5+zffRjl5SG+z+4A1R7HLIfr2G2x9Z4kz55rQL+AQbvYgkDXiVMSsbdJdraQ5t/SBCJcEHOh2xuQ=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-11-04T11:02:34.246+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-0519-7776, orcid:0000-0002-7114-6459;
+    npx:introduces sub:pharmacogenomics_guided_clopidogrel_therapy;
+    npx:supersedes <http://purl.org/np/RA4BJq9pLse6z1BRbZIOgARyf1zOY9Qw33ix3lsHcazOE>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAvOAyEg-J8ynmZNrkCgg5XqGuqRo-dXcGFvgDLxtY6ck>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RA2vCBXZf-icEcVRGhulJXugTGxpsV5yVr9yqCI1bQh4A>,
+      <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
 }
 
@@ -572,6 +1189,54 @@ sub:pubinfo {
     npx:introduces sub:patient_undergoing_PCI;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RA_uqYtoBEELzYKz7H3Yqp9L_sHdU-kgL8R5EqmBsTVzE> .
+@prefix sub: <http://purl.org/np/RA_uqYtoBEELzYKz7H3Yqp9L_sHdU-kgL8R5EqmBsTVzE#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:STX1B-mutation a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "STX1B mutation";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q42918>;
+    <http://www.w3.org/2004/02/skos/core#definition> "mutation in STX1B";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q18048867> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-6501-0806 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCY36SLWPLee0SZGM108+7dyjGzKFYg9t09XuL3js13jO3CDzqAZygcrwbJsbLQMRHYvWf0Mkly1ePLgdb43NqEbXiDHC4o49nHjhi2bSWeRDJ4jFicvhpL1Sjv5N0oFU3wTA8KGN+rYvQ10xhZXcjuuiCMb6yInj6wJ2S+wI14fwIDAQAB";
+    npx:hasSignature "dHs/mh4uX31nfABbnq45PR08OSx5MXVfJe9lHmp35hxOdXtTCwFkKBHITEpVQZZW9+7R2aAVrfHzUqSAPnAcpkqxySiszTt+ag300BYcTKA4WfeD39g/KWkzEcASNO2C7olX5mRGXrKDAvInhL1J30kc6TVD/5XqbevvwHnMEto=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-10-29T10:27:08.730+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-6501-0806;
+    npx:introduces sub:STX1B-mutation;
+    npx:supersedes <http://purl.org/np/RAPVWYH0x-xyDa9PfBcGUFly3m1FNEO43KG9s0uH-y6yo>;
+    <https://w3id.org/linkflows/reviews/isUpdateOf> <http://purl.org/np/RAPVWYH0x-xyDa9PfBcGUFly3m1FNEO43KG9s0uH-y6yo>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAOGu9Lh0BD4tbIRB9RG6RGRA_ObDh75NTbIqaWgxxs8M>, <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
 }
 
@@ -799,6 +1464,96 @@ sub:pubinfo {
     npx:introduces sub:expression-of-genes-IRX3-AND-IRX5;
     nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
     nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAYXLV7qwfx03AGH7k5ZP6zeMj_vx2kj88z5UQ5OX3C90> .
+@prefix sub: <http://purl.org/np/RAYXLV7qwfx03AGH7k5ZP6zeMj_vx2kj88z5UQ5OX3C90#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:Dysfunction_of_ERAD_pathway a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "Dysfunction of ERAD pathway";
+    rdfs:subClassOf <http://www.wikidata.org/entity/Q21101062>;
+    <http://www.w3.org/2004/02/skos/core#definition> "Dysfunction of ERAD pathway" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-0169-8159 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOWrvo3T4o7/c9+al6pWVu3tb32/oqIpuNK/bZlFUgR6bnQRBl+7ub5H++34CVFU1pWEQb4RXsx39Q0fM1UPvJbZbXDYAsCEPzn0mzN+YAYdSZKAEyjM2cf4cqjQLwKBabOluVKfKetxTaKB/Jr/9U770dEc2LR3lOMFcbALPSXwIDAQAB";
+    npx:hasSignature "c7y+kScx8w6fTTdYV3E63DbJlVw/50y+jSSRfD93wkagh815rjOalJBPx32P8SyPHuoNFmj8wBtxQxXWYrhylfs4BzOwDL/NKgwM6iG8XZOBmsRJ1i7bUVC1XdYHFZgWil/1QjygLSMcbETztar82nU2cJtX5XVzH97f9bMntO4=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-08T16:43:02.471+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-0169-8159;
+    npx:introduces sub:Dysfunction_of_ERAD_pathway;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
+}
+
+
+@prefix this: <http://purl.org/np/RAZVLqlkbwiX40n0GNxcxJany2Cw3oxMCrNuZtjBClryU> .
+@prefix sub: <http://purl.org/np/RAZVLqlkbwiX40n0GNxcxJany2Cw3oxMCrNuZtjBClryU#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:Dysfunction_of_ERAD_pathway a <http://www.w3.org/2002/07/owl#Class>;
+    rdfs:label "Dysfunction of ERAD pathway";
+    <http://www.w3.org/2004/02/skos/core#definition> "Dysfunction of ERAD pathway";
+    <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q21101062> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-0169-8159 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOWrvo3T4o7/c9+al6pWVu3tb32/oqIpuNK/bZlFUgR6bnQRBl+7ub5H++34CVFU1pWEQb4RXsx39Q0fM1UPvJbZbXDYAsCEPzn0mzN+YAYdSZKAEyjM2cf4cqjQLwKBabOluVKfKetxTaKB/Jr/9U770dEc2LR3lOMFcbALPSXwIDAQAB";
+    npx:hasSignature "lHpXoxwEiDwRt0Snb8FuYf1erV7wZgddH0orZakfvel/t2mfo2YjppvSes+/zHlMjU2FxYbUIV7KaitPVbbx1skOGyhbn0mLAB6xNKwy+iA7TjX2NazJVWpHq4EPVXJYsjU3x80TjAWJce6sPbU9gtgHsRGC6fFFGp0rDq70ZP4=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2021-12-17T10:19:45.788+01:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-0169-8159;
+    npx:introduces sub:Dysfunction_of_ERAD_pathway;
+    npx:supersedes <http://purl.org/np/RAYXLV7qwfx03AGH7k5ZP6zeMj_vx2kj88z5UQ5OX3C90>;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>,
+      <http://purl.org/np/RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI>;
     nt:wasCreatedFromTemplate <http://purl.org/np/RAdpgRpigXtt8iPV9uOPf3wIT3qzOI8Sg2Q72CNV8g-Yo> .
 }
 
