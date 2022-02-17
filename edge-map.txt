@@ -1,4 +1,5 @@
 cd-response-to-review
+cd-response-to-classdefupdate
 decision-to-updated
 response-to-review
 response-to-updated

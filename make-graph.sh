@@ -4,8 +4,6 @@ set -e
 
 cat np-graph.head.dot > np-graph.dot
 
-echo > np-graph-temp.dot
-
 while read line; do
   query=${line% *}
   color=${line#* }
@@ -38,7 +36,7 @@ while read line; do
     | sort \
     | uniq \
     | awk -v color=$color '{print "\""substr($1,20,10)"\" [fillcolor="color",URL=\""$1"\"]"}' \
-    >> np-graph-temp.dot
+    >> np-graph.dot
 done < color-map-x.txt
 
 while read line; do
@@ -48,14 +46,9 @@ while read line; do
     | sort \
     | uniq \
     | awk '{print "\""substr($1,20,10)"\" ->\""substr($2,20,10)"\""}' \
-    >> np-graph-temp.dot
+    >> np-graph.dot
 done < edge-map.txt
 
-cat np-graph-temp.dot | sort | uniq > np-graph-temp-sorted.dot
-
-cat np-graph-temp-sorted.dot >> np-graph.dot
 cat np-graph.tail.dot >> np-graph.dot
-
-rm np-graph-temp*
 
 dot -Tsvg np-graph.dot > np-graph.svg
