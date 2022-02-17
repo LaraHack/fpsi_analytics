@@ -56,3 +56,5 @@ cat np-graph-pre.dot | grep -v 'RAVYczMihU' > np-graph.dot
 rm np-graph-pre.dot
 
 dot -Tsvg np-graph.dot > np-graph.svg
+
+convert np-graph.svg np-graph.pdf
