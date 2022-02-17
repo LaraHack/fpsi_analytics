@@ -82,48 +82,6 @@ sub:pubinfo {
 }
 
 
-@prefix this: <http://purl.org/np/RAEpiQfxUee5E5o4qL8qPFbrzPFPWQS59YcsANHsJtw6w> .
-@prefix sub: <http://purl.org/np/RAEpiQfxUee5E5o4qL8qPFbrzPFPWQS59YcsANHsJtw6w#> .
-@prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix nt: <https://w3id.org/np/o/ntemplate/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix orcid: <https://orcid.org/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
-
-sub:Head {
-  this: np:hasAssertion sub:assertion;
-    np:hasProvenance sub:provenance;
-    np:hasPublicationInfo sub:pubinfo;
-    a np:Nanopublication .
-}
-
-sub:assertion {
-  <http://purl.org/np/RAokVMmiZSbRh01diNeJLum4p13kUd-NZjGFuVtxVz4Bs> dct:description
-      "The review comments were addressed and the updated formalization looks good.";
-    <http://purl.org/spar/pso/withStatus> <http://purl.org/spar/pso/accepted-for-publication>;
-    <http://purl.org/vocab/frbr/core#partOf> <https://w3id.org/linkflows/formalization-papers/DataScienceSpecialIssue> .
-}
-
-sub:provenance {
-  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0000-0002-7114-6459 .
-}
-
-sub:pubinfo {
-  sub:sig npx:hasAlgorithm "RSA";
-    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
-    npx:hasSignature "F577RWq7LndVLgMbfkBR5YfnQLOc3zLwsLEJCXzFzA9mEKzf26pNxTM3YVmBnwl2XpBrUdEgGZzbe5wEwyK+xrv68EzS899pIOVO5/XBFOcCBY2AWJIukr6umCKD+oQwTsnjaZ73l0psKoeZJUpFJ+7eRBK9/Je2tWgB635eSK0=";
-    npx:hasSignatureTarget this: .
-  
-  this: dct:created "2021-11-12T17:14:18.858+02:00"^^xsd:dateTime;
-    dct:creator orcid:0000-0002-7114-6459;
-    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ>;
-    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
-    nt:wasCreatedFromTemplate <http://purl.org/np/RAbN8-_C536GLgIoayNw86zS5ntCEgtFJn_uTgxmMdyeY> .
-}
-
-
 @prefix this: <http://purl.org/np/RAgM9cY7OGMXgyPYL4Aimc9CKIsMVaxhHmZdAKD-AdMQA> .
 @prefix sub: <http://purl.org/np/RAgM9cY7OGMXgyPYL4Aimc9CKIsMVaxhHmZdAKD-AdMQA#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
