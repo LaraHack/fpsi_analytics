@@ -1,6 +1,7 @@
 digraph G {
 node[label="",shape=square,style=filled]
 concentrate=true
+pack=true
 "RA062HUn_Z" [fillcolor=orange,URL="http://purl.org/np/RA062HUn_Zu1nVB61cxpeesJ4DyUCVIK9HEgS5BJVkE-Y"]
 "RA2kBfTdI1" [fillcolor=orange,URL="http://purl.org/np/RA2kBfTdI1zfinySdO_KecrMqS5x3kr5n87r5inNba_Bo"]
 "RA913Qgx4U" [fillcolor=orange,URL="http://purl.org/np/RA913Qgx4UShjz9upA4IAsbYCkLhSxQ0vaV1figRNXkH8"]

@@ -1,3 +1,4 @@
 digraph G {
 node[label="",shape=square,style=filled]
 concentrate=true
+pack=true
