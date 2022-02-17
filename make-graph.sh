@@ -51,4 +51,8 @@ done < edge-map.txt
 
 cat np-graph.tail.dot >> np-graph.dot
 
+mv np-graph.dot np-graph-pre.dot
+cat np-graph-pre.dot | grep -v 'RAVYczMihU' > np-graph.dot
+rm np-graph-pre.dot
+
 dot -Tsvg np-graph.dot > np-graph.svg
