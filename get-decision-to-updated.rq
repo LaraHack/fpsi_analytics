@@ -46,5 +46,10 @@ select distinct ?decision_np ?update_np where {
     graph ?sra { ?newversion_update_np npx:supersedes ?update_np . }
   }
   graph npa:graph { ?decision_np npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB"^^xsd:string . } ?decision_np np:hasAssertion ?da .  # TODO: move into npa:graph
+  filter not exists {
+#    graph npa:graph { ?retraction_decision_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
+    ?retraction_decision_np np:hasAssertion ?rda .  # TODO: move into npa:graph
+    graph ?rda { ?retraction_decision_np npx:retracts ?decision_np . }
+  }
   graph ?da { ?update_np pso:withStatus ?decision . }
 }
