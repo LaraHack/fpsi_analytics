@@ -49,7 +49,7 @@ select distinct ?decision_np ?update_np where {
   filter not exists {
 #    graph npa:graph { ?retraction_decision_np npa:hasValidSignatureForPublicKey ?pubkey2 . }
     ?retraction_decision_np np:hasAssertion ?rda .  # TODO: move into npa:graph
-    graph ?rda { ?retraction_decision_np npx:retracts ?decision_np . }
+    graph ?rda { ?somebody_retraction_decision_np npx:retracts ?decision_np . }
   }
   graph ?da { ?update_np pso:withStatus ?decision . }
 }
