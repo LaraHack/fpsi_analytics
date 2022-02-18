@@ -24,7 +24,7 @@ while read line; do
     | uniq \
     | awk '{print "\""substr($2,20,10)"\" ->\""substr($1,20,10)"\" [color = red]"}' \
     >> np-graph.dot
-done < color-map.txt
+done < node-map.txt
 
 while read line; do
   query=${line% *}
@@ -37,7 +37,7 @@ while read line; do
     | uniq \
     | awk -v color=$color '{print "\""substr($1,20,10)"\" [fillcolor="color",URL=\""$1"\"]"}' \
     >> np-graph.dot
-done < color-map-x.txt
+done < node-map-x.txt
 
 while read line; do
   cat sparql-results/$line.csv sparql-results/${line}_x.csv \

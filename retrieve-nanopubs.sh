@@ -16,7 +16,7 @@ while read line; do
     | sed -r 's/^(.*)$/>\&2 echo "Retrieving \1..."\nnp get \1/' \
     | bash \
     > nanopubs/$query.trig
-done < color-map.txt
+done < node-map.txt
 
 echo "Checking retrieved nanopubs"
 echo
