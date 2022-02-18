@@ -26,6 +26,12 @@ while read line; do
     | uniq \
     | awk '{print "\""substr($2,20,10)"\" ->\""substr($1,20,10)"\" [color = red]"}' \
     >> np-graph.dot
+  cat np-graph.head.dot > icons/$query.dot
+  echo "\"node\" [fillcolor=\"$color\",label=\"$label\"]" >> icons/$query.dot
+  cat np-graph.tail.dot >> icons/$query.dot
+  dot -Tsvg icons/$query.dot > icons/$query.svg
+  inkscape icons/$query.svg --export-pdf=icons/$query.pdf 2> /dev/null
+  rm icons/$query.dot
 done < node-map.txt
 
 while read line; do
@@ -61,4 +67,4 @@ rm np-graph-pre.dot
 
 dot -Tsvg np-graph.dot > np-graph.svg
 
-convert np-graph.svg np-graph.pdf
+inkscape np-graph.svg --export-pdf=np-graph.pdf 2> /dev/null
