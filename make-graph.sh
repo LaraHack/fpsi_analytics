@@ -5,15 +5,17 @@ set -e
 cat np-graph.head.dot > np-graph.dot
 
 while read line; do
-  query=${line% *}
-  color=${line#* }
+  args=($(echo $line | tr ' ' '\n'))
+  query=${args[0]}
+  color=${args[1]}
+  label=${args[2]}
   cat sparql-results/$query.csv sparql-results/${query}_x.csv \
     | sed 1d \
     | sed -r 's/^"([^"]*)".*$/\1/' \
     | grep '^http://purl.org/np/' \
     | sort \
     | uniq \
-    | awk -v color=$color '{print "\""substr($1,20,10)"\" [fillcolor="color",URL=\""$1"\"]"}' \
+    | awk -v color=$color -v label=$label '{print "\""substr($1,20,10)"\" [fillcolor="color",label="label",URL=\""$1"\"]"}' \
     >> np-graph.dot
   cat sparql-results/$query.csv sparql-results/${query}_x.csv \
     | sed 1d \
@@ -27,15 +29,17 @@ while read line; do
 done < node-map.txt
 
 while read line; do
-  query=${line% *}
-  color=${line#* }
+  args=($(echo $line | tr ' ' '\n'))
+  query=${args[0]}
+  color=${args[1]}
+  label=${args[2]}
   cat sparql-results/$query.csv sparql-results/${query}_x.csv \
     | sed 1d \
     | sed -r 's/^"([^"]*)"."([^"]*)"$/\2/' \
     | grep '^http://purl.org/np/' \
     | sort \
     | uniq \
-    | awk -v color=$color '{print "\""substr($1,20,10)"\" [fillcolor="color",URL=\""$1"\"]"}' \
+    | awk -v color=$color -v label=$label '{print "\""substr($1,20,10)"\" [fillcolor="color",label="label",URL=\""$1"\"]"}' \
     >> np-graph.dot
 done < node-map-x.txt
 

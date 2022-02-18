@@ -1,4 +1,4 @@
 digraph G {
-node[label="",shape=square,style=filled]
+node[label="",shape=square,style=filled,fontname=Arial,fontsize=30,margin=0]
 concentrate=true
 pack=true

@@ -1,2 +1,2 @@
-classdefs red
-superpatterns blue
+classdefs tomato C
+superpatterns lightblue F
