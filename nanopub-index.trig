@@ -1,7 +1,8 @@
-@prefix this: <http://purl.org/np/RA_cnOxkxnv-ya78EQl5f_fxno0NsDbochIeycN1isc2U> .
-@prefix sub: <http://purl.org/np/RA_cnOxkxnv-ya78EQl5f_fxno0NsDbochIeycN1isc2U#> .
+@prefix this: <http://purl.org/np/RA85gORDAI1puVhYE4Pmih5n2Dx00YwuCDdqpfC094s7E> .
+@prefix sub: <http://purl.org/np/RA85gORDAI1puVhYE4Pmih5n2Dx00YwuCDdqpfC094s7E#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix npx: <http://purl.org/nanopub/x/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ns1: <http://purl.org/np/> .
@@ -225,9 +226,12 @@ sub:provenance {
 sub:pubinfo {
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwUtewGCpT5vIfXYE1bmf/Uqu1ojqnWdYxv+ySO80ul8Gu7m8KoyPAwuvaPj0lvPtHrg000qMmkxzKhYknEjq8v7EerxZNYp5B3/3+5ZpuWOYAs78UnQVjbHSmDdmryr4D4VvvNIiUmd0yxci47dTFUj4DvfHnGd6hVe5+goqdcwIDAQAB";
-    npx:hasSignature "HgtVPsXhIzvTWv0Zv5muRehShBOEEb04Ya1+qeh7XDo9xtSSNhzo0bdgyKkDwxYhSv2ARu1e47+M8f1DDXumRQ98GgIz8ywDMHmFpCnq0YYABGCQNo0/FXiu+Brm6JuOghEmWbJgLJY1P8UMUxoob2ZmADeFwQ8KMokyU6IPGyw=";
+    npx:hasSignature "QcOZ0eqoN+ydM97OAxVAi0pHLiBjl8ZtaFGL5PS+fb7x4qEVBf8TgLkDTjN1qTRC25Clot8OmXiBNVNTaZ7Ei7bvWgRI40RJ4O7r/yqSwm0uGpaeuCSk96NHBR6xtyrapPFM5qLxyIoNnqkzZBEiKjyPFOoPCOk7rw9Eh5sSWk4=";
     npx:hasSignatureTarget this: .
   
-  this: dct:created "2022-02-28T09:57:07.750+01:00"^^xsd:dateTime;
+  this: dce:description "This set includes the nanopublications of the submissions, auxiliary class definitions, reviews, responses, and decisions for the special issue at the journal Data Science by IOS Press.";
+    dce:title "Nanopublications for the special issue of formalization papers at the journal Data Science 2021/2022";
+    dct:created "2022-02-28T10:09:39.333+01:00"^^xsd:dateTime;
+    dct:creator <https://orcid.org/0000-0002-1267-0234>, <https://orcid.org/0000-0002-7114-6459>;
     a npx:NanopubIndex .
 }
