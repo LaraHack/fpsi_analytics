@@ -1,5 +1,5 @@
-@prefix this: <http://purl.org/np/RA85gORDAI1puVhYE4Pmih5n2Dx00YwuCDdqpfC094s7E> .
-@prefix sub: <http://purl.org/np/RA85gORDAI1puVhYE4Pmih5n2Dx00YwuCDdqpfC094s7E#> .
+@prefix this: <http://purl.org/np/RAkLJW7vIsnKKJDf1iswdgtFPQSo3lEG_z8DhHfD7dofE> .
+@prefix sub: <http://purl.org/np/RAkLJW7vIsnKKJDf1iswdgtFPQSo3lEG_z8DhHfD7dofE#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
@@ -225,13 +225,13 @@ sub:provenance {
 
 sub:pubinfo {
   sub:sig npx:hasAlgorithm "RSA";
-    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwUtewGCpT5vIfXYE1bmf/Uqu1ojqnWdYxv+ySO80ul8Gu7m8KoyPAwuvaPj0lvPtHrg000qMmkxzKhYknEjq8v7EerxZNYp5B3/3+5ZpuWOYAs78UnQVjbHSmDdmryr4D4VvvNIiUmd0yxci47dTFUj4DvfHnGd6hVe5+goqdcwIDAQAB";
-    npx:hasSignature "QcOZ0eqoN+ydM97OAxVAi0pHLiBjl8ZtaFGL5PS+fb7x4qEVBf8TgLkDTjN1qTRC25Clot8OmXiBNVNTaZ7Ei7bvWgRI40RJ4O7r/yqSwm0uGpaeuCSk96NHBR6xtyrapPFM5qLxyIoNnqkzZBEiKjyPFOoPCOk7rw9Eh5sSWk4=";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJlM78d80R+gFMoQB1IG3f7AbqqGOCIv4HmZd1cx1KgEWMUUpPsojFNvx84fC/TltcJ8F8JafnbhDXW2HM2MhdK4yC04ROEV1vIgSzjDicHfiqXvMqdPuMyQp4mmCEY7mUoeEW10mWZqjk+S9TnmiAQbFGcpExP8aosr2aTR7CSQIDAQAB";
+    npx:hasSignature "WQ599F6qGiiQYxSDuqJTKw9Oiq2/Zj0reCNXLjjZFGBL1S/ED3VCxYXXvZWHBoIFNm2v6MVVMdzYNCy0i4CjXveQRFo8qRo9X9I77+2RdDE1SzgMbyvAsK6kWuaCAiZD3snjjoRkx809jg63aytdOssiks5wP2lrHIGH3I74l0Q=";
     npx:hasSignatureTarget this: .
   
   this: dce:description "This set includes the nanopublications of the submissions, auxiliary class definitions, reviews, responses, and decisions for the special issue at the journal Data Science by IOS Press.";
     dce:title "Nanopublications for the special issue of formalization papers at the journal Data Science 2021/2022";
-    dct:created "2022-02-28T10:09:39.333+01:00"^^xsd:dateTime;
+    dct:created "2022-03-01T11:59:05.050+01:00"^^xsd:dateTime;
     dct:creator <https://orcid.org/0000-0002-1267-0234>, <https://orcid.org/0000-0002-7114-6459>;
     a npx:NanopubIndex .
 }
